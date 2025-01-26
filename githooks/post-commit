@@ -1,0 +1,89 @@
+#!/bin/bash
+
+# Configuration
+REPO_URL="https://github.com/thekester/myfirstmicrodissertationinsociology"
+HISTORY_FILE="$(git rev-parse --show-toplevel)/history.txt"  # Chemin absolu vers history.txt
+LOG_FILE="$(git rev-parse --show-toplevel)/hook_debug.log"   # Fichier de log pour le debugging
+
+# Fonction pour formater les nombres avec des zéros
+pad_number() {
+  printf "%03d" "$1"
+}
+
+# Ajout de logs pour le debugging
+echo "Hook post-commit exécuté à $(date)" >> "$LOG_FILE"
+
+# Vérifie si history.txt existe, sinon le crée avec un en-tête
+if [ ! -f "$HISTORY_FILE" ]; then
+    echo "# history.txt - Journal des Évolutions pour \"Jeunes contre Vieux : La Guerre des Générations\"" > "$HISTORY_FILE"
+    echo "--------------------------------------------------------------------------------" >> "$HISTORY_FILE"
+    echo "" >> "$HISTORY_FILE"
+fi
+
+# Récupère le hash du dernier commit
+COMMIT_HASH=$(git rev-parse HEAD)
+echo "Commit Hash: $COMMIT_HASH" >> "$LOG_FILE"
+
+# Récupère la date du dernier commit
+COMMIT_DATE=$(git log -1 --format=%cd --date=short)
+echo "Commit Date: $COMMIT_DATE" >> "$LOG_FILE"
+
+# Récupère le message du dernier commit (première ligne)
+COMMIT_MESSAGE=$(git log -1 --pretty=%B | head -n1)
+echo "Commit Message: $COMMIT_MESSAGE" >> "$LOG_FILE"
+
+# Récupère l'auteur du dernier commit
+COMMIT_AUTHOR=$(git log -1 --pretty=format:'%an')
+echo "Commit Author: $COMMIT_AUTHOR" >> "$LOG_FILE"
+
+# Génère le lien vers le commit (fonctionne avec GitHub, GitLab, etc.)
+COMMIT_LINK="$REPO_URL/commit/$COMMIT_HASH"
+echo "Commit Link: $COMMIT_LINK" >> "$LOG_FILE"
+
+# Récupère la dernière version enregistrée
+LAST_VERSION_LINE=$(grep "^Version :" "$HISTORY_FILE" | tail -n1)
+if [ -z "$LAST_VERSION_LINE" ]; then
+    # Si aucune version n'est trouvée, commencer à v001.000
+    MAJOR=1
+    MINOR=0
+else
+    # Extraire les numéros majeur et mineur
+    LAST_VERSION=${LAST_VERSION_LINE#Version : v}
+    MAJOR=$(echo "$LAST_VERSION" | cut -d. -f1)
+    MINOR=$(echo "$LAST_VERSION" | cut -d. -f2)
+    
+    # Incrémenter le numéro mineur
+    MINOR=$((MINOR + 1))
+    
+    # Formater les numéros avec des zéros
+    MAJOR_PAD=$(pad_number "$MAJOR")
+    MINOR_PAD=$(pad_number "$MINOR")
+    
+    # Définir la nouvelle version
+    VERSION="v${MAJOR_PAD}.${MINOR_PAD}"
+fi
+
+# Si c'est la première version, définir VERSION
+if [ -z "$VERSION" ]; then
+    VERSION="v001.000"
+fi
+
+echo "Next Version: $VERSION" >> "$LOG_FILE"
+
+# Ajoute une nouvelle entrée dans history.txt
+cat <<EOT >> "$HISTORY_FILE"
+
+--------------------------------------------------------------------------------
+
+Version : $VERSION
+Date    : $COMMIT_DATE
+Auteur  : $COMMIT_AUTHOR
+Lien    : $COMMIT_LINK
+Contenu :
+- $COMMIT_MESSAGE
+
+--------------------------------------------------------------------------------
+EOT
+
+echo "Entrée ajoutée à history.txt" >> "$LOG_FILE"
+
