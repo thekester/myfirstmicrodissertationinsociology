@@ -1,20 +1,29 @@
 /* script.js
    Gestion de l'interactivité du livre :
    - Navigation entre chapitres
-   - Download PDF (version simplifiée)
+   - Download PDF (fonction d'exemple via html2pdf.js)
    - Évolution future : pagination, animations...
 */
 
 // Sélection du bouton pour téléchargement
 const downloadBtn = document.getElementById("downloadPdfBtn");
 
+// Au clic, on génère un PDF du contenu du livre
 downloadBtn.addEventListener("click", () => {
-  // Pour générer un PDF côté client, on peut utiliser une librairie type html2pdf, JSPDF, etc.
-  // Ici, on se contente d'un message. 
-  // ----
-  // Exemple (non fonctionnel ici) :
-  // html2pdf().from(document.body).save('Livre_JeunesContreVieux.pdf');
-  alert("Fonction de génération PDF à implémenter (librairie côté client requise).");
+  // Sélection de l'élément qui contiendra le livre entier
+  const element = document.getElementById("book-content");
+
+  // Options pour html2pdf
+  const options = {
+    margin:       0.5,
+    filename:     'JeunesContreVieux_TheophileAvenel.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+
+  // Génération et téléchargement du PDF
+  html2pdf().set(options).from(element).save();
 });
 
 // Gestion de la navigation chapitres
@@ -36,4 +45,4 @@ chapterLinks.forEach(link => {
 // TODO futur : 
 // - Ajouter un système de pagination interne 
 // - Permettre la saisie de commentaires ou notes 
-// - Faire évoluer la structure pour de réels 100 pages
+// - Faire évoluer la structure pour de réels 100 pages ou plus
