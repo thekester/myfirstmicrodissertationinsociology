@@ -1,0 +1,101 @@
+name: Update History
+
+on:
+  push:
+    branches:
+      - main
+    # Ignorer les commits effectués par GitHub Actions
+    paths-ignore:
+      - '.github/workflows/update-history.yml'
+      - 'history.txt'
+
+jobs:
+  update-history:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          # Inclure l'historique complet pour récupérer les tags et commits
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Ajouter des dépendances si nécessaire
+
+      - name: Update history.txt
+        env:
+          REPO_URL: ${{ github.repository_url }}
+        run: |
+          import os
+          import subprocess
+          from datetime import datetime
+
+          # Définir le chemin vers history.txt
+          history_file = 'history.txt'
+
+          # Vérifier si history.txt existe
+          if not os.path.exists(history_file):
+              with open(history_file, 'w') as f:
+                  f.write('# history.txt - Journal des Évolutions pour "Jeunes contre Vieux : La Guerre des Générations"\n\n')
+                  f.write('--------------------------------------------------------------------------------\n\n')
+
+          # Récupérer les informations du dernier commit
+          commit_hash = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode('utf-8').strip()
+          commit_date = subprocess.check_output(['git', 'log', '-1', '--format=%cd', '--date=short']).decode('utf-8').strip()
+          commit_message = subprocess.check_output(['git', 'log', '-1', '--pretty=%B']).decode('utf-8').strip().split('\n')[0]
+          commit_author = subprocess.check_output(['git', 'log', '-1', '--pretty=format:%an']).decode('utf-8').strip()
+          commit_link = f"{os.getenv('REPO_URL')}/commit/{commit_hash}"
+
+          # Récupérer la dernière version de history.txt
+          with open(history_file, 'r') as f:
+              lines = f.readlines()
+
+          last_version = None
+          for line in reversed(lines):
+              if line.startswith('Version : v'):
+                  last_version = line.strip().split(' ')[2]
+                  break
+
+          if last_version:
+              major, minor = map(int, last_version.lstrip('v').split('.'))
+              minor += 1
+          else:
+              major, minor = 1, 0
+
+          # Formater la nouvelle version avec des zéros
+          version = f"v{major:03}.{minor:03}"
+
+          # Ajouter la nouvelle entrée dans history.txt
+          with open(history_file, 'a') as f:
+              f.write('\n--------------------------------------------------------------------------------\n\n')
+              f.write(f"Version : {version}\n")
+              f.write(f"Date    : {commit_date}\n")
+              f.write(f"Auteur  : {commit_author}\n")
+              f.write(f"Lien    : {commit_link}\n")
+              f.write("Contenu :\n")
+              f.write(f"- {commit_message}\n\n")
+              f.write('--------------------------------------------------------------------------------\n')
+
+          # Configurer Git pour les commits automatisés
+          subprocess.run(['git', 'config', 'user.name', 'github-actions[bot]'], check=True)
+          subprocess.run(['git', 'config', 'user.email', 'github-actions[bot]@users.noreply.github.com'], check=True)
+
+          # Ajouter et committer history.txt
+          subprocess.run(['git', 'add', history_file], check=True)
+          commit_msg = f"Update history.txt to {version}"
+          subprocess.run(['git', 'commit', '-m', commit_msg], check=True)
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: false
