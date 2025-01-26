@@ -10,7 +10,7 @@ pad_number() {
   printf "%03d" "$1"
 }
 
-# Ajout de logs pour le debugging
+# Logging
 echo "Hook post-commit exécuté à $(date)" >> "$LOG_FILE"
 
 # Vérifie si history.txt existe, sinon le crée avec un en-tête
@@ -18,6 +18,7 @@ if [ ! -f "$HISTORY_FILE" ]; then
     echo "# history.txt - Journal des Évolutions pour \"Jeunes contre Vieux : La Guerre des Générations\"" > "$HISTORY_FILE"
     echo "--------------------------------------------------------------------------------" >> "$HISTORY_FILE"
     echo "" >> "$HISTORY_FILE"
+    echo "Created history.txt" >> "$LOG_FILE"
 fi
 
 # Récupère le hash du dernier commit
@@ -43,34 +44,25 @@ echo "Commit Link: $COMMIT_LINK" >> "$LOG_FILE"
 # Récupère la dernière version enregistrée
 LAST_VERSION_LINE=$(grep "^Version :" "$HISTORY_FILE" | tail -n1)
 if [ -z "$LAST_VERSION_LINE" ]; then
-    # Si aucune version n'est trouvée, commencer à v001.000
     MAJOR=1
     MINOR=0
 else
-    # Extraire les numéros majeur et mineur
     LAST_VERSION=${LAST_VERSION_LINE#Version : v}
     MAJOR=$(echo "$LAST_VERSION" | cut -d. -f1)
     MINOR=$(echo "$LAST_VERSION" | cut -d. -f2)
     
     # Incrémenter le numéro mineur
     MINOR=$((MINOR + 1))
-    
-    # Formater les numéros avec des zéros
-    MAJOR_PAD=$(pad_number "$MAJOR")
-    MINOR_PAD=$(pad_number "$MINOR")
-    
-    # Définir la nouvelle version
-    VERSION="v${MAJOR_PAD}.${MINOR_PAD}"
 fi
 
-# Si c'est la première version, définir VERSION
-if [ -z "$VERSION" ]; then
-    VERSION="v001.000"
-fi
+# Formater version avec zéros
+MAJOR_PAD=$(pad_number "$MAJOR")
+MINOR_PAD=$(pad_number "$MINOR")
+VERSION="v${MAJOR_PAD}.${MINOR_PAD}"
 
 echo "Next Version: $VERSION" >> "$LOG_FILE"
 
-# Ajoute une nouvelle entrée dans history.txt
+# Ajouter une nouvelle entrée dans history.txt
 cat <<EOT >> "$HISTORY_FILE"
 
 --------------------------------------------------------------------------------
@@ -86,4 +78,3 @@ Contenu :
 EOT
 
 echo "Entrée ajoutée à history.txt" >> "$LOG_FILE"
-
