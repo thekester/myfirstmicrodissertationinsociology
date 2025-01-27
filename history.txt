@@ -34,3 +34,14 @@ Contenu :
 - Update the index.html
 
 --------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Version : v001.003
+Date    : 2025-01-27
+Auteur  : thekester
+Lien    : https://github.com/thekester/myfirstmicrodissertationinsociology/commit/1987c300f2116048894dfd8086503f1ac2fb7b6b
+Contenu :
+- Update the update-history workflow
+
+--------------------------------------------------------------------------------
