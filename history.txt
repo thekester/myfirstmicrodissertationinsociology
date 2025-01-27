@@ -1,3 +1,36 @@
 # history.txt - Journal des Évolutions pour "Jeunes contre Vieux : La Guerre des Générations"
 
 --------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Version : v001.000
+Date    : 2025-01-26
+Auteur  : thekester
+Lien    : https://github.com/thekester/myfirstmicrodissertationinsociology/commit/d00a4c10ce7ef972ee27960617b9a428ce025a07
+Contenu :
+- Add the hook
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Version : v001.001
+Date    : 2025-01-26
+Auteur  : thekester
+Lien    : https://github.com/thekester/myfirstmicrodissertationinsociology/commit/5cadeacd230299385ad887f8c961b47105e2dd61
+Contenu :
+- Add GitHub Actions workflow to update history.txt
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Version : v001.002
+Date    : 2025-01-27
+Auteur  : thekester
+Lien    : https://github.com/thekester/myfirstmicrodissertationinsociology/commit/d3336966a61702b3c99a4948740fb971db5b111a
+Contenu :
+- Update the index.html
+
+--------------------------------------------------------------------------------
