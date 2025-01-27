@@ -19,6 +19,8 @@ jobs:
         with:
           # Fetch the entire history to retrieve all commits and tags
           fetch-depth: 0
+          # Do not persist the default GITHUB_TOKEN
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -101,9 +103,9 @@ jobs:
           subprocess.run(['git', 'config', 'user.email', 'github-actions[bot]@users.noreply.github.com'], check=True)
 
           # Stage and commit the updated history.txt
-          subprocess.run(['git', 'add', history_file], check=True)
+          subprocess.run(['git', 'add', history_file'], check=True)
           commit_msg = f"Update history.txt to {version}"
-          subprocess.run(['git', 'commit', '-m', commit_msg], check=True)
+          subprocess.run(['git', 'commit', '-m', commit_msg'], check=True)
           EOF
 
       - name: Push changes

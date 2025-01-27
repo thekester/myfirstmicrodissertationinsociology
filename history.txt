@@ -45,3 +45,14 @@ Contenu :
 - Update the update-history workflow
 
 --------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Version : v001.004
+Date    : 2025-01-27
+Auteur  : thekester
+Lien    : https://github.com/thekester/myfirstmicrodissertationinsociology/commit/45ef85bc469a91321c4926939ae80f5fcf0a45ef
+Contenu :
+- Update the update-history workflow
+
+--------------------------------------------------------------------------------
