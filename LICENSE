@@ -1,31 +1,21 @@
-Copyright (c) 2025 [Avenel Theophile]
+MIT License
+
+Copyright (c) 2025 Avenel Théophile
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this book and associated documentation files (the "Book"), to:
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. **Use**: Read and use the Book for personal, educational, or commercial purposes.
-2. **Copy**: Make copies of the Book in any medium.
-3. **Modify**: Adapt, translate, or create derivative works based on the Book.
-4. **Distribute**: Share copies of the Book with others.
-5. **Publish**: Publish, sell, or sublicense copies of the Book.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-**Conditions:**
-
-- The above copyright notice and this permission notice shall be included in all
-  copies or substantial portions of the Book.
-
-**Restrictions:**
-
-- **Sale of Original Copies**: You may sell copies of the original Book.
-- **Free Access Platform**: You may provide free access to the Book on designated platforms as specified by the author.
-- **Authorized Editions**: Any derivative works or editions must be authorized by the original author. Unauthorized editions are prohibited.
-
-**Limitations of Liability:**
-
-THE BOOK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE BOOK OR THE USE OR OTHER DEALINGS IN THE
-BOOK.
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
