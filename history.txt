@@ -232,3 +232,14 @@ Contenu :
 - Update chapter 12,13,14,15,16
 
 --------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Version : v001.017
+Date    : 2025-02-03
+Auteur  : thekester
+Lien    : https://github.com/thekester/myfirstmicrodissertationinsociology/commit/d04a378b8a5076377b782e173b39596e9e92afcb
+Contenu :
+- Add an awesome new version with all chapters stats
+
+--------------------------------------------------------------------------------
