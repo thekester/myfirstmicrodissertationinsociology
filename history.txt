@@ -287,3 +287,14 @@ Contenu :
 - Ajout des nouveaux témoignages
 
 --------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Version : v001.022
+Date    : 2025-02-05
+Auteur  : thekester
+Lien    : /commit/61b894ce697d4954c926a0b4f11eb63c65245358
+Contenu :
+- Ajout des nouveaux témoignages sur les entretiens recuillis par l'équipe SRT4
+
+--------------------------------------------------------------------------------
