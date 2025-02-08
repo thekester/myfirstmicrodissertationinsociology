@@ -2,146 +2,247 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jeunes vs Vieux : Dépasser la Fausse Guerre des Âges</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+
   <style>
-    /* Styles de base */
-    body {
-      font-family: Georgia, serif;
-      line-height: 1.6;
-      margin: 0 auto;
-      max-width: 940px;
-      padding: 2em;
-      background: #fff;
-      color: #222;
-    }
-    h1, h2, h3 {
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-      font-weight: normal;
-    }
-    h1 {
-      font-size: 2em;
-    }
-    h2 { 
-      font-size: 1.4em; 
-      border-bottom: 1px solid #ccc; 
-      padding-bottom: 0.1em; 
-      margin-bottom: 1em;
-    }
-    h3 {
-      font-size: 1.2em;
-      color: #333;
-      margin-top: 1em;
-    }
-    p, li {
-      margin-bottom: 1em;
-      text-align: justify;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    hr {
-      margin: 2em 0;
-    }
-    .pdf-button, #toggleModeButton {
-      margin-bottom: 1em;
-      padding: 0.6em 1.2em;
-      background-color: #007BFF;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .pdf-button:hover, #toggleModeButton:hover {
-      background-color: #0056b3;
-    }
-    .extrait-intergen {
-      background-color: #faf6dd;  /* Jaune pâle */
-      border-left: 5px solid #d0b353;
-      padding: 1rem;
-      margin: 1.5rem 0;
-      font-style: italic;
-      color: #444;
-    }
-    .extrait-intergen p {
-      margin: 0;
-    }
-    .extrait-video {
-      background: #fafafa;
-      border-left: 5px solid #007BFF;
-      padding: 1rem;
-      margin: 1.5rem 0;
-    }
-    .extrait-video blockquote {
-      margin: 0;
-      padding: 0 1em;
-      font-style: italic;
-      border-left: 3px solid #ccc;
-    }
-    .extrait-speaker {
-      font-weight: bold;
-      margin-top: 0.5rem;
-    }
-    .video-link {
-      display: block;
-      margin-top: 1rem;
-      text-decoration: none;
-      color: #007BFF;
-    }
-    .video-link:hover {
-      text-decoration: underline;
-    }
-    
-    /* Pagination – chaque "page" est un div de hauteur fixe */
-    #contentToPrint { }
-    #pagesContainer {
-      position: relative;
-    }
-    .page {
-      width: 940px;
-      min-height: 1200px;  /* Hauteur fixe d'une page (ajustable) */
-      box-sizing: border-box;
-      padding: 20px;
-      margin: 10px auto;
-      border: 1px solid #ccc;
-      display: none;
-    }
-    .page.active {
-      display: block;
-    }
-    /* En mode vertical, toutes les pages sont affichées */
-    .vertical-mode .page {
-      display: block !important;
-    }
-    /* La classe paginée rétablit le comportement par défaut */
-    .paginated-mode .page {
-      display: none;
-    }
-    .paginated-mode .page.active {
-      display: block;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-    /* Listes de notes */
-    .notes-list {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .notes-list li {
-      margin-bottom: 1em;
-    }
+:root {
+  --primary-color: #007BFF;
+  --primary-hover: #0056b3;
+  --background-color: #f4f4f4;
+  --page-bg: #ffffff;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
+  --accent-color: #d0b353;
+  --secondary-bg: #faf6dd;
+  --font-base: 'Open Sans', sans-serif;
+}
 
-    /* Message d'aide navigation */
-    .navigation-help {
-      font-style: italic;
-      font-size: 0.9em;
-      text-align: center;
-      margin-bottom: 2em;
-      color: #555;
-    }
+/* Global Styles */
+body {
+  font-family: var(--font-base);
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 940px;
+  padding: 2em;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Headings */
+h1, h2, h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.2em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+/* Paragraphs and Lists */
+p, li {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Horizontal Rule */
+hr {
+  margin: 2em 0;
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Buttons */
+.pdf-button,
+#toggleModeButton {
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 0.75em 1.5em;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover,
+#toggleModeButton:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Extraits */
+.extrait-intergen {
+  background-color: var(--secondary-bg);
+  border-left: 5px solid var(--accent-color);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--text-color);
+  border-radius: 4px;
+}
+
+.extrait-intergen p {
+  margin: 0;
+}
+
+.extrait-video {
+  background: #fafafa;
+  border-left: 5px solid var(--primary-color);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.extrait-video blockquote {
+  margin: 0;
+  padding: 0 1em;
+  font-style: italic;
+  border-left: 3px solid var(--border-color);
+}
+
+/* Video Link */
+.video-link {
+  display: block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.video-link:hover {
+  text-decoration: underline;
+}
+
+/* Page Container */
+.page {
+  width: 940px;
+  min-height: 1200px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 20px auto;
+  background: var(--page-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Navigation Modes */
+.vertical-mode .page {
+  display: block !important;
+}
+
+.paginated-mode .page {
+  display: none;
+}
+
+.paginated-mode .page.active {
+  display: block;
+}
+
+/* Responsive / Mobile Styles */@media screen and (max-width: 768px) {
+  body {
+    padding: 5px;
+    max-width: 100%;
+    font-size: 18px; /* éventuellement ajuster pour éviter un texte trop grand */
+    line-height: 1.6;
+  }
+  
+  .page {
+    width: 100%;
+    margin: 5px auto;
+    padding: 10px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    display: block !important;
+  }
+  
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.4em; }
+  h3 { font-size: 1.2em; }
+  
+  p, li {
+    font-size: 1em;
+  }
+  
+  .pdf-button,
+  #toggleModeButton {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1em;
+  }
+  
+  .extrait-intergen,
+  .extrait-video {
+    padding: 0.8rem;
+    margin: 1rem 0;
+  }
+  
+  /* Forcer le retour à la ligne sur les liens dans les notes & références */
+  .notes-list li a {
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+  
+  /* Ajouter un scroll horizontal si nécessaire */
+  #referencesContainer {
+    overflow-x: auto;
+  }
+  
+  /* Désactiver le mode paginé sur mobile si souhaité */
+  #toggleModeButton, .navigation-help {
+    display: none;
+  }
+  
+  /* Afficher toutes les pages en mode vertical */
+  .page {
+    display: block !important;
+  }
+}
+
+/* Appliquer le box-sizing globalement */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
   </style>
 </head>
 <body>
