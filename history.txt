@@ -320,3 +320,14 @@ Contenu :
 - Ajout de la nouvelel version paginée
 
 --------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Version : v001.025
+Date    : 2025-02-08
+Auteur  : thekester
+Lien    : /commit/3753ee1c66ad88eaa05abee9b5ef107f90f164de
+Contenu :
+- Ajout des favicons et du mode paginé, correction des problèmes responsifs
+
+--------------------------------------------------------------------------------
