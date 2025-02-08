@@ -26,6 +26,12 @@
   --font-base: 'Open Sans', sans-serif;
 }
 
+a {
+  overflow-wrap: break-word; /* ou word-wrap: break-word; pour une compatibilité plus ancienne */
+  white-space: normal;
+}
+
+
 /* Global Styles */
 body {
   font-family: var(--font-base);
@@ -162,6 +168,12 @@ hr {
   display: block;
 }
 
+p {
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+
 /* Navigation Modes */
 .vertical-mode .page {
   display: block !important;
@@ -175,13 +187,25 @@ hr {
   display: block;
 }
 
-/* Responsive / Mobile Styles */@media screen and (max-width: 768px) {
+/* Responsive / Mobile Styles */
+@media screen and (max-width: 768px) {
   body {
     padding: 5px;
     max-width: 100%;
     font-size: 18px; /* éventuellement ajuster pour éviter un texte trop grand */
     line-height: 1.6;
   }
+
+  a {
+  overflow-wrap: break-word; /* ou word-wrap: break-word; pour une compatibilité plus ancienne */
+  white-space: normal;
+}
+
+p {
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
   
   .page {
     width: 100%;
