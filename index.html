@@ -150,6 +150,24 @@ hr {
   text-decoration: underline;
 }
 
+
+/* Footnotes */
+.footnotes {
+  font-size: 0.9em;
+  margin: 1.5em 0;
+  color: #444;
+  border-top: 1px dotted #ccc;
+  padding-top: 0.5em;
+}
+.footnotes ol {
+  margin: 0;
+  padding-left: 1.3em;
+}
+.footnotes li {
+  margin-bottom: 0.5em;
+}
+
+
 /* Page Container */
 .page {
   width: 940px;
@@ -290,8 +308,6 @@ p {
         <hr>
 
   <!-- AVANT-PROPOS -->
- 
-  <!-- AVANT-PROPOS -->
   <h2>Avant-propos</h2>
   <p>
     Depuis quelques années, un récit médiatique récurrent oppose celles et ceux que l’on qualifie de « jeunes » à ceux que l’on étiquette comme « vieux », comme si la société était scindée en deux blocs incompatibles. Pourtant, à mesure que l’on analyse la réalité de terrain, nous découvrons que cette opposition relève souvent d’une construction médiatique plutôt que d’une hostilité véritable. Selon certaines études, <em>46 % des Français</em> considèrent que la « guerre des générations » est essentiellement un phénomène amplifié par les médias<sup><a href="#note1">1</a></sup>.
@@ -382,103 +398,98 @@ p {
   <p>
     Les témoignages du terrain montrent que les clivages intergénérationnels reposent souvent sur des stéréotypes – le senior « intrinsèquement dépassé » et le junior « irrévérencieux » – alors que la réalité reflète surtout une dynamique d’apprentissage et d’adaptation continue.
   </p>
-  <!-- Dans Chapitre 2, après les premiers paragraphes ou juste avant le <hr> final -->
-<div class="extrait-intergen">
-  <h3>Vidéo illustrant un dialogue théâtralisé : “La brochette de clichés”</h3>
-
-  <p><strong>Adeline Perez :</strong> 
-    « Regarde-moi cette belle brochette de clichés sur pattes ! Quand je te disais que ça existe, 
-    les générations, tu ne me croyais pas. Lui, c’est Jean Marc, il a 49 ans, il donne tout pour le taf, 
-    il fait tout : les KPI, le toner magenta, j’adore. Mais bon, ça fait 23 ans qu’il est là, 
-    il commence à fatiguer, va falloir penser à… » 
+   <!-- >>> AJOUT de la mention de la vidéo GEN Z : Des éternels enfants <<< -->
+   <p>
+    Par ailleurs, certains contenus abordent la question du
+    « refus de vieillir » chez la Gen Z, montrant
+    comment cette génération reconfigure les étapes de la vie
+    <sup><a href="#footGZ1">GZ1</a></sup>.
   </p>
 
-  <p><strong>Frédérique Jeske :</strong> 
-    « Bienvenue dans le monde des stéréotypes. Si tu veux continuer à pleurer sur tes taux de 
-    désengagement, eh bien continue à mettre tout le monde en case… »
+  <p>
+    De plus, la vidéo <em>"Gen Z : La génération la plus FAIBLE de tous les temps ?"</em> <sup><a href="#footGZ3">GZ3</a></sup> explore les critiques adressées à la génération Z, souvent perçue comme moins résiliente que ses prédécesseurs, en analysant les facteurs éducatifs et sociétaux qui contribuent à cette image.
   </p>
 
-  <p><strong>Adeline Perez :</strong> 
-    « Et euh là-bas, c’est la génération Y. La meuf a 35 ans : en gros, si elle a fait sa méditation 
-    anti-stress et si son boss lui a dit un truc gentil dans la journée, tu peux lui parler. 
-    Sinon, on va te saouler avec nos horaires non flexibles et notre politique environnementale de merde. »
-  </p>
+<!-- Dans Chapitre 2, après les premiers paragraphes ou juste avant le <hr> final -->
+<p>
+  D'autres contenus abordent ce phénomène par l'humour, comme illustré dans la vidéo 
+  <em>"La brochette de clichés"</em> <sup><a href="#foot217">217</a></sup>.
+</p>
 
-  <p><strong>Frédérique Jeske :</strong> 
-    « Ben oui c’est sûr, on a tous des différences, on est tous singuliers, mais on a aussi 
-    tous beaucoup de choses en commun, et puis l’intergénérationnel, c’est plus d’innovation, 
-    plus de performance… »
-  </p>
-
-  <p><strong>Adeline Perez :</strong> 
-    « Last but not least, la Gen Z : elle a 21 ans, non mais la chance qu’on a de la voir 
-    en présentiel, parce que d’habitude elle est en full remote, elle bosse depuis le Costa Rica. 
-    La légende raconte qu’elle sait changer TikTok en ChatGPT… »
-  </p>
-
-  <p><strong>Frédérique Jeske :</strong> 
-    « Bon, je vois le problème dans ta boîte. Tu permets que je teste un truc ? 
-    Qui veut du sens dans son job ? »
-  </p>
-
-  <p><strong>Chœur des différentes générations :</strong> « Moi, moi, moi ! »</p>
-
-  <p><strong>Frédérique Jeske :</strong> 
-    « Qui veut bosser avec plaisir ? »
-  </p>
-
-  <p><strong>Chœur :</strong> « Moi, moi, moi ! »</p>
-
-  <p><strong>Frédérique Jeske :</strong> 
-    « Qui veut se sentir utile ? »
-  </p>
-
-  <p><strong>Chœur :</strong> « Moi, moi, moi ! »</p>
-
-  <p> Vidéo sur Linkedin :
-    <a href="https://www.linkedin.com/posts/frederiquejeske_no%C3%ABl-en-famille-on-lattend-avec-impatience-activity-7275396960285593600-_MEL" target="_blank" rel="noopener noreferrer">
-      https://www.linkedin.com/posts/frederiquejeske_no%C3%ABl-en-famille-on-lattend-avec-impatience-activity-7275396960285593600-_MEL
-    </a>
-  </p>
-</div>
 
   <p>
     Par ailleurs, le marché de l’emploi exige de plus en plus des compétences numériques avancées pour les postes juniors. Une analyse de la <em>Grande École du Numérique</em> indique qu’environ 20 % des offres d’emploi concernent des métiers requérant ces compétences (développement, cybersécurité, data)<sup><a href="#note8">8</a></sup>.
   </p>
+
+  
+<p>
+  De plus, le témoignage vidéo <em>"Une Gen Z nous dit ce qu’elle ne fera pas comme ses parents au travail"</em> 
+  <sup><a href="#footGZ4">GZ4</a></sup> présente le point de vue d'une jeune femme de la génération Z qui refuse les heures supplémentaires non rémunérées, recherche du sens dans son travail, et revendique un équilibre entre vie professionnelle et vie personnelle, tout en soulignant l'importance de maîtriser les technologies.
+</p>
+
+<p>
+  Les défis du recrutement de la génération Z sont également illustrés par le témoignage vidéo 
+  <em>"Dans les pensées d'une RH qui tente de recruter un Gen Z"</em> 
+  <sup><a href="#footGZ5">GZ5</a></sup>, qui met en lumière les difficultés des responsables RH à comprendre et à répondre aux attentes spécifiques de cette génération.
+</p>
+<p>
+  Un autre contenu met en lumière, de façon humoristique, les réactions contrastées face à un retard au travail en fonction des générations. Ainsi, la vidéo <em>"Un Gen X, un Millennial et un Gen Z sont en retard au travail"</em> <sup><a href="#footGZ6">GZ6</a></sup> illustre comment un employé de la génération X, un millennial et un membre de la génération Z adoptent des attitudes différentes pour justifier leur retard, soulignant ainsi leurs divergences en termes de communication et de rapport à l’autorité.
+</p>
+<p>
+  Un autre contenu met en lumière, de manière humoristique, les approches distinctes lors de la recherche d’emploi par différentes générations. Ainsi, la vidéo <em>"Un Gen X, un Millennial et un Gen Z recherchent un emploi"</em> <sup><a href="#footGZ7">GZ7</a></sup> illustre comment un représentant de la génération X, un millennial et un membre de la génération Z adoptent chacun des stratégies spécifiques face aux exigences du marché du travail.
+</p>
+<p>
+  Certains contenus médiatiques abordent également la représentation de la génération Z. Par exemple, la vidéo 
+  <em>"Le PROBLÈME avec les personnages de la Gen Z"</em> <sup><a href="#footGZ8">GZ8</a></sup> analyse comment les médias dépeignent cette génération de manière stéréotypée, en insistant sur sa dépendance aux technologies, sa sensibilité exacerbée et son manque de résilience. Elle appelle à une représentation plus nuancée et authentique de ses membres.
+</p>
+<p>
+  Certains témoignages illustrent avec humour les différences générationnelles dans le monde professionnel. Par exemple, la vidéo 
+  <em>"Un Gen X, un Millennial et un Gen Z négocient leur salaire"</em> <sup><a href="#footGS9">GS9</a></sup> montre comment chaque génération adopte une stratégie distincte lors de la négociation salariale, soulignant ainsi leurs valeurs et attentes propres.
+</p>
+<p>
+  D'autres témoignages illustrent les défis et stéréotypes auxquels font face les jeunes générations. Par exemple, la vidéo 
+  <em>"Faire partie de la génération Y / Z : C’EST QUOI LE PIRE ?!"</em> <sup><a href="#footGZ10">GZ10</a></sup> explore les difficultés et les préjugés associés aux générations Y et Z, en mettant en lumière leur rapport aux technologies, aux conditions de travail et aux valeurs professionnelles.
+</p>
+<p>
+  Certains discours médiatiques critiquent la génération Z en la qualifiant de « la génération la plus FAIBLE de tous les temps ». Cette vision est contestée par plusieurs experts, comme en témoigne la vidéo 
+  <em>"Gen Z : La génération la plus FAIBLE de tous les temps ?"</em> <sup><a href="#footGZ11">GZ11</a></sup> qui analyse les facteurs éducatifs et sociétaux pouvant contribuer à cette perception.
+</p>
+<p>
+  Certains contenus mettent en lumière une tendance émergente dans le monde du travail, connue sous le nom de "loud quitting". Cette approche consiste pour la génération Z à annoncer publiquement sa démission pour dénoncer des conditions de travail jugées inacceptables. La vidéo 
+  <em>"Gen Z introduces new way of quitting jobs, and it’s loud"</em> <sup><a href="#footGZ12">GZ12</a></sup> analyse ce phénomène, en soulignant les avantages et les risques associés à cette pratique.
+</p>
+
+<p>
+  Certains contenus abordent avec humour la tendance intergénérationnelle où la génération Z critique les comportements de la génération suivante. Ainsi, la vidéo 
+  <em>"La Gen Z déteste la nouvelle génération"</em> <sup><a href="#footGZ13">GZ13</a></sup> illustre comment, par le biais de situations satiriques, la Gen Z exprime son incompréhension et son rejet face aux habitudes et valeurs des plus jeunes.
+</p>
+<p>
+  Plusieurs entreprises se séparent de leurs employés de la génération Z, en raison de défis tels que le manque de compétences en communication et une éthique de travail jugée insuffisante. Ces enjeux sont analysés dans la vidéo 
+  <em>"Why Companies Are Firing Gen Z Workers"</em> <sup><a href="#footGZ14">GZ14</a></sup>, qui insiste également sur l'importance pour les employeurs de comprendre les valeurs et les motivations de cette génération pour favoriser une collaboration efficace.
+</p>
+<p>
+  Une étude récente examine les défis auxquels la génération Z est confrontée sur le marché du travail, identifiant notamment un manque de compétences en communication et une éthique de travail souvent jugée insuffisante. Cependant, de nombreux jeunes adultes contestent ces conclusions, arguant que ces perceptions reposent sur des stéréotypes et ne reflètent pas la réalité de leurs expériences professionnelles. Cette analyse est illustrée par la vidéo <em>"Study explains why Gen Z struggles in the workforce. Young adults disagree"</em> <sup><a href="#footGZ15">GZ15</a></sup>.
+</p>
+
+
 
     <!-- Nouveau bloc extrait sur l'innovation technologique intergénérationnelle -->
     <div class="extrait-intergen">
       <h3>Les jeunes et l'innovation technologique</h3>
       <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe d'Orange :</strong> « Ce qui m’a le plus impressionné, c’est la rapidité avec laquelle les jeunes assimilent les nouvelles technologies. Là où nous avions appris le Pascal ou le C++, ils maîtrisent instantanément des langages modernes comme Python. Cette complémentarité crée une dynamique enrichissante au sein de l’équipe, où l’expérience des seniors rencontre l’enthousiasme et l’innovation des digital natives. »</p>
     </div>
-  <!-- Juste après le 2e paragraphe du Chapitre 2 -->
-<div class="extrait-intergen">
-  <h3>Zoom : “Vous, les jeunes au travail&nbsp;?”</h3>
-  <p><strong>Vidéo (Frédérique Jeske) :</strong></p>
-  <p>
-    « Sérieux moi j’y comprends rien. Notre société aime les jeunes, on exalte partout 
-    (télé, cinéma) les qualités de la jeunesse : plus créatifs, plus dynamiques, plus agiles. 
-    Il ne fait pas bon avoir des rides ou des cheveux blancs, le vieillissement c’est tabou. 
-    Et dans le même temps, les entreprises ne veulent pas non plus recruter les plus jeunes. 
-    On a 16 % des moins de 24 ans qui sont au chômage, 1,4 million de jeunes sans emploi. 
-    Obtenir un premier CDI, c’est un chemin de croix… 
-  </p>
-  <p>
-    Les entreprises veulent des “jeunes talents”, donc oui des jeunes, mais avec expérience. 
-    Donc pas de vieux, pas trop de jeunes… L’âge d’or des 30-45 ans serait donc la seule 
-    génération “utile” ? Moi je dis souvent qu’il faut changer le regard sur les expérimentés, 
-    parce que bientôt ils seront majoritaires dans nos entreprises. Mais changeons aussi de regard 
-    sur nos jeunes : non, la Gen Z n’est pas globalement fainéante, incapable de bosser et accro 
-    aux réseaux sociaux. Comme toutes les générations, chacun est singulier et unique. 
-    Et je vous assure qu’une équipe engagée, innovante et performante, c’est une équipe intergénérationnelle. »
-  </p>
-  <p>
-    Post Linkedin sur le thème de " Et si on changeait notre regard sur les âges au travail ?"" <br>
-    <a href="https://www.linkedin.com/posts/frederiquejeske_s%C3%A9rieux-moi-je-ny-comprends-rien-activity-7268526690056785920-Z4Br/" target="_blank">
-      https://www.linkedin.com/posts/frederiquejeske_s%C3%A9rieux-moi-je-ny-comprends-rien-activity-7268526690056785920-Z4Br/
-    </a>
-  </p>
-</div>
+    <!-- Juste après le 2e paragraphe du Chapitre 2 -->
+    <p>
+      D'autres contenus abordent ces questions avec humour et esprit critique. Par exemple, dans la vidéo 
+      <em>"Zoom : Vous, les jeunes au travail ?"</em> <sup><a href="#footZTW1">ZTW1</a></sup>, 
+      Frédérique Jeske s'interroge sur la valorisation excessive de la jeunesse dans le monde professionnel, 
+      remettant en question les critères traditionnels de recrutement et soulignant l'importance de l'expérience.
+    </p>
+    <p>
+      Par ailleurs, la vidéo <em>"GEN Z : Les rebelles du travail"</em> <sup><a href="#footGZ2">GZ2</a></sup> explore comment la génération Z, confrontée à un marché du travail exigeant et à des conditions jugées inacceptables (heures supplémentaires non payées, salaires bas, etc.), revendique de meilleures conditions et redéfinit les normes professionnelles.
+    </p>
+    
+
 
 <div class="extrait-intergen">
   <h3>Commentaires sur Linkedin en dessous du post </h3>
@@ -520,6 +531,104 @@ p {
     </p>
   </div>
         <hr>
+        <!-- Courte note de bas de page insérée juste après le paragraphe -->
+        <div class="footnotes">
+          <ol>
+            <li id="footGZ1">
+              <strong>“GEN Z : Des éternels enfants”</strong> (vidéo YouTube) : points marquants
+              <ul>
+                <li>Question de l’« adulte responsable » et étirement de la jeunesse</li>
+                <li>Changements de priorités : voyages plutôt qu’achat immobilier</li>
+                <li>Influence forte des réseaux sociaux et quête de bien-être</li>
+                <li>Culture de la “distraction” et difficulté de planifier à long terme</li>
+                <li>Refus de vieillir, préférant souplesse et spontanéité</li>
+              </ul>
+              → Voir notice <a href="#biblioGZ1">[GZ1]</a> en fin d’article.
+            </li>
+            <li id="foot217">
+              <strong>La brochette de clichés [vidéo LinkedIn]</strong> (2024) : Vidéo satirique mettant en scène un dialogue théâtral qui illustre, de manière humoristique, divers clichés intergénérationnels. 
+              <br>Voir la notice bibliographique (Note 217) en fin d’article.
+            </li>
+            <!-- Dans la section des notes de bas de page -->
+            <li id="footZTW1">
+              <strong>Zoom : Vous, les jeunes au travail? [Vidéo LinkedIn]</strong> (2023/2024) : 
+              Dans cette vidéo, Frédérique Jeske critique la tendance à valoriser exclusivement la jeunesse, 
+              en soulignant que l'expérience des professionnels plus âgés reste essentielle. 
+              Elle remet en question l'idée que seuls les "jeunes talents" sont capables d'innover, appelant à une réévaluation des critères de recrutement.
+            </li>
+            <li id="footGZ2">
+              <strong>GEN Z : Les rebelles du travail [Vidéo YouTube]</strong> : Publiée il y a 9 mois, cette vidéo analyse la position de la génération Z face aux exigences du marché du travail. Elle met en avant leur refus des conditions traditionnelles (heures supplémentaires non rémunérées, salaires insuffisants) et leur volonté de redéfinir les normes professionnelles.
+            </li>
+            <li id="footGZ3">
+              <strong>Gen Z : La génération la plus FAIBLE de tous les temps ? [Vidéo YouTube]</strong> :
+              Cette vidéo examine les critiques adressées à la génération Z, souvent perçue comme moins résiliente que les générations précédentes. Elle explore notamment comment une éducation surprotectrice et une moindre exposition aux défis pratiques influencent la capacité de ces jeunes à s’adapter au monde du travail et à assumer des responsabilités.
+            </li>
+            
+          <li id="footGZ4">
+            <strong>Une Gen Z nous dit ce qu’elle ne fera pas comme ses parents au travail [Vidéo YouTube]</strong> : 
+            Cette vidéo présente le témoignage d'une jeune femme de la génération Z qui explique son refus d'effectuer des heures supplémentaires non rémunérées, son exigence de sens dans son travail, ainsi que l'importance qu'elle accorde à un équilibre sain entre vie professionnelle et vie personnelle, et à l'utilisation des technologies pour rester compétitive.
+          </li>
+          <li id="footGZ5">
+            <strong>Dans les pensées d'une RH qui tente de recruter un Gen Z [Vidéo YouTube]</strong> : 
+            Cette vidéo explore les défis auxquels sont confrontés les responsables des ressources humaines lors du recrutement de membres de la génération Z. Elle met en lumière les différences de valeurs et d'attentes entre générations – notamment en termes d'équilibre entre vie professionnelle et vie personnelle, de quête de sens et d'utilisation des technologies numériques – et insiste sur la nécessité pour les RH de s'adapter afin d'attirer et de fidéliser ces jeunes talents.
+          </li>
+          <li id="footGZ7">
+            <strong>Un Gen X, un Millennial et un Gen Z recherchent un emploi [Vidéo YouTube]</strong> : 
+            Cette vidéo humoristique montre comment trois générations – Gen X, Millennials et Gen Z – abordent différemment la recherche d’emploi. Elle met en lumière leurs méthodes, priorités et valeurs professionnelles contrastées face aux exigences du marché du travail.
+          </li>
+          
+
+          <li id="footGZ7">
+            <strong>Un Gen X, un Millennial et un Gen Z recherchent un emploi [Vidéo YouTube]</strong> : 
+            Cette vidéo humoristique montre comment trois générations – Gen X, Millennials et Gen Z – abordent différemment la recherche d’emploi. Elle met en lumière leurs méthodes, priorités et valeurs professionnelles contrastées face aux exigences du marché du travail.
+          </li>
+
+
+          <li id="footGZ8">
+            <strong>Le PROBLÈME avec les personnages de la Gen Z [Vidéo YouTube]</strong> : 
+            Cette vidéo analyse la représentation stéréotypée des personnages de la génération Z dans les médias, en soulignant notamment leur dépendance aux technologies, leur sensibilité exacerbée et leur manque de résilience. Elle plaide pour une image plus nuancée et authentique de cette génération.
+          </li>
+          
+          <li id="footGS9">
+            <strong>Un Gen X, un Millennial et un Gen Z négocient leur salaire [Vidéo YouTube]</strong> : 
+            Cette vidéo illustre de manière humoristique la négociation salariale par trois représentants de générations différentes – la Génération X, les Millennials et la Génération Z. Elle met en avant leurs stratégies et attentes variées en matière de communication et de valorisation du travail.
+          </li>
+          
+          <li id="footGZ10">
+            <strong>Faire partie de la génération Y / Z : C’EST QUOI LE PIRE ?! [Vidéo YouTube]</strong> : 
+            Cette vidéo analyse les défis et stéréotypes auxquels sont confrontées les générations Y et Z, notamment la dépendance aux technologies, les attentes professionnelles et la remise en question des normes traditionnelles. Elle déconstruit certains préjugés en montrant comment ces jeunes redéfinissent leur rapport au travail.
+          </li>
+
+          <li id="footGZ11">
+            <strong>GZ11 – Gen Z : La génération la plus FAIBLE de tous les temps ? [Vidéo YouTube]</strong> : 
+            Cette vidéo explore les critiques adressées à la génération Z, souvent présentée comme moins résiliente que les générations précédentes. Elle examine notamment l’impact d’une éducation axée sur la protection et la moindre exposition aux défis pratiques, et propose une réflexion sur la nécessité de développer la résilience et l’autonomie chez les jeunes.
+          </li>
+          <li id="footGZ12">
+            <strong>GZ12 – Gen Z introduces new way of quitting jobs, and it’s loud [Vidéo YouTube]</strong> : 
+            Cette vidéo explore le phénomène du "loud quitting", dans lequel les jeunes travailleurs de la génération Z annoncent publiquement leur démission pour protester contre des conditions de travail perçues comme toxiques ou injustes. Elle met en lumière la rupture avec le modèle traditionnel du "quiet quitting" et examine les implications de cette démarche pour la réputation professionnelle et les pratiques managériales.
+          </li>
+          <li id="footGZ13">
+            <strong>GZ13 – La Gen Z déteste la nouvelle génération [Vidéo YouTube]</strong> : 
+            Cette vidéo aborde de manière humoristique les critiques que la génération Z adresse à la génération Alpha, en soulignant leur incompréhension face aux comportements et aux valeurs des plus jeunes. Elle met en avant le cycle perpétuel du jugement entre générations et invite à repenser l’évolution rapide des normes sociales et culturelles.
+          </li>
+          <li id="footGZ14">
+            <strong>GZ14 – Why Companies Are Firing Gen Z Workers [Vidéo YouTube]</strong> : 
+            Cette vidéo explore les raisons pour lesquelles certaines entreprises se séparent de leurs employés de la génération Z, en soulignant des défis tels que le manque de compétences en communication, une éthique de travail perçue comme insuffisante et des attentes professionnelles élevées. Elle met en avant la nécessité pour les employeurs de mieux comprendre les valeurs et motivations de cette génération.
+          </li>
+
+          <li id="footGZ15">
+            <strong>GZ15 – Study explains why Gen Z struggles in the workforce. Young adults disagree [Vidéo YouTube]</strong> : 
+            Cette vidéo analyse les difficultés que rencontre la génération Z sur le marché du travail, notamment en termes de communication et d'éthique professionnelle, tout en présentant les objections de jeunes adultes qui contestent ces critiques comme étant fondées sur des stéréotypes. Elle insiste sur la nécessité pour les employeurs d’adapter leurs pratiques aux attentes de cette génération.
+          </li>
+          
+          
+          
+          
+          
+
+          </ol>
+        </div>
+        <!-- Fin note de bas de page -->
       </div>
       
       <!-- Page 4 : Chapitre 3 -->
@@ -2127,8 +2236,130 @@ p {
               <a href="https://www.linkedin.com/posts/frederiquejeske_no%C3%ABl-en-famille-on-lattend-avec-impatience-activity-7275396960285593600-_MEL" target="_blank">
                 https://www.linkedin.com/posts/frederiquejeske_no%C3%ABl-en-famille-on-lattend-avec-impatience-activity-7275396960285593600-_MEL
               </a><br>
-              <em>Format inspiré de Grafiati (référence vidéo en ligne).</em>
             </li>
+            <!-- ============ NOUVELLE NOTICE BIBLIO POUR GEN Z (GZ1) ============ -->
+            <li id="biblioGZ1">
+              <strong>[GZ1]</strong> 
+              « GEN Z : Des éternels enfants », vidéo en ligne, YouTube (2023).<br>
+              <a href="https://www.youtube.com/watch?v=DepeQS6iT68" target="_blank">
+                https://www.youtube.com/watch?v=DepeQS6iT68
+              </a>
+              <br>
+              <em>Résumé : défis propres à la Gen Z : “adulte responsable”, priorités 
+              (voyage vs. achat immobilier), influence des réseaux sociaux, quête de 
+              bien-être et “refus de vieillir”.</em>
+            </li>
+            <li id="ref217">
+              <strong>La brochette de clichés [vidéo LinkedIn]</strong>. (2024). Perez, A., &amp; Jeske, F. 
+              Vidéo satirique illustrant les clichés intergénérationnels. Disponible sur LinkedIn : 
+              <a href="https://www.linkedin.com/posts/frederiquejeske_no%C3%ABl-en-famille-on-lattend-avec-impatience-activity-7275396960285593600-_MEL" target="_blank" rel="noopener noreferrer">
+                https://www.linkedin.com/posts/frederiquejeske_no%C3%ABl-en-famille-on-lattend-avec-impatience-activity-7275396960285593600-_MEL
+              </a>
+            </li>
+            <li id="refZTW1">
+              <strong>Zoom : Vous, les jeunes au travail? [Vidéo LinkedIn]</strong>. (2023/2024). Frédérique Jeske. 
+              Vidéo publiée sur LinkedIn, dans laquelle l'intervenante analyse avec ironie les clichés associés à la jeunesse dans le monde professionnel.  
+              Disponible sur : 
+              <a href="https://www.linkedin.com/posts/frederiquejeske_s%C3%A9rieux-moi-je-ny-comprends-rien-activity-7268526690056785920-Z4Br/" target="_blank" rel="noopener noreferrer">
+                https://www.linkedin.com/posts/frederiquejeske_s%C3%A9rieux-moi-je-ny-comprends-rien-activity-7268526690056785920-Z4Br/
+              </a>
+            </li>
+            <li id="refGZ2">
+              <strong>GEN Z : Les rebelles du travail [Vidéo YouTube]</strong>. (2023). Dans cette vidéo, la génération Z est présentée comme refusant les conditions de travail jugées inacceptables et revendiquant une révision des normes professionnelles. Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=O5e72NrZbqs" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=O5e72NrZbqs
+              </a>
+            </li>
+            <li id="refGZ3">
+              <strong>Gen Z : La génération la plus FAIBLE de tous les temps ? [Vidéo YouTube]</strong>. 
+              Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=epLycx9FSvI" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=epLycx9FSvI
+              </a>
+            </li>
+            <li id="refGZ4">
+              <strong>Une Gen Z nous dit ce qu’elle ne fera pas comme ses parents au travail [Vidéo YouTube]</strong>. 
+              Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=2fioJ19gCbQ" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=2fioJ19gCbQ
+              </a>
+            </li>
+            
+  <li id="refGZ5">
+    <strong>Dans les pensées d'une RH qui tente de recruter un Gen Z [Vidéo YouTube]</strong>. 
+    Disponible sur : 
+    <a href="https://www.youtube.com/watch?v=Kt1WpTcUH_I" target="_blank" rel="noopener noreferrer">
+      https://www.youtube.com/watch?v=Kt1WpTcUH_I
+    </a>
+  </li>
+  <li id="refGZ6">
+    <strong>Un Gen X, un Millennial et un Gen Z sont en retard au travail [Vidéo YouTube]</strong>. 
+    Disponible sur : 
+    <a href="https://www.youtube.com/watch?v=l9ZS5xgmWi8" target="_blank" rel="noopener noreferrer">
+      https://www.youtube.com/watch?v=l9ZS5xgmWi8
+    </a>
+  </li>
+  <li id="refGZ7">
+    <strong>Un Gen X, un Millennial et un Gen Z recherchent un emploi [Vidéo YouTube]</strong>. 
+    Disponible sur : 
+    <a href="https://www.youtube.com/watch?v=y8us5VaTaH4" target="_blank" rel="noopener noreferrer">
+      https://www.youtube.com/watch?v=y8us5VaTaH4
+    </a>
+  </li>
+  <li id="refGZ8">
+    <strong>Le PROBLÈME avec les personnages de la Gen Z [Vidéo YouTube]</strong>. 
+    Disponible sur : 
+    <a href="https://www.youtube.com/watch?v=NQnFbVzWIec" target="_blank" rel="noopener noreferrer">
+      https://www.youtube.com/watch?v=NQnFbVzWIec
+    </a>
+  </li>
+  <li id="refGS9">
+    <strong>Un Gen X, un Millennial et un Gen Z négocient leur salaire [Vidéo YouTube]</strong>. Disponible sur : 
+    <a href="https://www.youtube.com/watch?v=9E607VR1eCs" target="_blank" rel="noopener noreferrer">
+      https://www.youtube.com/watch?v=9E607VR1eCs
+    </a>
+  </li>
+  
+  <li id="refGZ10">
+    <strong>Faire partie de la génération Y / Z : C’EST QUOI LE PIRE ?! [Vidéo YouTube]</strong>. Disponible sur : 
+    <a href="https://www.youtube.com/watch?v=STxxloxmrkI" target="_blank" rel="noopener noreferrer">
+      https://www.youtube.com/watch?v=STxxloxmrkI
+    </a>
+  </li>
+
+  <li id="refGZ11">
+    <strong>Gen Z : La génération la plus FAIBLE de tous les temps ? [Vidéo YouTube]</strong>. 
+    Disponible sur : <a href="https://www.youtube.com/watch?v=epLycx9FSvI" target="_blank" rel="noopener noreferrer">
+    https://www.youtube.com/watch?v=epLycx9FSvI</a>
+  </li>
+
+  <li id="refGZ12">
+    <strong>Gen Z introduces new way of quitting jobs, and it’s loud [Vidéo YouTube]</strong>. 
+    Disponible sur : <a href="https://www.youtube.com/watch?v=MBYUfMUjoew" target="_blank" rel="noopener noreferrer">
+    https://www.youtube.com/watch?v=MBYUfMUjoew</a>
+  </li>
+  <li id="refGZ13">
+    <strong>La Gen Z déteste la nouvelle génération [Vidéo YouTube]</strong>. Disponible sur : 
+    <a href="https://www.youtube.com/watch?v=Fb5bXxPuul4" target="_blank" rel="noopener noreferrer">
+      https://www.youtube.com/watch?v=Fb5bXxPuul4
+    </a>
+  </li>
+  <li id="refGZ14">
+    <strong>Why Companies Are Firing Gen Z Workers [Vidéo YouTube]</strong>. Disponible sur : 
+    <a href="https://www.youtube.com/watch?v=hin_juGmdHs" target="_blank" rel="noopener noreferrer">
+      https://www.youtube.com/watch?v=hin_juGmdHs
+    </a>
+  </li>
+  
+  <li id="refGZ15">
+    <strong>Study explains why Gen Z struggles in the workforce. Young adults disagree [Vidéo YouTube]</strong>. Disponible sur : 
+    <a href="https://www.youtube.com/watch?v=yx03GVbovSU" target="_blank" rel="noopener noreferrer">
+      https://www.youtube.com/watch?v=yx03GVbovSU
+    </a>
+  </li>
+  
+  
+            
           </ul>
         </div>
       </div> <!-- Fin de page22 (Notes & Références) -->
