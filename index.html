@@ -12,279 +12,275 @@
   <link rel="shortcut icon" href="images/favicon.ico">
 
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-:root {
-  --primary-color: #007BFF;
-  --primary-hover: #0056b3;
-  --background-color: #f4f4f4;
-  --page-bg: #ffffff;
-  --text-color: #333333;
-  --border-color: #e0e0e0;
-  --accent-color: #d0b353;
-  --secondary-bg: #faf6dd;
-  --font-base: 'Open Sans', sans-serif;
-}
+    :root {
+      --primary-color: #007BFF;
+      --primary-hover: #0056b3;
+      --background-color: #f4f4f4;
+      --page-bg: #ffffff;
+      --text-color: #333333;
+      --border-color: #e0e0e0;
+      --accent-color: #d0b353;
+      --secondary-bg: #faf6dd;
+      --font-base: 'Open Sans', sans-serif;
+    }
 
-a {
-  overflow-wrap: break-word; /* ou word-wrap: break-word; pour une compatibilité plus ancienne */
-  white-space: normal;
-}
+    a {
+      overflow-wrap: break-word; /* ou word-wrap: break-word; pour une compatibilité plus ancienne */
+      white-space: normal;
+    }
 
+    /* Global Styles */
+    body {
+      font-family: var(--font-base);
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 940px;
+      padding: 2em;
+      background: var(--background-color);
+      color: var(--text-color);
+    }
 
-/* Global Styles */
-body {
-  font-family: var(--font-base);
-  line-height: 1.6;
-  margin: 0 auto;
-  max-width: 940px;
-  padding: 2em;
-  background: var(--background-color);
-  color: var(--text-color);
-}
+    /* Headings */
+    h1, h2, h3 {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      font-weight: 600;
+    }
 
-/* Headings */
-h1, h2, h3 {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  font-weight: 600;
-}
+    h1 {
+      font-size: 2em;
+    }
 
-h1 {
-  font-size: 2em;
-}
+    h2 {
+      font-size: 1.5em;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.2em;
+    }
 
-h2 {
-  font-size: 1.5em;
-  border-bottom: 2px solid var(--border-color);
-  padding-bottom: 0.2em;
-}
+    h3 {
+      font-size: 1.25em;
+    }
 
-h3 {
-  font-size: 1.25em;
-}
+    /* Paragraphs and Lists */
+    p, li {
+      margin-bottom: 1em;
+      text-align: justify;
+    }
 
-/* Paragraphs and Lists */
-p, li {
-  margin-bottom: 1em;
-  text-align: justify;
-}
+    /* Links */
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-/* Links */
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+    a:hover {
+      color: var(--primary-hover);
+    }
 
-a:hover {
-  color: var(--primary-hover);
-}
+    /* Horizontal Rule */
+    hr {
+      margin: 2em 0;
+      border: none;
+      border-top: 1px solid var(--border-color);
+    }
 
-/* Horizontal Rule */
-hr {
-  margin: 2em 0;
-  border: none;
-  border-top: 1px solid var(--border-color);
-}
+    /* Buttons */
+    .pdf-button,
+    #toggleModeButton {
+      display: inline-block;
+      margin-bottom: 1em;
+      padding: 0.75em 1.5em;
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
 
-/* Buttons */
-.pdf-button,
-#toggleModeButton {
-  display: inline-block;
-  margin-bottom: 1em;
-  padding: 0.75em 1.5em;
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
+    .pdf-button:hover,
+    #toggleModeButton:hover {
+      background-color: var(--primary-hover);
+    }
 
-.pdf-button:hover,
-#toggleModeButton:hover {
-  background-color: var(--primary-hover);
-}
+    /* Extraits */
+    .extrait-intergen {
+      background-color: var(--secondary-bg);
+      border-left: 5px solid var(--accent-color);
+      padding: 1rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--text-color);
+      border-radius: 4px;
+    }
 
-/* Extraits */
-.extrait-intergen {
-  background-color: var(--secondary-bg);
-  border-left: 5px solid var(--accent-color);
-  padding: 1rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  color: var(--text-color);
-  border-radius: 4px;
-}
+    .extrait-intergen p {
+      margin: 0;
+    }
 
-.extrait-intergen p {
-  margin: 0;
-}
+    .extrait-video {
+      background: #fafafa;
+      border-left: 5px solid var(--primary-color);
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
 
-.extrait-video {
-  background: #fafafa;
-  border-left: 5px solid var(--primary-color);
-  padding: 1rem;
-  margin: 1.5rem 0;
-  border-radius: 4px;
-}
+    .extrait-video blockquote {
+      margin: 0;
+      padding: 0 1em;
+      font-style: italic;
+      border-left: 3px solid var(--border-color);
+    }
 
-.extrait-video blockquote {
-  margin: 0;
-  padding: 0 1em;
-  font-style: italic;
-  border-left: 3px solid var(--border-color);
-}
+    /* Video Link */
+    .video-link {
+      display: block;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
 
-/* Video Link */
-.video-link {
-  display: block;
-  margin-top: 1rem;
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-.video-link:hover {
-  text-decoration: underline;
-}
-
-
-/* Footnotes */
-.footnotes {
-  font-size: 0.9em;
-  margin: 1.5em 0;
-  color: #444;
-  border-top: 1px dotted #ccc;
-  padding-top: 0.5em;
-}
-.footnotes ol {
-  margin: 0;
-  padding-left: 1.3em;
-}
-.footnotes li {
-  margin-bottom: 0.5em;
-}
+    .video-link:hover {
+      text-decoration: underline;
+    }
 
 
-/* Page Container */
-.page {
-  width: 940px;
-  min-height: 1200px;
-  box-sizing: border-box;
-  padding: 20px;
-  margin: 20px auto;
-  background: var(--page-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  display: none;
-}
-
-.page.active {
-  display: block;
-}
-
-p {
-  overflow-wrap: break-word;
-  white-space: normal;
-}
+    /* Footnotes */
+    .footnotes {
+      font-size: 0.9em;
+      margin: 1.5em 0;
+      color: #444;
+      border-top: 1px dotted #ccc;
+      padding-top: 0.5em;
+    }
+    .footnotes ol {
+      margin: 0;
+      padding-left: 1.3em;
+    }
+    .footnotes li {
+      margin-bottom: 0.5em;
+    }
 
 
-/* Navigation Modes */
-.vertical-mode .page {
-  display: block !important;
-}
+    /* Page Container */
+    .page {
+      width: 940px;
+      min-height: 1200px;
+      box-sizing: border-box;
+      padding: 20px;
+      margin: 20px auto;
+      background: var(--page-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
 
-.paginated-mode .page {
-  display: none;
-}
+    .page.active {
+      display: block;
+    }
 
-.paginated-mode .page.active {
-  display: block;
-}
-
-/* Responsive / Mobile Styles */
-@media screen and (max-width: 768px) {
-  body {
-    padding: 5px;
-    max-width: 100%;
-    font-size: 18px; /* éventuellement ajuster pour éviter un texte trop grand */
-    line-height: 1.6;
-  }
-
-  a {
-  overflow-wrap: break-word; /* ou word-wrap: break-word; pour une compatibilité plus ancienne */
-  white-space: normal;
-}
-
-p {
-  overflow-wrap: break-word;
-  white-space: normal;
-}
-
-  
-  .page {
-    width: 100%;
-    margin: 5px auto;
-    padding: 10px;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    display: block !important;
-  }
-  
-  h1 { font-size: 1.6em; }
-  h2 { font-size: 1.4em; }
-  h3 { font-size: 1.2em; }
-  
-  p, li {
-    font-size: 1em;
-  }
-  
-  .pdf-button,
-  #toggleModeButton {
-    width: 100%;
-    padding: 0.8em;
-    font-size: 1em;
-  }
-  
-  .extrait-intergen,
-  .extrait-video {
-    padding: 0.8rem;
-    margin: 1rem 0;
-  }
-  
-  /* Forcer le retour à la ligne sur les liens dans les notes & références */
-  .notes-list li a {
-    word-break: break-all;
-    overflow-wrap: break-word;
-  }
-  
-  /* Ajouter un scroll horizontal si nécessaire */
-  #referencesContainer {
-    overflow-x: auto;
-  }
-  
-  /* Désactiver le mode paginé sur mobile si souhaité */
-  #toggleModeButton, .navigation-help {
-    display: none;
-  }
-  
-  /* Afficher toutes les pages en mode vertical */
-  .page {
-    display: block !important;
-  }
-}
-
-/* Appliquer le box-sizing globalement */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+    p {
+      overflow-wrap: break-word;
+      white-space: normal;
+    }
 
 
+    /* Navigation Modes */
+    .vertical-mode .page {
+      display: block !important;
+    }
 
+    .paginated-mode .page {
+      display: none;
+    }
+
+    .paginated-mode .page.active {
+      display: block;
+    }
+
+    /* Responsive / Mobile Styles */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 5px;
+        max-width: 100%;
+        font-size: 18px; /* éventuellement ajuster pour éviter un texte trop grand */
+        line-height: 1.6;
+      }
+
+      a {
+      overflow-wrap: break-word; /* ou word-wrap: break-word; pour une compatibilité plus ancienne */
+      white-space: normal;
+    }
+
+    p {
+      overflow-wrap: break-word;
+      white-space: normal;
+    }
+
+      
+      .page {
+        width: 100%;
+        margin: 5px auto;
+        padding: 10px;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        display: block !important;
+      }
+      
+      h1 { font-size: 1.6em; }
+      h2 { font-size: 1.4em; }
+      h3 { font-size: 1.2em; }
+      
+      p, li {
+        font-size: 1em;
+      }
+      
+      .pdf-button,
+      #toggleModeButton {
+        width: 100%;
+        padding: 0.8em;
+        font-size: 1em;
+      }
+      
+      .extrait-intergen,
+      .extrait-video {
+        padding: 0.8rem;
+        margin: 1rem 0;
+      }
+      
+      /* Forcer le retour à la ligne sur les liens dans les notes & références */
+      .notes-list li a {
+        word-break: break-all;
+        overflow-wrap: break-word;
+      }
+      
+      /* Ajouter un scroll horizontal si nécessaire */
+      #referencesContainer {
+        overflow-x: auto;
+      }
+      
+      /* Désactiver le mode paginé sur mobile si souhaité */
+      #toggleModeButton, .navigation-help {
+        display: none;
+      }
+      
+      /* Afficher toutes les pages en mode vertical */
+      .page {
+        display: block !important;
+      }
+    }
+
+    /* Appliquer le box-sizing globalement */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -301,47 +297,55 @@ p {
   <!-- Conteneur principal à imprimer (toutes les pages) -->
   <div id="contentToPrint">
     <div id="pagesContainer">
-      <!-- Page 1 : Avant-propos & Problématique -->
+      <!-- ============== PAGE 1 : Avant-propos, Problématique ============== -->
       <div class="page active" id="page1">
         <h1>Jeunes vs Vieux : Dépasser la Fausse Guerre des Âges</h1>
         <p><em>Par <a href="https://www.linkedin.com/in/theophile-avenel-42974a194/" target="_blank">Théophile Avenel</a>, <a href="https://www.linkedin.com/in/younes-r-aa00a1202/" target="_blank">Younes Razzaki</a> et <a href="https://www.linkedin.com/in/mathis-jamin/" target="_blank">Mathis Jamin</a>, promo SRT 2026 de Polytech Nantes</em></p>
         <hr>
 
-  <!-- AVANT-PROPOS -->
-  <h2>Avant-propos</h2>
-  <p>
-    Depuis quelques années, un récit médiatique récurrent oppose celles et ceux que l’on qualifie de « jeunes » à ceux que l’on étiquette comme « vieux », comme si la société était scindée en deux blocs incompatibles. Pourtant, à mesure que l’on analyse la réalité de terrain, nous découvrons que cette opposition relève souvent d’une construction médiatique plutôt que d’une hostilité véritable. Selon certaines études, <em>46 % des Français</em> considèrent que la « guerre des générations » est essentiellement un phénomène amplifié par les médias<sup><a href="#note1">1</a></sup>.
-  </p>
-  <p>
-    Lorsque l’on interroge retraités, actifs et étudiants, un autre visage apparaît : celui d’une volonté de transmission, de partage de compétences et d’entraide. Par exemple, <em>62 % des retraités</em> souhaitent contribuer au mentorat pour les plus jeunes<sup><a href="#note2">2</a></sup>, et près de <em>39 % des salariés en reconversion</em> ont plus de 45 ans<sup><a href="#note3">3</a></sup>. L’objectif de ce "micromémoire"" est donc d’approfondir la question en s’appuyant sur <strong>162 statistiques</strong>, des témoignages détaillés et une réflexion sociologique poussée.
-  </p>
-  <p>
-    Le contexte environnemental, économique et sociétal joue également un rôle : dès 1990, le premier rapport du GIEC alertait sur les conséquences gravissimes du réchauffement climatique<sup><a href="#note4">4</a></sup>, alors que la vente de véhicules SUV explosait<sup><a href="#note5">5</a></sup>, tout comme le trafic aérien<sup><a href="#note7">7</a></sup> et l’importation de biens de consommation<sup><a href="#note8">8</a></sup>. Aujourd’hui, le <em>principe de co-formation</em> – la mise en commun des savoirs entre jeunes et seniors – devient essentiel<sup><a href="#note9">9</a></sup>.
-  </p>
+        <h2>Avant-propos</h2>
+        <p>
+          Depuis quelques années, un récit médiatique récurrent oppose celles et ceux que l’on qualifie de « jeunes » à ceux que l’on étiquette comme « vieux », comme si la société était scindée en deux blocs incompatibles. Pourtant, à mesure que l’on analyse la réalité de terrain, nous découvrons que cette opposition relève souvent d’une construction médiatique plutôt que d’une hostilité véritable. Selon certaines études, <em>46 % des Français</em> considèrent que la « guerre des générations » est essentiellement un phénomène amplifié par les médias<sup><a href="#note1">1</a></sup>.
+        </p>
+        <p>
+          Lorsque l’on interroge retraités, actifs et étudiants, un autre visage apparaît : celui d’une volonté de transmission, de partage de compétences et d’entraide. Par exemple, <em>62 % des retraités</em> souhaitent contribuer au mentorat pour les plus jeunes<sup><a href="#note2">2</a></sup>, et près de <em>39 % des salariés en reconversion</em> ont plus de 45 ans<sup><a href="#note3">3</a></sup>. L’objectif de ce "micromémoire" est donc d’approfondir la question en s’appuyant sur <strong>162 statistiques</strong>, des témoignages détaillés et une réflexion sociologique poussée.
+        </p>
+        <p>
+          Le contexte environnemental, économique et sociétal joue également un rôle : dès 1990, le premier rapport du GIEC alertait sur les conséquences gravissimes du réchauffement climatique<sup><a href="#note4">4</a></sup>, alors que la vente de véhicules SUV explosait<sup><a href="#note5">5</a></sup>, tout comme le trafic aérien<sup><a href="#note7">7</a></sup> et l’importation de biens de consommation<sup><a href="#note8">8</a></sup>. Aujourd’hui, le <em>principe de co-formation</em> – la mise en commun des savoirs entre jeunes et seniors – devient essentiel<sup><a href="#note9">9</a></sup>.
+        </p>
 
-    <!-- Nouvel extrait d'entretien recueilli par Younes -->
-    <div class="extrait-intergen">
-      <h3>Extraits d'entretien recueillis par Younes</h3>
-      <p><strong>Younes Razzaki :</strong> "Enfin, il n’y a pas de différence entre collègues quand il n’y a pas de différence... Il faut avoir une certaine maturité. Moi et Fred, on s’entend super bien, malgré 20 piges d’écart."</p>
-      <p><strong>L'interviewé :</strong> "Quand tu évoques des centres d’intérêts personnels que je ne partage pas, je reste attentif, je suis à l’écoute et j’en apprends toujours."</p>
-      <p><strong>L'interviewé :</strong> "J’ai eu un job étudiant au Lister à Lille, une ville très diversifiée, où j’ai travaillé avec des étudiants d’horizons variés – Amérique latine, Angleterre, Hollande et Afrique du Nord. Cet environnement m’a beaucoup appris sur les autres."</p>
-      <p><strong>L'interviewé :</strong> "À la BU, je ne ressens aucune tension liée à la différence d’âge ou de culture. Dans une petite équipe, on est obligés de bien s’entendre, et nos relations vont du strict professionnel à des moments plus conviviaux, comme aller boire un verre ensemble."</p>
-      <p><strong>L'interviewé :</strong> "Concernant l’impact des tensions sur la performance, dans mes expériences, elles sont rares voire inexistantes – globalement, tout va bien."</p>
-    </div>
+        <!-- NOUVEAU PARAGRAPHE : Approche Sociologique (Karl Mannheim, Bourdieu) -->
+        <p>
+          <strong>Approche Sociologique.</strong> Au-delà de ces constats, la sociologie nous invite à 
+          <em>questionner la notion même de “guerre des générations”</em>. Comme l’a montré 
+          <strong>Karl Mannheim</strong> au début du XX<sup>e</sup> siècle, une génération ne se définit pas seulement par 
+          l’âge biologique, mais par l’expérience sociale et historique partagée (la <em>“situation de génération”</em>) 
+          <sup><a href="#noteS1">S1</a></sup>. De plus, <strong>Pierre Bourdieu</strong> insiste sur l’influence 
+          du capital culturel, social ou économique, rendant la “Gen Z” éminemment diverse 
+          (certains jeunes maîtrisent le numérique, d’autres non ; certains sont favorisés, d’autres en précarité). 
+          Ainsi, il se pourrait que la “guerre des âges” occulte des lignes de fracture plus structurelles 
+          (inégalités économiques, éducatives, etc.).
+        </p>
 
-  <!-- AVANT-PROPOS - après le 3e paragraphe -->
-<div class="extrait-intergen">
-  <p>
-    « Car une chose est certaine : les jeunes ne correspondent pas aux clichés 
-    qui leur collent à la peau. Il est plus qu’urgent de changer de regard 
-    sur la jeunesse : la solidarité intergénérationnelle est indispensable 
-    pour faire face aux bouleversements qui nous menacent tous. »
-    <br>
-    <em>(Extrait du livre de Salomé Saqué <strong>Sois jeune et tais-toi</strong> page 2)</em>
+        <div class="extrait-intergen">
+          <h3>Extraits d'entretien recueillis par Younes</h3>
+          <p><strong>Younes Razzaki :</strong> "Enfin, il n’y a pas de différence entre collègues quand il n’y a pas de différence... Il faut avoir une certaine maturité. Moi et Fred, on s’entend super bien, malgré 20 piges d’écart."</p>
+          <p><strong>L'interviewé :</strong> "Quand tu évoques des centres d’intérêts personnels que je ne partage pas, je reste attentif, je suis à l’écoute et j’en apprends toujours."</p>
+          <p><strong>L'interviewé :</strong> "J’ai eu un job étudiant au Lister à Lille, une ville très diversifiée, où j’ai travaillé avec des étudiants d’horizons variés – Amérique latine, Angleterre, Hollande et Afrique du Nord. Cet environnement m’a beaucoup appris sur les autres."</p>
+          <p><strong>L'interviewé :</strong> "À la BU, je ne ressens aucune tension liée à la différence d’âge ou de culture. Dans une petite équipe, on est obligés de bien s’entendre, et nos relations vont du strict professionnel à des moments plus conviviaux, comme aller boire un verre ensemble."</p>
+          <p><strong>L'interviewé :</strong> "Concernant l’impact des tensions sur la performance, dans mes expériences, elles sont rares voire inexistantes – globalement, tout va bien."</p>
+        </div>
 
-  </p>
-</div>
-
+        <div class="extrait-intergen">
+          <p>
+            « Car une chose est certaine : les jeunes ne correspondent pas aux clichés 
+            qui leur collent à la peau. Il est plus qu’urgent de changer de regard 
+            sur la jeunesse : la solidarité intergénérationnelle est indispensable 
+            pour faire face aux bouleversements qui nous menacent tous. »
+            <br>
+            <em>(Extrait du livre de Salomé Saqué <strong>Sois jeune et tais-toi</strong> page 2)</em>
+          </p>
+        </div>
 
         <hr>
         <h3>Problématique</h3>
@@ -358,178 +362,182 @@ p {
           de potentiels vecteurs d’innovation sociale, particulièrement à l’heure où la réforme des retraites 
           impose un allongement de la présence des seniors sur le marché du travail ?
         </p>
+
       </div>
       
       <!-- Page 2 : Chapitre 1 -->
       <div class="page" id="page2">
         
-  <!-- CHAPITRE 1 -->
-  <h2>Chapitre 1 : Genèse du Mythe et Réalité du Terrain</h2>
-  <p>
-    La notion de « guerre des générations » est souvent évoquée dans les médias pour décrire des tensions potentielles entre différentes tranches d’âge. Cependant, plusieurs études nuancent cette perception. Par exemple, une analyse du <em>CRÉDOC</em> intitulée « L'évolution des relations entre générations dans un contexte de mutation du cycle de vie » démontre que les relations intergénérationnelles reposent davantage sur une interdépendance que sur un conflit<sup><a href="#note1">1</a></sup>. De même, une publication de <em>France Stratégie</em> affirme que « la guerre des âges n’aura pas lieu », soulignant l’aspiration commune à l’autonomie entre jeunes et seniors<sup><a href="#note2">2</a></sup>.
-  </p>
-  <div class="extrait-intergen">
-    <h3>L’arrivée et la complémentarité des jeunes et des plus expérimentés</h3>
-    <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe Orange :</strong></p>
-    <p><strong>Interviewé :</strong> « J’ai été le plus jeune de l’équipe, et mes collègues appréciaient d’ailleurs qu’il y ait des recrutements de jeunes pour apporter un souffle nouveau. Je me souviens avoir eu l’impression, parfois, d’accompagner certains vers la retraite, d’entraîner des anciens à adopter de nouvelles méthodes. »</p>
-    <p>Ce passage souligne comment la fraîcheur des jeunes se combine avec l’expérience des plus anciens, même si cela peut parfois donner l’impression que les générations se relaient vers la retraite.</p>
-  </div>
-  
-  <p>
-    L’engagement bénévole en France évolue également selon l’âge. Chez les jeunes (15–34 ans), le taux d’engagement a connu une hausse significative ces dernières années, atteignant en 2024 les niveaux les plus élevés et surpassant ceux des seniors<sup><a href="#note3">3</a></sup>. En revanche, chez les seniors (65 ans et plus), une diminution progressive est constatée depuis 2019.
-  </p>
-  <p>
-    Par ailleurs, les équipes intergénérationnelles – qui associent l’expérience des seniors et l’innovation des jeunes – offrent un réel avantage économique. Une étude de <em>McKinsey (2023)</em> révèle qu’elles génèrent jusqu’à 15 % de gains de productivité en moyenne par rapport à des équipes homogènes<sup><a href="#note4">4</a></sup>.
-  </p>
-  <p>
-    Le mentorat en entreprise s’avère être un levier stratégique pour améliorer la rétention des talents. Une enquête de <em>Deloitte</em> indique que 71 % des employeurs ayant mis en place un programme de mentorat constatent une baisse significative du turnover, comme en témoigne l’exemple de Google, qui a réduit de 50 % sa rotation du personnel grâce à un programme interne efficace<sup><a href="#note5">5</a></sup>.
-  </p>
-  <p>
-    Enfin, les statistiques de l’Insee montrent que le taux de chômage est de 17,2 % chez les 15–24 ans, 6,7 % chez les 25–49 ans et 5,1 % chez les 50 ans et plus<sup><a href="#note6">6</a></sup>. Le chômage de longue durée est également plus marqué chez les jeunes, avec 4,2 % pour les 15–24 ans contre 2,7 % et 3,0 % pour les autres tranches d’âge<sup><a href="#note7">7</a></sup>.
-  </p>
+        <!-- CHAPITRE 1 -->
+        <h2>Chapitre 1 : Genèse du Mythe et Réalité du Terrain</h2>
+        <p>
+          La notion de « guerre des générations » est souvent évoquée dans les médias pour décrire des tensions potentielles entre différentes tranches d’âge. Cependant, plusieurs études nuancent cette perception. Par exemple, une analyse du <em>CRÉDOC</em> intitulée « L'évolution des relations entre générations dans un contexte de mutation du cycle de vie » démontre que les relations intergénérationnelles reposent davantage sur une interdépendance que sur un conflit<sup><a href="#note1">1</a></sup>. De même, une publication de <em>France Stratégie</em> affirme que « la guerre des âges n’aura pas lieu », soulignant l’aspiration commune à l’autonomie entre jeunes et seniors<sup><a href="#note2">2</a></sup>.
+        </p>
+        <div class="extrait-intergen">
+          <h3>L’arrivée et la complémentarité des jeunes et des plus expérimentés</h3>
+          <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe Orange :</strong></p>
+          <p><strong>Interviewé :</strong> « J’ai été le plus jeune de l’équipe, et mes collègues appréciaient d’ailleurs qu’il y ait des recrutements de jeunes pour apporter un souffle nouveau. Je me souviens avoir eu l’impression, parfois, d’accompagner certains vers la retraite, d’entraîner des anciens à adopter de nouvelles méthodes. »</p>
+          <p>Ce passage souligne comment la fraîcheur des jeunes se combine avec l’expérience des plus anciens, même si cela peut parfois donner l’impression que les générations se relaient vers la retraite.</p>
+        </div>
+        
+        <p>
+          L’engagement bénévole en France évolue également selon l’âge. Chez les jeunes (15–34 ans), le taux d’engagement a connu une hausse significative ces dernières années, atteignant en 2024 les niveaux les plus élevés et surpassant ceux des seniors<sup><a href="#note3">3</a></sup>. En revanche, chez les seniors (65 ans et plus), une diminution progressive est constatée depuis 2019.
+        </p>
+        <p>
+          Par ailleurs, les équipes intergénérationnelles – qui associent l’expérience des seniors et l’innovation des jeunes – offrent un réel avantage économique. Une étude de <em>McKinsey (2023)</em> révèle qu’elles génèrent jusqu’à 15 % de gains de productivité en moyenne par rapport à des équipes homogènes<sup><a href="#note4">4</a></sup>.
+        </p>
+        <p>
+          Le mentorat en entreprise s’avère être un levier stratégique pour améliorer la rétention des talents. Une enquête de <em>Deloitte</em> indique que 71 % des employeurs ayant mis en place un programme de mentorat constatent une baisse significative du turnover, comme en témoigne l’exemple de Google, qui a réduit de 50 % sa rotation du personnel grâce à un programme interne efficace<sup><a href="#note5">5</a></sup>.
+        </p>
+        <p>
+          Enfin, les statistiques de l’Insee montrent que le taux de chômage est de 17,2 % chez les 15–24 ans, 6,7 % chez les 25–49 ans et 5,1 % chez les 50 ans et plus<sup><a href="#note6">6</a></sup>. Le chômage de longue durée est également plus marqué chez les jeunes, avec 4,2 % pour les 15–24 ans contre 2,7 % et 3,0 % pour les autres tranches d’âge<sup><a href="#note7">7</a></sup>.
+        </p>
+        <!--Transition chapitre 1 et chapitre 2-->
+        <p>
+          Ainsi, si la construction médiatique semble parfois exagérer l’idée d’un conflit généralisé entre les âges, il apparaît que le terrain révèle une réalité plus nuancée, où la complémentarité entre l’expérience et l’innovation est bien présente. 
+          Nous allons désormais explorer, à travers les témoignages et les clichés persistants, comment ces représentations se confrontent à la réalité quotidienne dans le monde professionnel.
+        </p>
         <hr>
       </div>
       
       <!-- Page 3 : Chapitre 2 -->
       <div class="page" id="page3">
       
-  <!-- CHAPITRE 2 -->
-  <h2>Chapitre 2 : Témoignages et Clichés Persistants</h2>
-  <p>
-    Les témoignages du terrain montrent que les clivages intergénérationnels reposent souvent sur des stéréotypes – le senior « intrinsèquement dépassé » et le junior « irrévérencieux » – alors que la réalité reflète surtout une dynamique d’apprentissage et d’adaptation continue.
-  </p>
-   <!-- >>> AJOUT de la mention de la vidéo GEN Z : Des éternels enfants <<< -->
-   <p>
-    Par ailleurs, certains contenus abordent la question du
-    « refus de vieillir » chez la Gen Z, montrant
-    comment cette génération reconfigure les étapes de la vie
-    <sup><a href="#footGZ1">GZ1</a></sup>.
-  </p>
+        <!-- CHAPITRE 2 -->
+        <h2>Chapitre 2 : Témoignages et Clichés Persistants</h2>
+        <p>
+          Les témoignages du terrain montrent que les clivages intergénérationnels reposent souvent sur des stéréotypes – le senior « intrinsèquement dépassé » et le junior « irrévérencieux » – alors que la réalité reflète surtout une dynamique d’apprentissage et d’adaptation continue.
+        </p>
+        <!-- >>> AJOUT de la mention de la vidéo GEN Z : Des éternels enfants <<< -->
+        <p>
+          Par ailleurs, certains contenus abordent la question du
+          « refus de vieillir » chez la Gen Z, montrant
+          comment cette génération reconfigure les étapes de la vie
+          <sup><a href="#footGZ1">GZ1</a></sup>.
+        </p>
 
-  <p>
-    De plus, la vidéo <em>"Gen Z : La génération la plus FAIBLE de tous les temps ?"</em> <sup><a href="#footGZ3">GZ3</a></sup> explore les critiques adressées à la génération Z, souvent perçue comme moins résiliente que ses prédécesseurs, en analysant les facteurs éducatifs et sociétaux qui contribuent à cette image.
-  </p>
+        <p>
+          De plus, la vidéo <em>"Gen Z : La génération la plus FAIBLE de tous les temps ?"</em> <sup><a href="#footGZ3">GZ3</a></sup> explore les critiques adressées à la génération Z, souvent perçue comme moins résiliente que ses prédécesseurs, en analysant les facteurs éducatifs et sociétaux qui contribuent à cette image.
+        </p>
 
-<!-- Dans Chapitre 2, après les premiers paragraphes ou juste avant le <hr> final -->
-<p>
-  D'autres contenus abordent ce phénomène par l'humour, comme illustré dans la vidéo 
-  <em>"La brochette de clichés"</em> <sup><a href="#foot217">217</a></sup>.
-</p>
+        <!-- Dans Chapitre 2, après les premiers paragraphes ou juste avant le <hr> final -->
+        <p>
+          D'autres contenus abordent ce phénomène par l'humour, comme illustré dans la vidéo 
+          <em>"La brochette de clichés"</em> <sup><a href="#foot217">217</a></sup>.
+        </p>
 
+        <p>
+          Par ailleurs, le marché de l’emploi exige de plus en plus des compétences numériques avancées pour les postes juniors. Une analyse de la <em>Grande École du Numérique</em> indique qu’environ 20 % des offres d’emploi concernent des métiers requérant ces compétences (développement, cybersécurité, data)<sup><a href="#note8">8</a></sup>.
+        </p>
 
-  <p>
-    Par ailleurs, le marché de l’emploi exige de plus en plus des compétences numériques avancées pour les postes juniors. Une analyse de la <em>Grande École du Numérique</em> indique qu’environ 20 % des offres d’emploi concernent des métiers requérant ces compétences (développement, cybersécurité, data)<sup><a href="#note8">8</a></sup>.
-  </p>
+        <p>
+          De plus, le témoignage vidéo <em>"Une Gen Z nous dit ce qu’elle ne fera pas comme ses parents au travail"</em> 
+          <sup><a href="#footGZ4">GZ4</a></sup> présente le point de vue d'une jeune femme de la génération Z qui refuse les heures supplémentaires non rémunérées, recherche du sens dans son travail, et revendique un équilibre entre vie professionnelle et vie personnelle, tout en soulignant l'importance de maîtriser les technologies.
+        </p>
 
-  
-<p>
-  De plus, le témoignage vidéo <em>"Une Gen Z nous dit ce qu’elle ne fera pas comme ses parents au travail"</em> 
-  <sup><a href="#footGZ4">GZ4</a></sup> présente le point de vue d'une jeune femme de la génération Z qui refuse les heures supplémentaires non rémunérées, recherche du sens dans son travail, et revendique un équilibre entre vie professionnelle et vie personnelle, tout en soulignant l'importance de maîtriser les technologies.
-</p>
+        <p>
+          Les défis du recrutement de la génération Z sont également illustrés par le témoignage vidéo 
+          <em>"Dans les pensées d'une RH qui tente de recruter un Gen Z"</em> 
+          <sup><a href="#footGZ5">GZ5</a></sup>, qui met en lumière les difficultés des responsables RH à comprendre et à répondre aux attentes spécifiques de cette génération.
+        </p>
+        <p>
+          Un autre contenu met en lumière, de façon humoristique, les réactions contrastées face à un retard au travail en fonction des générations. Ainsi, la vidéo <em>"Un Gen X, un Millennial et un Gen Z sont en retard au travail"</em> <sup><a href="#footGZ6">GZ6</a></sup> illustre comment un employé de la génération X, un millennial et un membre de la génération Z adoptent des attitudes différentes pour justifier leur retard, soulignant ainsi leurs divergences en termes de communication et de rapport à l’autorité.
+        </p>
+        <p>
+          Un autre contenu met en lumière, de manière humoristique, les approches distinctes lors de la recherche d’emploi par différentes générations. Ainsi, la vidéo <em>"Un Gen X, un Millennial et un Gen Z recherchent un emploi"</em> <sup><a href="#footGZ7">GZ7</a></sup> illustre comment un représentant de la génération X, un millennial et un membre de la génération Z adoptent chacun des stratégies spécifiques face aux exigences du marché du travail.
+        </p>
+        <p>
+          Certains contenus médiatiques abordent également la représentation de la génération Z. Par exemple, la vidéo 
+          <em>"Le PROBLÈME avec les personnages de la Gen Z"</em> <sup><a href="#footGZ8">GZ8</a></sup> analyse comment les médias dépeignent cette génération de manière stéréotypée, en insistant sur sa dépendance aux technologies, sa sensibilité exacerbée et son manque de résilience. Elle appelle à une représentation plus nuancée et authentique de ses membres.
+        </p>
+        <p>
+          Certains témoignages illustrent avec humour les différences générationnelles dans le monde professionnel. Par exemple, la vidéo 
+          <em>"Un Gen X, un Millennial et un Gen Z négocient leur salaire"</em> <sup><a href="#footGS9">GS9</a></sup> montre comment chaque génération adopte une stratégie distincte lors de la négociation salariale, soulignant ainsi leurs valeurs et attentes propres.
+        </p>
+        <p>
+          D'autres témoignages illustrent les défis et stéréotypes auxquels font face les jeunes générations. Par exemple, la vidéo 
+          <em>"Faire partie de la génération Y / Z : C’EST QUOI LE PIRE ?!"</em> <sup><a href="#footGZ10">GZ10</a></sup> explore les difficultés et les préjugés associés aux générations Y et Z, en mettant en lumière leur rapport aux technologies, aux conditions de travail et aux valeurs professionnelles.
+        </p>
+        <p>
+          Certains discours médiatiques critiquent la génération Z en la qualifiant de « la génération la plus FAIBLE de tous les temps ». Cette vision est contestée par plusieurs experts, comme en témoigne la vidéo 
+          <em>"Gen Z : La génération la plus FAIBLE de tous les temps ?"</em> <sup><a href="#footGZ11">GZ11</a></sup> qui analyse les facteurs éducatifs et sociétaux pouvant contribuer à cette perception.
+        </p>
+        <p>
+          Certains contenus mettent en lumière une tendance émergente dans le monde du travail, connue sous le nom de "loud quitting". Cette approche consiste pour la génération Z à annoncer publiquement sa démission pour dénoncer des conditions de travail jugées inacceptables. La vidéo 
+          <em>"Gen Z introduces new way of quitting jobs, and it’s loud"</em> <sup><a href="#footGZ12">GZ12</a></sup> analyse ce phénomène, en soulignant les avantages et les risques associés à cette pratique.
+        </p>
 
-<p>
-  Les défis du recrutement de la génération Z sont également illustrés par le témoignage vidéo 
-  <em>"Dans les pensées d'une RH qui tente de recruter un Gen Z"</em> 
-  <sup><a href="#footGZ5">GZ5</a></sup>, qui met en lumière les difficultés des responsables RH à comprendre et à répondre aux attentes spécifiques de cette génération.
-</p>
-<p>
-  Un autre contenu met en lumière, de façon humoristique, les réactions contrastées face à un retard au travail en fonction des générations. Ainsi, la vidéo <em>"Un Gen X, un Millennial et un Gen Z sont en retard au travail"</em> <sup><a href="#footGZ6">GZ6</a></sup> illustre comment un employé de la génération X, un millennial et un membre de la génération Z adoptent des attitudes différentes pour justifier leur retard, soulignant ainsi leurs divergences en termes de communication et de rapport à l’autorité.
-</p>
-<p>
-  Un autre contenu met en lumière, de manière humoristique, les approches distinctes lors de la recherche d’emploi par différentes générations. Ainsi, la vidéo <em>"Un Gen X, un Millennial et un Gen Z recherchent un emploi"</em> <sup><a href="#footGZ7">GZ7</a></sup> illustre comment un représentant de la génération X, un millennial et un membre de la génération Z adoptent chacun des stratégies spécifiques face aux exigences du marché du travail.
-</p>
-<p>
-  Certains contenus médiatiques abordent également la représentation de la génération Z. Par exemple, la vidéo 
-  <em>"Le PROBLÈME avec les personnages de la Gen Z"</em> <sup><a href="#footGZ8">GZ8</a></sup> analyse comment les médias dépeignent cette génération de manière stéréotypée, en insistant sur sa dépendance aux technologies, sa sensibilité exacerbée et son manque de résilience. Elle appelle à une représentation plus nuancée et authentique de ses membres.
-</p>
-<p>
-  Certains témoignages illustrent avec humour les différences générationnelles dans le monde professionnel. Par exemple, la vidéo 
-  <em>"Un Gen X, un Millennial et un Gen Z négocient leur salaire"</em> <sup><a href="#footGS9">GS9</a></sup> montre comment chaque génération adopte une stratégie distincte lors de la négociation salariale, soulignant ainsi leurs valeurs et attentes propres.
-</p>
-<p>
-  D'autres témoignages illustrent les défis et stéréotypes auxquels font face les jeunes générations. Par exemple, la vidéo 
-  <em>"Faire partie de la génération Y / Z : C’EST QUOI LE PIRE ?!"</em> <sup><a href="#footGZ10">GZ10</a></sup> explore les difficultés et les préjugés associés aux générations Y et Z, en mettant en lumière leur rapport aux technologies, aux conditions de travail et aux valeurs professionnelles.
-</p>
-<p>
-  Certains discours médiatiques critiquent la génération Z en la qualifiant de « la génération la plus FAIBLE de tous les temps ». Cette vision est contestée par plusieurs experts, comme en témoigne la vidéo 
-  <em>"Gen Z : La génération la plus FAIBLE de tous les temps ?"</em> <sup><a href="#footGZ11">GZ11</a></sup> qui analyse les facteurs éducatifs et sociétaux pouvant contribuer à cette perception.
-</p>
-<p>
-  Certains contenus mettent en lumière une tendance émergente dans le monde du travail, connue sous le nom de "loud quitting". Cette approche consiste pour la génération Z à annoncer publiquement sa démission pour dénoncer des conditions de travail jugées inacceptables. La vidéo 
-  <em>"Gen Z introduces new way of quitting jobs, and it’s loud"</em> <sup><a href="#footGZ12">GZ12</a></sup> analyse ce phénomène, en soulignant les avantages et les risques associés à cette pratique.
-</p>
+        <p>
+          Certains contenus abordent avec humour la tendance intergénérationnelle où la génération Z critique les comportements de la génération suivante. Ainsi, la vidéo 
+          <em>"La Gen Z déteste la nouvelle génération"</em> <sup><a href="#footGZ13">GZ13</a></sup> illustre comment, par le biais de situations satiriques, la Gen Z exprime son incompréhension et son rejet face aux habitudes et valeurs des plus jeunes.
+        </p>
+        <p>
+          Plusieurs entreprises se séparent de leurs employés de la génération Z, en raison de défis tels que le manque de compétences en communication et une éthique de travail jugée insuffisante. Ces enjeux sont analysés dans la vidéo 
+          <em>"Why Companies Are Firing Gen Z Workers"</em> <sup><a href="#footGZ14">GZ14</a></sup>, qui insiste également sur l'importance pour les employeurs de comprendre les valeurs et les motivations de cette génération pour favoriser une collaboration efficace.
+        </p>
+        <p>
+          Une étude récente examine les défis auxquels la génération Z est confrontée sur le marché du travail, identifiant notamment un manque de compétences en communication et une éthique de travail souvent jugée insuffisante. Cependant, de nombreux jeunes adultes contestent ces conclusions, arguant que ces perceptions reposent sur des stéréotypes et ne reflètent pas la réalité de leurs expériences professionnelles. Cette analyse est illustrée par la vidéo <em>"Study explains why Gen Z struggles in the workforce. Young adults disagree"</em> <sup><a href="#footGZ15">GZ15</a></sup>.
+        </p>
 
-<p>
-  Certains contenus abordent avec humour la tendance intergénérationnelle où la génération Z critique les comportements de la génération suivante. Ainsi, la vidéo 
-  <em>"La Gen Z déteste la nouvelle génération"</em> <sup><a href="#footGZ13">GZ13</a></sup> illustre comment, par le biais de situations satiriques, la Gen Z exprime son incompréhension et son rejet face aux habitudes et valeurs des plus jeunes.
-</p>
-<p>
-  Plusieurs entreprises se séparent de leurs employés de la génération Z, en raison de défis tels que le manque de compétences en communication et une éthique de travail jugée insuffisante. Ces enjeux sont analysés dans la vidéo 
-  <em>"Why Companies Are Firing Gen Z Workers"</em> <sup><a href="#footGZ14">GZ14</a></sup>, qui insiste également sur l'importance pour les employeurs de comprendre les valeurs et les motivations de cette génération pour favoriser une collaboration efficace.
-</p>
-<p>
-  Une étude récente examine les défis auxquels la génération Z est confrontée sur le marché du travail, identifiant notamment un manque de compétences en communication et une éthique de travail souvent jugée insuffisante. Cependant, de nombreux jeunes adultes contestent ces conclusions, arguant que ces perceptions reposent sur des stéréotypes et ne reflètent pas la réalité de leurs expériences professionnelles. Cette analyse est illustrée par la vidéo <em>"Study explains why Gen Z struggles in the workforce. Young adults disagree"</em> <sup><a href="#footGZ15">GZ15</a></sup>.
-</p>
-
-
-
-    <!-- Nouveau bloc extrait sur l'innovation technologique intergénérationnelle -->
-    <div class="extrait-intergen">
-      <h3>Les jeunes et l'innovation technologique</h3>
-      <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe d'Orange :</strong> « Ce qui m’a le plus impressionné, c’est la rapidité avec laquelle les jeunes assimilent les nouvelles technologies. Là où nous avions appris le Pascal ou le C++, ils maîtrisent instantanément des langages modernes comme Python. Cette complémentarité crée une dynamique enrichissante au sein de l’équipe, où l’expérience des seniors rencontre l’enthousiasme et l’innovation des digital natives. »</p>
-    </div>
-    <!-- Juste après le 2e paragraphe du Chapitre 2 -->
-    <p>
-      D'autres contenus abordent ces questions avec humour et esprit critique. Par exemple, dans la vidéo 
-      <em>"Zoom : Vous, les jeunes au travail ?"</em> <sup><a href="#footZTW1">ZTW1</a></sup>, 
-      Frédérique Jeske s'interroge sur la valorisation excessive de la jeunesse dans le monde professionnel, 
-      remettant en question les critères traditionnels de recrutement et soulignant l'importance de l'expérience.
-    </p>
-    <p>
-      Par ailleurs, la vidéo <em>"GEN Z : Les rebelles du travail"</em> <sup><a href="#footGZ2">GZ2</a></sup> explore comment la génération Z, confrontée à un marché du travail exigeant et à des conditions jugées inacceptables (heures supplémentaires non payées, salaires bas, etc.), revendique de meilleures conditions et redéfinit les normes professionnelles.
-    </p>
+        <!-- Nouveau bloc extrait sur l'innovation technologique intergénérationnelle -->
+        <div class="extrait-intergen">
+          <h3>Les jeunes et l'innovation technologique</h3>
+          <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe d'Orange :</strong> « Ce qui m’a le plus impressionné, c’est la rapidité avec laquelle les jeunes assimilent les nouvelles technologies. Là où nous avions appris le Pascal ou le C++, ils maîtrisent instantanément des langages modernes comme Python. Cette complémentarité crée une dynamique enrichissante au sein de l’équipe, où l’expérience des seniors rencontre l’enthousiasme et l’innovation des digital natives. »</p>
+        </div>
+        <!-- Juste après le 2e paragraphe du Chapitre 2 -->
+        <p>
+          D'autres contenus abordent ces questions avec humour et esprit critique. Par exemple, dans la vidéo 
+          <em>"Zoom : Vous, les jeunes au travail ?"</em> <sup><a href="#footZTW1">ZTW1</a></sup>, 
+          Frédérique Jeske s'interroge sur la valorisation excessive de la jeunesse dans le monde professionnel, 
+          remettant en question les critères traditionnels de recrutement et soulignant l'importance de l'expérience.
+        </p>
+        <p>
+          Par ailleurs, la vidéo <em>"GEN Z : Les rebelles du travail"</em> <sup><a href="#footGZ2">GZ2</a></sup> explore comment la génération Z, confrontée à un marché du travail exigeant et à des conditions jugées inacceptables (heures supplémentaires non payées, salaires bas, etc.), revendique de meilleures conditions et redéfinit les normes professionnelles.
+        </p>
     
+        <div class="extrait-intergen">
+          <h3>Commentaires sur Linkedin en dessous du post </h3>
 
+          <p><strong>Commentaire n°1 :</strong>  
+            « Bon alors j’en pense que la Gen Z c’est une invention qui fait le buzz sur les réseaux sociaux mais qui ne correspond à rien sur le plan de la realité. Le concept de « génération » est assez ressent dans l’histoire. Je n’ai plus en tête le non de celui qui l’a initié.
+            Ce qui est sûr c’est qu’il n’a jamais été démontré que l’âge constituait une variable permettant de définir des comportements. Brassens et d’autres l’ont très bien dit par le passé 😉😅.
+            Et ce qui est certain également c’est que les bisbilles et autres incompréhensions entre jeunes et vieux ça remonte à loin : Sénèque en parlait déjà !
+            Conclusion : rien de nouveau sous le soleil à part peut-être une plus forte tendance à vouloir tout « catégoriser » et uniformiser. Signe d’une époque qui a terriblement besoin de réassurance.  »
+          </p>
 
-<div class="extrait-intergen">
-  <h3>Commentaires sur Linkedin en dessous du post </h3>
+          <p><strong>Commentaire n°2 :</strong>  
+            « Est-ce que les compétences ont un âge ? Sincèrement, non. Pourtant, pour pouvoir occuper un poste, il faut avoir des compétences. Les préjugés sur l'âge, le sexe et autres ne devraient plus être car c'est encadré par la loi... A un moment, ces entreprises seront obligées de faire autrement car elles n'auront plus personne pour travailler pour elles en continuant ainsi. Revoir ses pratiques et s'adapter au monde changeant est une nécessité pour les entreprises et quand je parle de changement, je ne parle pas que de changement technologique mais bien de TOUS les changements qui vont avoir une influence. Il serait temps de comprendre que chacun est unique et que c'est une erreur de vouloir faire rentrer dans des cases. L'innovation vient de la diversité.  »
+          </p>
+        </div>
 
-  <p><strong>Commentaire n°1 :</strong>  
-    « Bon alors j’en pense que la Gen Z c’est une invention qui fait le buzz sur les réseaux sociaux mais qui ne correspond à rien sur le plan de la realité. Le concept de « génération » est assez ressent dans l’histoire. Je n’ai plus en tête le non de celui qui l’a initié.
-    Ce qui est sûr c’est qu’il n’a jamais été démontré que l’âge constituait une variable permettant de définir des comportements. Brassens et d’autres l’ont très bien dit par le passé 😉😅.
-    Et ce qui est certain également c’est que les bisbilles et autres incompréhensions entre jeunes et vieux ça remonte à loin : Sénèque en parlait déjà !
-    Conclusion : rien de nouveau sous le soleil à part peut-être une plus forte tendance à vouloir tout « catégoriser » et uniformiser. Signe d’une époque qui a terriblement besoin de réassurance.  »
-  </p>
+        <p>
+          La transmission des savoirs tacites – ces connaissances informelles non formalisées – est cruciale pour la pérennité des entreprises. Une étude indique que seulement 20 % des savoir-faire d’une entreprise sont formalisés, ce qui expose un risque de perte lors des départs ou mutations. Pour pallier ce déficit, des stratégies telles que la documentation des processus et le mentorat sont recommandées<sup><a href="#note9">9</a></sup><sup><a href="#note10">10</a></sup>.
+        </p>
+        <p>
+          De plus, la convivialité et un climat de travail positif sont essentiels pour le bien-être des salariés. Une étude de 2019 montre que 73 % des salariés se disent satisfaits de leur qualité de vie au travail, et une enquête OpinionWay de 2022 souligne que 29 % des employés considèrent la convivialité comme un critère majeur de motivation<sup><a href="#note11">11</a></sup>.
+        </p>
+        <p>
+          Enfin, concernant l’emploi stable après reconversion, une étude de 2023 révèle que 33 % des salariés envisagent une reconversion professionnelle, mais seulement 10 % la concrétisent dans les quatre ans. Parmi ceux qui se reconvertissent, environ 7 à 9 % trouvent un emploi stable, tandis que l’INSEE montre que les seniors – notamment les femmes – sont particulièrement touchés par le chômage (entre 9 et 12 % selon les tranches d’âge)<sup><a href="#note12">12</a></sup><sup><a href="#note13">13</a></sup>.
+        </p>
+        <p>
+          Enfin, la perception du clivage intergénérationnel varie selon les sondages. Une étude IFOP (2021) indique que 50 % des Français estiment que les liens entre générations se sont affaiblis au cours des vingt dernières années, tandis qu’un sondage Odoxa (2021) révèle que 56 % craignent un futur conflit – avec 70 % d’inquiétude chez les 65 ans et plus contre 60 % chez les 18–34 ans<sup><a href="#note14">14</a></sup>. Un baromètre de SC Solidarité Seniors (2024) souligne quant à lui que 94 % des seniors et 87 % des jeunes considèrent qu’un renforcement des liens intergénérationnels améliorerait la cohésion sociale<sup><a href="#note15">15</a></sup>.
+        </p>
+        <div class="extrait-intergen">
+          <p>
+            « Je ne veux pas démontrer que ma génération est moralement 
+            supérieure aux autres, ni rejeter la faute des dégâts actuels 
+            sur une génération donnée. Ce livre n’est pas un brûlot 
+            “anti-boomers”. »
+            <br>
+            <em>(Extrait du livre de Salomé Saqué <strong>Sois jeune et tais-toi</strong> page 19)</em>
 
-  <p><strong>Commentaire n°2 :</strong>  
-    « Est-ce que les compétences ont un âge ? Sincèrement, non. Pourtant, pour pouvoir occuper un poste, il faut avoir des compétences. Les préjugés sur l'âge, le sexe et autres ne devraient plus être car c'est encadré par la loi... A un moment, ces entreprises seront obligées de faire autrement car elles n'auront plus personne pour travailler pour elles en continuant ainsi. Revoir ses pratiques et s'adapter au monde changeant est une nécessité pour les entreprises et quand je parle de changement, je ne parle pas que de changement technologique mais bien de TOUS les changements qui vont avoir une influence. Il serait temps de comprendre que chacun est unique et que c'est une erreur de vouloir faire rentrer dans des cases. L'innovation vient de la diversité.  »
-  </p>
-</div>
-
-
-  <p>
-    La transmission des savoirs tacites – ces connaissances informelles non formalisées – est cruciale pour la pérennité des entreprises. Une étude indique que seulement 20 % des savoir-faire d’une entreprise sont formalisés, ce qui expose un risque de perte lors des départs ou mutations. Pour pallier ce déficit, des stratégies telles que la documentation des processus et le mentorat sont recommandées<sup><a href="#note9">9</a></sup><sup><a href="#note10">10</a></sup>.
-  </p>
-  <p>
-    De plus, la convivialité et un climat de travail positif sont essentiels pour le bien-être des salariés. Une étude de 2019 montre que 73 % des salariés se disent satisfaits de leur qualité de vie au travail, et une enquête OpinionWay de 2022 souligne que 29 % des employés considèrent la convivialité comme un critère majeur de motivation<sup><a href="#note11">11</a></sup>.
-  </p>
-  <p>
-    Enfin, concernant l’emploi stable après reconversion, une étude de 2023 révèle que 33 % des salariés envisagent une reconversion professionnelle, mais seulement 10 % la concrétisent dans les quatre ans. Parmi ceux qui se reconvertissent, environ 7 à 9 % trouvent un emploi stable, tandis que l’INSEE montre que les seniors – notamment les femmes – sont particulièrement touchés par le chômage (entre 9 et 12 % selon les tranches d’âge)<sup><a href="#note12">12</a></sup><sup><a href="#note13">13</a></sup>.
-  </p>
-  <p>
-    Enfin, la perception du clivage intergénérationnel varie selon les sondages. Une étude IFOP (2021) indique que 50 % des Français estiment que les liens entre générations se sont affaiblis au cours des vingt dernières années, tandis qu’un sondage Odoxa (2021) révèle que 56 % craignent un futur conflit – avec 70 % d’inquiétude chez les 65 ans et plus contre 60 % chez les 18–34 ans<sup><a href="#note14">14</a></sup>. Un baromètre de SC Solidarité Seniors (2024) souligne quant à lui que 94 % des seniors et 87 % des jeunes considèrent qu’un renforcement des liens intergénérationnels améliorerait la cohésion sociale<sup><a href="#note15">15</a></sup>.
-  </p>
-  <div class="extrait-intergen">
-    <p>
-      « Je ne veux pas démontrer que ma génération est moralement 
-      supérieure aux autres, ni rejeter la faute des dégâts actuels 
-      sur une génération donnée. Ce livre n’est pas un brûlot 
-      “anti-boomers”. »
-      <br>
-      <em>(Extrait du livre de Salomé Saqué <strong>Sois jeune et tais-toi</strong> page 19)</em>
-
-    </p>
-  </div>
+          </p>
+        </div>
+        <!-- Entre Chapitre 2 et Chapitre 3 -->
+        <p>
+          Les témoignages recueillis illustrent non seulement la diversité des points de vue sur la jeunesse et le vieillissement, mais révèlent également la persistance de stéréotypes qui alimentent le débat. 
+          Dans le chapitre suivant, nous nous intéresserons aux politiques RH et aux structures d’accueil – ou leur absence – afin de comprendre comment ces pratiques influencent la dynamique intergénérationnelle au sein des organisations
+        </p>
         <hr>
         <!-- Courte note de bas de page insérée juste après le paragraphe -->
         <div class="footnotes">
@@ -576,29 +584,22 @@ p {
             <strong>Un Gen X, un Millennial et un Gen Z recherchent un emploi [Vidéo YouTube]</strong> : 
             Cette vidéo humoristique montre comment trois générations – Gen X, Millennials et Gen Z – abordent différemment la recherche d’emploi. Elle met en lumière leurs méthodes, priorités et valeurs professionnelles contrastées face aux exigences du marché du travail.
           </li>
-          
-
           <li id="footGZ7">
             <strong>Un Gen X, un Millennial et un Gen Z recherchent un emploi [Vidéo YouTube]</strong> : 
             Cette vidéo humoristique montre comment trois générations – Gen X, Millennials et Gen Z – abordent différemment la recherche d’emploi. Elle met en lumière leurs méthodes, priorités et valeurs professionnelles contrastées face aux exigences du marché du travail.
           </li>
-
-
           <li id="footGZ8">
             <strong>Le PROBLÈME avec les personnages de la Gen Z [Vidéo YouTube]</strong> : 
             Cette vidéo analyse la représentation stéréotypée des personnages de la génération Z dans les médias, en soulignant notamment leur dépendance aux technologies, leur sensibilité exacerbée et leur manque de résilience. Elle plaide pour une image plus nuancée et authentique de cette génération.
           </li>
-          
           <li id="footGS9">
             <strong>Un Gen X, un Millennial et un Gen Z négocient leur salaire [Vidéo YouTube]</strong> : 
             Cette vidéo illustre de manière humoristique la négociation salariale par trois représentants de générations différentes – la Génération X, les Millennials et la Génération Z. Elle met en avant leurs stratégies et attentes variées en matière de communication et de valorisation du travail.
           </li>
-          
           <li id="footGZ10">
             <strong>Faire partie de la génération Y / Z : C’EST QUOI LE PIRE ?! [Vidéo YouTube]</strong> : 
             Cette vidéo analyse les défis et stéréotypes auxquels sont confrontées les générations Y et Z, notamment la dépendance aux technologies, les attentes professionnelles et la remise en question des normes traditionnelles. Elle déconstruit certains préjugés en montrant comment ces jeunes redéfinissent leur rapport au travail.
           </li>
-
           <li id="footGZ11">
             <strong>GZ11 – Gen Z : La génération la plus FAIBLE de tous les temps ? [Vidéo YouTube]</strong> : 
             Cette vidéo explore les critiques adressées à la génération Z, souvent présentée comme moins résiliente que les générations précédentes. Elle examine notamment l’impact d’une éducation axée sur la protection et la moindre exposition aux défis pratiques, et propose une réflexion sur la nécessité de développer la résilience et l’autonomie chez les jeunes.
@@ -615,17 +616,10 @@ p {
             <strong>GZ14 – Why Companies Are Firing Gen Z Workers [Vidéo YouTube]</strong> : 
             Cette vidéo explore les raisons pour lesquelles certaines entreprises se séparent de leurs employés de la génération Z, en soulignant des défis tels que le manque de compétences en communication, une éthique de travail perçue comme insuffisante et des attentes professionnelles élevées. Elle met en avant la nécessité pour les employeurs de mieux comprendre les valeurs et motivations de cette génération.
           </li>
-
           <li id="footGZ15">
             <strong>GZ15 – Study explains why Gen Z struggles in the workforce. Young adults disagree [Vidéo YouTube]</strong> : 
             Cette vidéo analyse les difficultés que rencontre la génération Z sur le marché du travail, notamment en termes de communication et d'éthique professionnelle, tout en présentant les objections de jeunes adultes qui contestent ces critiques comme étant fondées sur des stéréotypes. Elle insiste sur la nécessité pour les employeurs d’adapter leurs pratiques aux attentes de cette génération.
           </li>
-          
-          
-          
-          
-          
-
           </ol>
         </div>
         <!-- Fin note de bas de page -->
@@ -633,167 +627,189 @@ p {
       
       <!-- Page 4 : Chapitre 3 -->
       <div class="page" id="page4">
-      
 
-
-  <!-- CHAPITRE 3 -->
-  <h2>Chapitre 3 : Politiques RH et Manque de Structures d’Accueil</h2>
-  <div class="extrait-intergen">
-    <h3>Extrait vidéo B SMART : “Recruter en fonction des compétences”</h3>
-    <p><strong>Amélie Favre-Guittet :</strong>
-      « Arrêtez de les oublier ! Recruter en fonction des compétences 
-      plutôt que de l’âge, c’est essentiel. Et pourtant, j’entends encore 
-      des RH dire : “49 ans ? Trop vieux, trop cher.” »
-    </p>
-    <p>
-      <em>(Source : SMART JOB, B SMART, 31 octobre 2024) – 
-        <br>
-        Voir la vidéo
-      <a href="https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024"
-         target="_blank" rel="noopener noreferrer">
-         https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
-      </a></em>
-    </p>
-  </div>
-  <p>
-    Dans de nombreuses TPE et PME, les dispositifs formels de tutorat font souvent défaut en raison des ressources limitées. Des études (ANACT) indiquent que le pourcentage des TPE/PME ne disposant pas d’un dispositif formel de tutorat est élevé<sup><a href="#note21">21</a></sup>. Cette absence conduit à une transmission des savoirs principalement informelle, reposant sur les interactions quotidiennes entre les employés et leurs dirigeants, ce qui peut être à double tranchant.
-  </p>
-  <p>
-    Par ailleurs, les programmes d’éducation continue pour adultes présentent d’importantes insuffisances. Selon le cinquième Rapport mondial sur l'apprentissage et l'éducation des adultes (GRALE 5) de l’UNESCO, 60 % des pays n’ont constaté aucune amélioration de la participation des personnes vulnérables (détenus, personnes handicapées, migrants), tandis que 24 % des pays rapportent une diminution de la participation des populations rurales et des personnes âgées<sup><a href="#note22">22</a></sup>.
-  </p>
-  <p>
-    Les grandes entreprises sont généralement mieux équipées pour mettre en place des dispositifs de parrainage senior-junior, mais les données précises de l’INSEE sur ce taux ne sont pas disponibles<sup><a href="#note24">24</a></sup>. Néanmoins, il est reconnu que ces programmes favorisent le transfert de compétences et renforcent la cohésion des équipes.
-  </p>
-  <p>
-    En outre, les plans de départs volontaires ciblant les salariés de plus de 52 ans représentent un outil de gestion des effectifs. Par exemple, en novembre 2024, l’opérateur Orange a mis en place un dispositif de « temps partiel senior » (TPS), permettant aux salariés de préparer leur départ à la retraite de manière progressive – 50 % d’activité la première année avec une rémunération à 70 %, puis 60 % par la suite<sup><a href="#note25">25</a></sup>. Ces plans, qui offrent des conditions avantageuses (indemnités, accompagnement, formation), visent à renouveler les compétences tout en respectant le cadre légal.
-  </p>
-  <p>
-    Enfin, l’absence de dispositifs structurés d’intégration pour les nouveaux embauchés peut avoir un impact négatif significatif. Une intégration mal organisée conduit à un turnover élevé, à une démotivation des recrues et à des perturbations dans la dynamique d’équipe, entraînant des coûts financiers élevés en recrutement et formation<sup><a href="#note26">26</a></sup>.
-  </p>
-
-  
-  <div class="extrait-intergen">
-    <h3>Extrait vidéo B SMART : “Offboarding et marque employeur”</h3>
-    <p><strong>Amélie Favre-Guittet :</strong> 
-      « On parle aujourd’hui énormément de marque employeur : 
-      quelle image on veut laisser à un collaborateur après 5 ou 20 ans 
-      dans l’entreprise ? Offrir une porte de sortie digne, c’est aussi ça. »
-    </p>
-    <p>
-      <em>(Source : SMART JOB, B SMART, 31 octobre 2024) – <br>
-        Voir la vidéo
-      <a href="https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024"
-         target="_blank" rel="noopener noreferrer">
-         https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
-      </a></em>
-    </p>
-  </div>
+        <!-- CHAPITRE 3 -->
+        <h2>Chapitre 3 : Politiques RH et Manque de Structures d’Accueil</h2>
+        <div class="extrait-intergen">
+          <h3>Extrait vidéo B SMART : “Recruter en fonction des compétences”</h3>
+          <p><strong>Amélie Favre-Guittet :</strong>
+            « Arrêtez de les oublier ! Recruter en fonction des compétences 
+            plutôt que de l’âge, c’est essentiel. Et pourtant, j’entends encore 
+            des RH dire : “49 ans ? Trop vieux, trop cher.” »
+          </p>
+          <p>
+            <em>(Source : SMART JOB, B SMART, 31 octobre 2024) – 
+              <br>
+              Voir la vidéo
+            <a href="https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024"
+              target="_blank" rel="noopener noreferrer">
+              https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
+            </a></em>
+          </p>
+        </div>
+        <p>
+          Dans de nombreuses TPE et PME, les dispositifs formels de tutorat font souvent défaut en raison des ressources limitées. Des études (ANACT) indiquent que le pourcentage des TPE/PME ne disposant pas d’un dispositif formel de tutorat est élevé<sup><a href="#note21">21</a></sup>. Cette absence conduit à une transmission des savoirs principalement informelle, reposant sur les interactions quotidiennes entre les employés et leurs dirigeants, ce qui peut être à double tranchant.
+        </p>
+        <p>
+          Par ailleurs, les programmes d’éducation continue pour adultes présentent d’importantes insuffisances. Selon le cinquième Rapport mondial sur l'apprentissage et l'éducation des adultes (GRALE 5) de l’UNESCO, 60 % des pays n’ont constaté aucune amélioration de la participation des personnes vulnérables (détenus, personnes handicapées, migrants), tandis que 24 % des pays rapportent une diminution de la participation des populations rurales et des personnes âgées<sup><a href="#note22">22</a></sup>.
+        </p>
+        <p>
+          Les grandes entreprises sont généralement mieux équipées pour mettre en place des dispositifs de parrainage senior-junior, mais les données précises de l’INSEE sur ce taux ne sont pas disponibles<sup><a href="#note24">24</a></sup>. Néanmoins, il est reconnu que ces programmes favorisent le transfert de compétences et renforcent la cohésion des équipes.
+        </p>
+        <p>
+          En outre, les plans de départs volontaires ciblant les salariés de plus de 52 ans représentent un outil de gestion des effectifs. Par exemple, en novembre 2024, l’opérateur Orange a mis en place un dispositif de « temps partiel senior » (TPS), permettant aux salariés de préparer leur départ à la retraite de manière progressive – 50 % d’activité la première année avec une rémunération à 70 %, puis 60 % par la suite<sup><a href="#note25">25</a></sup>. Ces plans, qui offrent des conditions avantageuses (indemnités, accompagnement, formation), visent à renouveler les compétences tout en respectant le cadre légal.
+        </p>
+        <p>
+          Enfin, l’absence de dispositifs structurés d’intégration pour les nouveaux embauchés peut avoir un impact négatif significatif. Une intégration mal organisée conduit à un turnover élevé, à une démotivation des recrues et à des perturbations dans la dynamique d’équipe, entraînant des coûts financiers élevés en recrutement et formation<sup><a href="#note26">26</a></sup>.
+        </p>
+        <div class="extrait-intergen">
+          <h3>Extrait vidéo B SMART : “Offboarding et marque employeur”</h3>
+          <p><strong>Amélie Favre-Guittet :</strong> 
+            « On parle aujourd’hui énormément de marque employeur : 
+            quelle image on veut laisser à un collaborateur après 5 ou 20 ans 
+            dans l’entreprise ? Offrir une porte de sortie digne, c’est aussi ça. »
+          </p>
+          <p>
+            <em>(Source : SMART JOB, B SMART, 31 octobre 2024) – <br>
+              Voir la vidéo
+            <a href="https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024"
+              target="_blank" rel="noopener noreferrer">
+              https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
+            </a></em>
+          </p>
+        </div>
+        <!-- Entre Chapitre 3 et Chapitre 4 -->
+        <p>
+          Après avoir examiné comment les dispositifs de tutorat et les stratégies RH façonnent l’accueil des nouvelles recrues, il convient de s’interroger sur l’impact de la mobilité géographique et de la dispersion des compétences sur les dynamiques de travail.
+          Le prochain chapitre se penchera sur ces enjeux, en analysant les difficultés de recrutement en province versus les grandes métropoles et la manière dont cela influence la répartition des compétences. 
+        </p>
+        <hr>
       </div>
       
       <!-- Page 5 : Chapitre 4 -->
       <div class="page" id="page5">
 
-  <!-- CHAPITRE 4 -->
-  <h2>Chapitre 4 : Le Poids de la Mobilité et de la Dispersion</h2>
-  <p>
-    Bien que les données précises soient rares, plusieurs tendances montrent que les choix géographiques des jeunes sont influencés par la recherche d’opportunités et de meilleures conditions de vie. Par exemple, bien qu’il n’existe pas de pourcentage exact des jeunes refusant un CDI en province pour s’installer à Paris, diverses enquêtes indiquent que le CDI est toujours considéré comme un objectif majeur, mais que son accessibilité est difficile en province par rapport à l’Île-de-France<sup><a href="#note27">27</a></sup>.
-  </p>
-  <p>
-    D’autre part, le remplacement d’un expert proche de la retraite sur un site éloigné s’avère particulièrement compliqué. La pénurie de compétences locales, combinée à une attractivité limitée des zones rurales, rend le recrutement difficile. Des stratégies comme le mentorat, les incitations à la mobilité, la formation continue et le télétravail sont ainsi recommandées pour pallier ces défis<sup><a href="#note28">28</a></sup>.
-  </p>
-  <p>
-    L’évolution de la formation continue pour les seniors montre des progrès modestes. Par exemple, en 2012, 33 % des personnes de 55 à 64 ans avaient suivi une formation, chiffre qui atteint 35 % en 2022, bien que des disparités persistent selon la catégorie socioprofessionnelle et la taille de l’entreprise<sup><a href="#note29">29</a></sup>.
-  </p>
-  <p>
-    Concernant le mentorat, il est reconnu que les profils engagés dans cette démarche reçoivent généralement des recommandations plus positives sur LinkedIn, ce qui renforce leur crédibilité professionnelle<sup><a href="#note30">30</a></sup>.
-  </p>
-  <p>
-    Enfin, la fracture numérique touche particulièrement les seniors. Selon le Baromètre du numérique 2023 et une étude de l’INSEE dans le Grand Est, environ 48 % des personnes de 60 à 69 ans et 51 % des plus de 70 ans éprouvent des difficultés avec les outils numériques, et 41 % des seniors sont en situation d'illectronisme<sup><a href="#note31">31</a></sup>.
-  </p>
+        <!-- CHAPITRE 4 -->
+        <h2>Chapitre 4 : Le Poids de la Mobilité et de la Dispersion</h2>
+        <p>
+          Bien que les données précises soient rares, plusieurs tendances montrent que les choix géographiques des jeunes sont influencés par la recherche d’opportunités et de meilleures conditions de vie. Par exemple, bien qu’il n’existe pas de pourcentage exact des jeunes refusant un CDI en province pour s’installer à Paris, diverses enquêtes indiquent que le CDI est toujours considéré comme un objectif majeur, mais que son accessibilité est difficile en province par rapport à l’Île-de-France<sup><a href="#note27">27</a></sup>.
+        </p>
+        <p>
+          D’autre part, le remplacement d’un expert proche de la retraite sur un site éloigné s’avère particulièrement compliqué. La pénurie de compétences locales, combinée à une attractivité limitée des zones rurales, rend le recrutement difficile. Des stratégies comme le mentorat, les incitations à la mobilité, la formation continue et le télétravail sont ainsi recommandées pour pallier ces défis<sup><a href="#note28">28</a></sup>.
+        </p>
+        <p>
+          L’évolution de la formation continue pour les seniors montre des progrès modestes. Par exemple, en 2012, 33 % des personnes de 55 à 64 ans avaient suivi une formation, chiffre qui atteint 35 % en 2022, bien que des disparités persistent selon la catégorie socioprofessionnelle et la taille de l’entreprise<sup><a href="#note29">29</a></sup>.
+        </p>
+        <p>
+          Concernant le mentorat, il est reconnu que les profils engagés dans cette démarche reçoivent généralement des recommandations plus positives sur LinkedIn, ce qui renforce leur crédibilité professionnelle<sup><a href="#note30">30</a></sup>.
+        </p>
+        <p>
+          Enfin, la fracture numérique touche particulièrement les seniors. Selon le Baromètre du numérique 2023 et une étude de l’INSEE dans le Grand Est, environ 48 % des personnes de 60 à 69 ans et 51 % des plus de 70 ans éprouvent des difficultés avec les outils numériques, et 41 % des seniors sont en situation d'illectronisme<sup><a href="#note31">31</a></sup>.
+        </p>
+        <!-- Entre Chapitre 4 et Chapitre 5 -->
+        <p>
+          La dispersion des compétences et les choix de mobilité révèlent des disparités territoriales qui se répercutent sur l’ensemble du marché du travail.
+          Ces éléments nous amènent à considérer la dimension démographique et sociale, sujet du prochain chapitre, où nous analyserons l’évolution de l’âge médian et les implications sur l’emploi des seniors. 
+        </p>
+        <hr>
       </div>
       
       <!-- Page 6 : Chapitre 5 -->
       <div class="page" id="page6">
-        
-  <!-- CHAPITRE 5 -->
-  <h2>Chapitre 5 : La Dimension Démographique et Sociale</h2>
-  <p>
-    L’évolution de l’âge médian de la population active en France reflète des dynamiques démographiques et économiques importantes. Selon l’INSEE, l’âge médian de la population française est passé de 36,2 ans en 1991 à 41,7 ans en 2025, soit une augmentation de 5,5 ans qui traduit un vieillissement général de la population<sup><a href="#note33">33</a></sup>. Parallèlement, le taux d’activité des seniors s’est amélioré : en 2023, le taux d’emploi des 60–64 ans a atteint 38,9 %, le niveau le plus élevé depuis 1976<sup><a href="#note34">34</a></sup>. Ces éléments indiquent une transformation du marché du travail, avec une part croissante de travailleurs seniors.
-  </p>
-  <p>
-    Par ailleurs, plusieurs études montrent l’importance du partage d’expérience intergénérationnel. Une enquête menée par le cabinet USKOA Partners révèle que 86 % des salariés estiment que la différence d’âge influence positivement la collaboration, et 91 % souhaitent la mise en place d’actions concrètes (ateliers, mentorat croisé, formations sur les biais liés à l’âge)<sup><a href="#note35">35</a></sup>. D’autres données indiquent que 90 % des salariés pensent que les entreprises devraient intensifier leurs efforts pour encourager le travail intergénérationnel, une opinion partagée par 89 % de la génération Z et 81 % des seniors<sup><a href="#note36">36</a></sup>.
-  </p>
-  <p>
-    La flexisécurité, bien qu’elle ne cible pas directement la coopération intergénérationnelle, crée un environnement propice à l’apprentissage continu et au mentorat, favorisant ainsi le transfert des compétences entre générations. Les stratégies de formation tout au long de la vie et les politiques actives du marché du travail contribuent indirectement à renforcer ces interactions<sup><a href="#note37">37</a></sup>.
-  </p>
-  <p>
-    En outre, les récentes réformes dans le domaine de la formation professionnelle, notamment le développement du contrat de professionnalisation pour les 30–45 ans, témoignent d’un effort pour élargir l’accès à l’alternance. La loi de 2018 a permis d’adapter ces dispositifs aux besoins spécifiques des adultes, sans exigence de certification préalable<sup><a href="#note38">38</a></sup>.
-  </p>
-  <p>
-    Enfin, le taux de turnover diffère fortement selon l’âge. En France, l’INSEE indique qu’en moyenne le turnover est d’environ 15 %, mais il est beaucoup plus élevé chez les jeunes (15–24 ans) en raison de la précarité de l’emploi, tandis que les seniors bénéficient d’une stabilité plus marquée<sup><a href="#note39">39</a></sup>.
-  </p>
+        <!-- CHAPITRE 5 -->
+        <h2>Chapitre 5 : La Dimension Démographique et Sociale</h2>
+        <p>
+          L’évolution de l’âge médian de la population active en France reflète des dynamiques démographiques et économiques importantes. Selon l’INSEE, l’âge médian de la population française est passé de 36,2 ans en 1991 à 41,7 ans en 2025, soit une augmentation de 5,5 ans qui traduit un vieillissement général de la population<sup><a href="#note33">33</a></sup>. Parallèlement, le taux d’activité des seniors s’est amélioré : en 2023, le taux d’emploi des 60–64 ans a atteint 38,9 %, le niveau le plus élevé depuis 1976<sup><a href="#note34">34</a></sup>. Ces éléments indiquent une transformation du marché du travail, avec une part croissante de travailleurs seniors.
+        </p>
+        <p>
+          Par ailleurs, plusieurs études montrent l’importance du partage d’expérience intergénérationnel. Une enquête menée par le cabinet USKOA Partners révèle que 86 % des salariés estiment que la différence d’âge influence positivement la collaboration, et 91 % souhaitent la mise en place d’actions concrètes (ateliers, mentorat croisé, formations sur les biais liés à l’âge)<sup><a href="#note35">35</a></sup>. D’autres données indiquent que 90 % des salariés pensent que les entreprises devraient intensifier leurs efforts pour encourager le travail intergénérationnel, une opinion partagée par 89 % de la génération Z et 81 % des seniors<sup><a href="#note36">36</a></sup>.
+        </p>
+        <p>
+          La flexisécurité, bien qu’elle ne cible pas directement la coopération intergénérationnelle, crée un environnement propice à l’apprentissage continu et au mentorat, favorisant ainsi le transfert des compétences entre générations. Les stratégies de formation tout au long de la vie et les politiques actives du marché du travail contribuent indirectement à renforcer ces interactions<sup><a href="#note37">37</a></sup>.
+        </p>
+        <p>
+          En outre, les récentes réformes dans le domaine de la formation professionnelle, notamment le développement du contrat de professionnalisation pour les 30–45 ans, témoignent d’un effort pour élargir l’accès à l’alternance. La loi de 2018 a permis d’adapter ces dispositifs aux besoins spécifiques des adultes, sans exigence de certification préalable<sup><a href="#note38">38</a></sup>.
+        </p>
+        <p>
+          Enfin, le taux de turnover diffère fortement selon l’âge. En France, l’INSEE indique qu’en moyenne le turnover est d’environ 15 %, mais il est beaucoup plus élevé chez les jeunes (15–24 ans) en raison de la précarité de l’emploi, tandis que les seniors bénéficient d’une stabilité plus marquée<sup><a href="#note39">39</a></sup>.
+        </p>
         <hr>
+        <!-- Entre Chapitre 5 et Chapitre 6 -->
+        <p>
+          L’évolution démographique et le partage d’expérience entre générations mettent en lumière des dynamiques structurantes du marché du travail.
+          Toutefois, ces changements ne se limitent pas aux chiffres : ils se traduisent aussi par des tensions sociales et des défis en matière de communication.
+          Le chapitre suivant abordera ainsi le climat social en entreprise, en se focalisant sur l’isolement, les conflits intergénérationnels et les besoins de dialogue.
+        </p>
       </div>
       
       <!-- Page 7 : Chapitre 6 -->
       <div class="page" id="page7">
 
-
-  <!-- CHAPITRE 6 -->
-  <h2>Chapitre 6 : Climat Social, Isolement et Besoins de Dialogue</h2>
-  <p>
-    Le climat social dans les entreprises est souvent affecté par les tensions intergénérationnelles. Selon une étude menée par ADP, 71 % des salariés en France déclarent être confrontés à des conflits intergénérationnels, qui nuisent à leur motivation et à leur productivité<sup><a href="#note40">40</a></sup>. Ces conflits, liés à des divergences de valeurs ou de méthodes de travail, peuvent créer un environnement tendu et impacter négativement la cohésion d’équipe.
-  </p>
-  <p>
-    Par ailleurs, l’INSEE rapporte que 55 % des embauches des moins de 30 ans se font sous forme de contrats à durée déterminée (CDD courts), tandis que ce mode de recrutement concerne 82 % des personnes de 60 ans et plus, révélant une précarité marquée chez les jeunes<sup><a href="#note41">41</a></sup>. De plus, les CDD longs concernent majoritairement les jeunes, avec 45 % des signataires ayant moins de 24 ans<sup><a href="#note42">42</a></sup>.
-  </p>
-  <p>
-    L’indice de cohésion intergénérationnelle n’étant pas systématiquement mesuré, des enquêtes montrent néanmoins que 90 % des professionnels estiment que chaque génération apporte des compétences précieuses à l’entreprise, bien que 50 % des Français pensent que le lien entre générations s’est affaibli ces 20 dernières années<sup><a href="#note43">43</a></sup>.
-  </p>
-  <p>
-    Enfin, dans le domaine de la cybersécurité, les comportements diffèrent selon l’âge : les jeunes adoptent parfois des pratiques à risque tandis que les seniors, bien que plus expérimentés, peuvent être réticents aux nouvelles solutions. Des études soulignent qu’une approche intergénérationnelle, avec formation continue et mentorat inversé, permet d’améliorer la posture de cybersécurité globale des organisations<sup><a href="#note44">44</a></sup>.
-  </p>
-  <p>
-    Le tutorat inversé gagne également du terrain dans les grandes entreprises pour favoriser l’échange de compétences, bien que les taux précis de mise en œuvre restent à préciser<sup><a href="#note45">45</a></sup>.
-  </p>
+        <!-- CHAPITRE 6 -->
+        <h2>Chapitre 6 : Climat Social, Isolement et Besoins de Dialogue</h2>
+        <p>
+          Le climat social dans les entreprises est souvent affecté par les tensions intergénérationnelles. Selon une étude menée par ADP, 71 % des salariés en France déclarent être confrontés à des conflits intergénérationnels, qui nuisent à leur motivation et à leur productivité<sup><a href="#note40">40</a></sup>. Ces conflits, liés à des divergences de valeurs ou de méthodes de travail, peuvent créer un environnement tendu et impacter négativement la cohésion d’équipe.
+        </p>
+        <p>
+          Par ailleurs, l’INSEE rapporte que 55 % des embauches des moins de 30 ans se font sous forme de contrats à durée déterminée (CDD courts), tandis que ce mode de recrutement concerne 82 % des personnes de 60 ans et plus, révélant une précarité marquée chez les jeunes<sup><a href="#note41">41</a></sup>. De plus, les CDD longs concernent majoritairement les jeunes, avec 45 % des signataires ayant moins de 24 ans<sup><a href="#note42">42</a></sup>.
+        </p>
+        <p>
+          L’indice de cohésion intergénérationnelle n’étant pas systématiquement mesuré, des enquêtes montrent néanmoins que 90 % des professionnels estiment que chaque génération apporte des compétences précieuses à l’entreprise, bien que 50 % des Français pensent que le lien entre générations s’est affaibli ces 20 dernières années<sup><a href="#note43">43</a></sup>.
+        </p>
+        <p>
+          Enfin, dans le domaine de la cybersécurité, les comportements diffèrent selon l’âge : les jeunes adoptent parfois des pratiques à risque tandis que les seniors, bien que plus expérimentés, peuvent être réticents aux nouvelles solutions. Des études soulignent qu’une approche intergénérationnelle, avec formation continue et mentorat inversé, permet d’améliorer la posture de cybersécurité globale des organisations<sup><a href="#note44">44</a></sup>.
+        </p>
+        <p>
+          Le tutorat inversé gagne également du terrain dans les grandes entreprises pour favoriser l’échange de compétences, bien que les taux précis de mise en œuvre restent à préciser<sup><a href="#note45">45</a></sup>.
+        </p>
   
-  <div class="extrait-intergen">
-    <p>
-      « L’âgisme est une discrimination qui touche les deux côtés du curseur : 
-      les plus jeunes comme les plus âgés. » 
-      <br>
-      <em>(Frédérique Jeske, émission B SMART, 31 octobre 2024)</em>
-    </p>
-  </div>
-  <p>
-    Cette citation est particulièrement éloquente : il est faux de limiter 
-    l’âgisme à une exclusion des seuls seniors. Les jeunes peuvent aussi faire l’objet 
-    de jugements négatifs sur leur manque prétendu de sérieux ou d’expérience.
-  </p>
+        <div class="extrait-intergen">
+          <p>
+            « L’âgisme est une discrimination qui touche les deux côtés du curseur : 
+            les plus jeunes comme les plus âgés. » 
+            <br>
+            <em>(Frédérique Jeske, émission B SMART, 31 octobre 2024)</em>
+          </p>
+        </div>
+        <p>
+          Cette citation est particulièrement éloquente : il est faux de limiter 
+          l’âgisme à une exclusion des seuls seniors. Les jeunes peuvent aussi faire l’objet 
+          de jugements négatifs sur leur manque prétendu de sérieux ou d’expérience.
+        </p>
+        <!-- Entre Chapitre 6 et Chapitre 7 -->
+        <p>
+          Après avoir examiné l’impact des tensions et des conflits sur la cohésion d’équipe, il est pertinent de s’intéresser à l’impact de ces dynamiques sur l’innovation et l’entrepreneuriat.
+          Le prochain chapitre mettra en lumière comment, malgré les obstacles, l’esprit d’initiative se manifeste et comment les startups tirent parti de la complémentarité des générations.
+        </p>
         <hr>
       </div>
       
       <!-- Page 8 : Chapitre 7 -->
       <div class="page" id="page8">
       
- 
-  <!-- CHAPITRE 7 -->
-  <h2>Chapitre 7 : L’Essor des Startups et la Place des Seniors</h2>
-  <p>
-    L’entrepreneuriat ne se limite pas aux jeunes. Selon une étude de l’INSEE, 38,1 % des créateurs d’entreprise en France avaient 45 ans ou plus au moment de leur création<sup><a href="#note46">46</a></sup>. Dans le secteur des fintechs, 8 % des fondateurs avaient plus de 50 ans<sup><a href="#note47">47</a></sup>, montrant que l’expérience et le réseau professionnel des seniors constituent des atouts pour l’innovation.
-  </p>
-  <p>
-    Par ailleurs, une étude de PageGroup indique que 45 % des salariés seniors envisagent un changement de secteur en fin de carrière, tandis qu’une autre enquête révèle que parmi les Français ayant envisagé une reconversion, 25 % souhaitent changer de métier<sup><a href="#note48">48</a></sup>.
-  </p>
-  <p>
-    L’e-learning joue un rôle crucial dans la reconversion des professionnels de plus de 45 ans. Une étude de juin 2020 montre que 76 % des actifs se disent prêts à se former à distance, et 65 % utilisent des MOOC pour acquérir de nouvelles compétences, facilitant ainsi leur réorientation professionnelle<sup><a href="#note49">49</a></sup>.
-  </p>
-  <p>
-    Concernant l’entrepreneuriat, une étude de France Stratégie indique que les seniors sont à l’origine d’environ 20 % des nouvelles entreprises chaque année, alors qu’ils représentent 29 % des actifs. Des initiatives telles que le programme « +45 » d’Initiative France visent à encourager et soutenir cette tendance<sup><a href="#note50">50</a></sup>.
-  </p>
-  <p>
-    Enfin, la diversité d’âge est un facteur de performance pour les entreprises. Une publication de la CCI souligne que 71 % des entreprises ont intégré l’âge comme critère de diversité en 2021, contre 57 % en 2019, ce qui améliore la créativité et l’innovation, malgré le fait que l’âge reste le premier critère de discrimination ressenti par les salariés<sup><a href="#note51">51</a></sup>.
-  </p>
+        <!-- CHAPITRE 7 -->
+        <h2>Chapitre 7 : L’Essor des Startups et la Place des Seniors</h2>
+        <p>
+          L’entrepreneuriat ne se limite pas aux jeunes. Selon une étude de l’INSEE, 38,1 % des créateurs d’entreprise en France avaient 45 ans ou plus au moment de leur création<sup><a href="#note46">46</a></sup>. Dans le secteur des fintechs, 8 % des fondateurs avaient plus de 50 ans<sup><a href="#note47">47</a></sup>, montrant que l’expérience et le réseau professionnel des seniors constituent des atouts pour l’innovation.
+        </p>
+        <p>
+          Par ailleurs, une étude de PageGroup indique que 45 % des salariés seniors envisagent un changement de secteur en fin de carrière, tandis qu’une autre enquête révèle que parmi les Français ayant envisagé une reconversion, 25 % souhaitent changer de métier<sup><a href="#note48">48</a></sup>.
+        </p>
+        <p>
+          L’e-learning joue un rôle crucial dans la reconversion des professionnels de plus de 45 ans. Une étude de juin 2020 montre que 76 % des actifs se disent prêts à se former à distance, et 65 % utilisent des MOOC pour acquérir de nouvelles compétences, facilitant ainsi leur réorientation professionnelle<sup><a href="#note49">49</a></sup>.
+        </p>
+        <p>
+          Concernant l’entrepreneuriat, une étude de France Stratégie indique que les seniors sont à l’origine d’environ 20 % des nouvelles entreprises chaque année, alors qu’ils représentent 29 % des actifs. Des initiatives telles que le programme « +45 » d’Initiative France visent à encourager et soutenir cette tendance<sup><a href="#note50">50</a></sup>.
+        </p>
+        <p>
+          Enfin, la diversité d’âge est un facteur de performance pour les entreprises. Une publication de la CCI souligne que 71 % des entreprises ont intégré l’âge comme critère de diversité en 2021, contre 57 % en 2019, ce qui améliore la créativité et l’innovation, malgré le fait que l’âge reste le premier critère de discrimination ressenti par les salariés<sup><a href="#note51">51</a></sup>.
+        </p>
+        <!-- Entre Chapitre 7 et Chapitre 8 -->
+        <p>
+          Les succès entrepreneuriaux des seniors démontrent que l’expérience est un levier d’innovation, même dans des secteurs réputés pour privilégier la jeunesse.
+          Toutefois, la manière dont les médias et la société perçoivent ces phénomènes reste ambivalente.
+          Le prochain chapitre s’attellera à décrypter ces regards sociaux et médiatiques, afin de mesurer l’influence des représentations sur la dynamique intergénérationnelle. 
+        </p>
         <hr>
       </div>
       
@@ -827,447 +843,487 @@ p {
             <em>(Source : SMART JOB, B SMART, 31 octobre 2024) – <br>
               Voir la vidéo :
             <a href="https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024"
-               target="_blank" rel="noopener noreferrer">
-               https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
+              target="_blank" rel="noopener noreferrer">
+              https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
             </a></em>
           </p>
-        <hr>
-      </div>
+          <!-- Entre Chapitre 8 et Chapitre 9 -->
+          <p>
+            Alors que la médiatisation semble parfois amplifier les clichés sur les différentes générations, il est essentiel de s’interroger sur le transfert effectif des savoirs et des compétences.
+            Le chapitre suivant se penchera sur la transmission intergénérationnelle et l’innovation, en mettant en lumière les obstacles et les potentiels pour améliorer la pérennité des connaissances au sein des organisations. 
+          </p>
+          <hr>
+        </div>
       </div>
       
       <!-- Page 10 : Chapitre 9 -->
       <div class="page" id="page10">
-       
-  <!-- CHAPITRE 9 -->
-  <h2>Chapitre 9 : Transmission Intergénérationnelle et Innovation</h2>
-  <p>
-    Les dynamiques de transmission des savoirs diffèrent fortement selon l’âge. Les 25–34 ans changent plus régulièrement d’entreprise, motivés par la recherche d’opportunités, tandis que les seniors privilégient la stabilité. Par exemple, une étude de l’Institut français des seniors indique que jusqu’à 90 % des seniors restent dans la même entreprise pendant plus de 10 ans<sup><a href="#note61">61</a></sup>.
-  </p>
-  <div class="extrait-intergen">
-    <h3>La complémentarité dans le travail entre générations</h3>
-    <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe Orange :</strong></p>
-    <p><strong>Interviewé :</strong> « Par exemple, quand j’étais responsable de projets, j’ai travaillé avec quelqu’un qui avait fait toute sa carrière dans le développement matériel et qui approchait de la retraite. Nous nous sommes très bien complétés : moi, avec mes connaissances en architecture réseau et en tests, et lui, qui savait implémenter les tests via le scripting. Ce partenariat m’a permis de renouer avec la programmation, et lui a offert une opportunité de découvrir un environnement plus innovant. »</p>
-    <p>Ici, le témoignage met en lumière comment la rencontre entre des compétences et des expériences différentes peut enrichir un projet et favoriser l’apprentissage mutuel.</p>
-  </div>
-  
-  <p>
-    La formalisation de la transmission des savoirs reste insuffisante. Selon Komin.io, seulement 20 % des savoir-faire d’une entreprise sont formalisés, ce qui souligne le besoin d’outils d’évaluation et de processus structurés pour améliorer le transfert des connaissances<sup><a href="#note62">62</a></sup>.
-  </p>
-  <p>
-    Par ailleurs, les équipes multigénérationnelles apportent un réel avantage pour la réussite des projets d’innovation. Des études de Top Employers et Spayr.eu montrent que ces équipes affichent un taux de réussite en innovation supérieur grâce à la complémentarité des compétences et au mentorat inversé, qui permet aux jeunes de partager leur expertise technologique avec les seniors, et inversement<sup><a href="#note63">63</a></sup>.
-  </p>
-  <p>
-    D’autres enjeux résident dans l’impact des contraintes horaires dans les familles recomposées, qui peuvent compliquer la transmission intergénérationnelle. L’INSEE indique qu’en 2021, 11 % des enfants vivent dans une famille recomposée, impliquant une coordination complexe des emplois du temps entre les parents et beaux-parents<sup><a href="#note64">64</a></sup>.
-  </p>
-   <!-- Insertion Extrait 2 dans le Chapitre 9 -->
-   <div class="extrait-intergen">
-    <h3>La complémentarité dans le travail entre générations</h3>
-    <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe Orange :</strong></p>
-    <p><strong>Interviewé :</strong> « Par exemple, quand j’étais responsable de projets, j’ai travaillé avec quelqu’un qui avait fait toute sa carrière dans le développement matériel et qui approchait de la retraite. Nous nous sommes très bien complétés : moi, avec mes connaissances en architecture réseau et en tests, et lui, qui savait implémenter les tests via le scripting. Ce partenariat m’a permis de renouer avec la programmation, et lui a offert une opportunité de découvrir un environnement plus innovant. »</p>
-    <p>Ici, le témoignage met en lumière comment la rencontre entre des compétences et des expériences différentes peut enrichir un projet et favoriser l’apprentissage mutuel.</p>
-  </div>
-  
-  <p>
-    Par ailleurs, le contentieux prud’homal révèle que, en 2022, 33 % des salariés ayant saisi les prud’hommes avaient 50 ans ou plus, bien que la part spécifique des litiges liés à l’âgisme ne soit pas détaillée<sup><a href="#note65">65</a></sup>.
-  </p>
-  <p>
-    Dans le secteur de l’hôtellerie-restauration, les salariés de plus de 50 ans sont très peu représentés : seuls 8 % des postes sont occupés par des personnes de 55 ans ou plus, contrastant avec une main-d’œuvre jeune dont l’âge moyen est de 35,7 ans<sup><a href="#note67">67</a></sup>.
-  </p>
+        <!-- CHAPITRE 9 -->
+        <h2>Chapitre 9 : Transmission Intergénérationnelle et Innovation</h2>
+        <p>
+          Les dynamiques de transmission des savoirs diffèrent fortement selon l’âge. Les 25–34 ans changent plus régulièrement d’entreprise, motivés par la recherche d’opportunités, tandis que les seniors privilégient la stabilité. Par exemple, une étude de l’Institut français des seniors indique que jusqu’à 90 % des seniors restent dans la même entreprise pendant plus de 10 ans<sup><a href="#note61">61</a></sup>.
+        </p>
+        <div class="extrait-intergen">
+          <h3>La complémentarité dans le travail entre générations</h3>
+          <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe Orange :</strong></p>
+          <p><strong>Interviewé :</strong> « Par exemple, quand j’étais responsable de projets, j’ai travaillé avec quelqu’un qui avait fait toute sa carrière dans le développement matériel et qui approchait de la retraite. Nous nous sommes très bien complétés : moi, avec mes connaissances en architecture réseau et en tests, et lui, qui savait implémenter les tests via le scripting. Ce partenariat m’a permis de renouer avec la programmation, et lui a offert une opportunité de découvrir un environnement plus innovant. »</p>
+          <p>Ici, le témoignage met en lumière comment la rencontre entre des compétences et des expériences différentes peut enrichir un projet et favoriser l’apprentissage mutuel.</p>
+        </div>
+        
+        <p>
+          La formalisation de la transmission des savoirs reste insuffisante. Selon Komin.io, seulement 20 % des savoir-faire d’une entreprise sont formalisés, ce qui souligne le besoin d’outils d’évaluation et de processus structurés pour améliorer le transfert des connaissances<sup><a href="#note62">62</a></sup>.
+        </p>
+        <p>
+          Par ailleurs, les équipes multigénérationnelles apportent un réel avantage pour la réussite des projets d’innovation. Des études de Top Employers et Spayr.eu montrent que ces équipes affichent un taux de réussite en innovation supérieur grâce à la complémentarité des compétences et au mentorat inversé, qui permet aux jeunes de partager leur expertise technologique avec les seniors, et inversement<sup><a href="#note63">63</a></sup>.
+        </p>
+        <p>
+          D’autres enjeux résident dans l’impact des contraintes horaires dans les familles recomposées, qui peuvent compliquer la transmission intergénérationnelle. L’INSEE indique qu’en 2021, 11 % des enfants vivent dans une famille recomposée, impliquant une coordination complexe des emplois du temps entre les parents et beaux-parents<sup><a href="#note64">64</a></sup>.
+        </p>
+        <!-- Insertion Extrait 2 dans le Chapitre 9 -->
+        <div class="extrait-intergen">
+          <h3>La complémentarité dans le travail entre générations</h3>
+          <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe Orange :</strong></p>
+          <p><strong>Interviewé :</strong> « Par exemple, quand j’étais responsable de projets, j’ai travaillé avec quelqu’un qui avait fait toute sa carrière dans le développement matériel et qui approchait de la retraite. Nous nous sommes très bien complétés : moi, avec mes connaissances en architecture réseau et en tests, et lui, qui savait implémenter les tests via le scripting. Ce partenariat m’a permis de renouer avec la programmation, et lui a offert une opportunité de découvrir un environnement plus innovant. »</p>
+          <p>Ici, le témoignage met en lumière comment la rencontre entre des compétences et des expériences différentes peut enrichir un projet et favoriser l’apprentissage mutuel.</p>
+        </div>
+        
+        <p>
+          Par ailleurs, le contentieux prud’homal révèle que, en 2022, 33 % des salariés ayant saisi les prud’hommes avaient 50 ans ou plus, bien que la part spécifique des litiges liés à l’âgisme ne soit pas détaillée<sup><a href="#note65">65</a></sup>.
+        </p>
+        <p>
+          Dans le secteur de l’hôtellerie-restauration, les salariés de plus de 50 ans sont très peu représentés : seuls 8 % des postes sont occupés par des personnes de 55 ans ou plus, contrastant avec une main-d’œuvre jeune dont l’âge moyen est de 35,7 ans<sup><a href="#note67">67</a></sup>.
+        </p>
+        <!-- Entre Chapitre 9 et Chapitre 10 -->
+        <p>
+          Les mécanismes de transmission intergénérationnelle révèlent des atouts indéniables pour l’innovation.
+          Cependant, ils s’inscrivent dans un contexte où les stéréotypes et les différences culturelles persistent, notamment dans le cadre de la “culture start-up”.
+          Le prochain chapitre analysera donc comment ces stéréotypes s’expriment dans les environnements professionnels et quelles en sont les répercussions sur l’image des générations au travail. 
+        </p>
         <hr>
-      </div>
+        </div>
       
       <!-- Page 11 : Chapitre 10 -->
       <div class="page" id="page11">
-       
 
-  <!-- CHAPITRE 10 -->
-  <h2>Chapitre 10&nbsp;: Stéréotypes et Culture Start-up</h2>
-  <p>
-    Les annonces évoquant une « culture start-up » attirent particulièrement les jeunes, notamment les 25–34 ans, comme le suggèrent des estimations indiquant que 63 % des clics proviennent de cette tranche d’âge<sup><a href="#note68">68</a></sup>. Bien que les données précises sur le comportement de clic par tranche d’âge ne soient pas disponibles, une étude de l’INSEE (2021) révèle qu’en 2017, 53 % des employés des start-ups avaient moins de 30 ans, tandis que seulement 2 % étaient âgés de 50 ans ou plus. Ces chiffres montrent que les environnements caractérisés par une « culture start-up » séduisent principalement les jeunes professionnels.
-  </p>
-  <p>
-    Par ailleurs, la stabilité professionnelle est souvent attribuée aux seniors. En effet, une étude de l’Institut français des seniors, relayée par le site Seniors à votre service, indique que jusqu’à 90 % des salariés de plus de 50 ans restent dans la même entreprise pendant plus de dix ans, ce qui constitue un atout en termes de loyauté et d’expérience<sup><a href="#note69">69</a></sup>. Cependant, cette stabilité est nuancée par le fait que 65 % des salariés perçoivent le statut de senior comme pouvant avoir une connotation négative.
-  </p>
-  <p>
-    Dans le secteur industriel, la tendance est également marquée par une préférence pour le recrutement de techniciens de moins de 35 ans. Environ 59 % des recrutements dans ce domaine ciblent cette tranche d’âge, souvent par crainte que les seniors soient perçus comme inadaptables aux exigences techniques actuelles<sup><a href="#note70">70</a></sup>. Dans ce contexte, la mise en place de dispositifs tels que la retraite progressive est envisagée pour réduire l’absentéisme chez les salariés de 55 ans et plus, en allégeant leur charge de travail et en améliorant leur bien-être<sup><a href="#note71">71</a></sup>.
-  </p>
-  <p>
-    Par ailleurs, l’usage quotidien d’outils collaboratifs comme Slack ou Teams reste majoritairement réservé aux plus jeunes – seulement 14 % des baby-boomers les utilisent quotidiennement, contre un taux bien supérieur chez les moins de 35 ans<sup><a href="#note72">72</a></sup>. Enfin, une enquête révèle que 72 % des Français considèrent que les entreprises doivent jouer un rôle clé dans l’accompagnement du vieillissement actif, bien que près de 50 % d’entre elles n’aient pas encore déployé de stratégies spécifiques pour les salariés de plus de 55 ans<sup><a href="#note73">73</a></sup>.
-  </p>
+        <!-- CHAPITRE 10 -->
+        <h2>Chapitre 10&nbsp;: Stéréotypes et Culture Start-up</h2>
+        <p>
+          Les annonces évoquant une « culture start-up » attirent particulièrement les jeunes, notamment les 25–34 ans, comme le suggèrent des estimations indiquant que 63 % des clics proviennent de cette tranche d’âge<sup><a href="#note68">68</a></sup>. Bien que les données précises sur le comportement de clic par tranche d’âge ne soient pas disponibles, une étude de l’INSEE (2021) révèle qu’en 2017, 53 % des employés des start-ups avaient moins de 30 ans, tandis que seulement 2 % étaient âgés de 50 ans ou plus. Ces chiffres montrent que les environnements caractérisés par une « culture start-up » séduisent principalement les jeunes professionnels.
+        </p>
+        <p>
+          Par ailleurs, la stabilité professionnelle est souvent attribuée aux seniors. En effet, une étude de l’Institut français des seniors, relayée par le site Seniors à votre service, indique que jusqu’à 90 % des salariés de plus de 50 ans restent dans la même entreprise pendant plus de dix ans, ce qui constitue un atout en termes de loyauté et d’expérience<sup><a href="#note69">69</a></sup>. Cependant, cette stabilité est nuancée par le fait que 65 % des salariés perçoivent le statut de senior comme pouvant avoir une connotation négative.
+        </p>
+        <p>
+          Dans le secteur industriel, la tendance est également marquée par une préférence pour le recrutement de techniciens de moins de 35 ans. Environ 59 % des recrutements dans ce domaine ciblent cette tranche d’âge, souvent par crainte que les seniors soient perçus comme inadaptables aux exigences techniques actuelles<sup><a href="#note70">70</a></sup>. Dans ce contexte, la mise en place de dispositifs tels que la retraite progressive est envisagée pour réduire l’absentéisme chez les salariés de 55 ans et plus, en allégeant leur charge de travail et en améliorant leur bien-être<sup><a href="#note71">71</a></sup>.
+        </p>
+        <p>
+          Par ailleurs, l’usage quotidien d’outils collaboratifs comme Slack ou Teams reste majoritairement réservé aux plus jeunes – seulement 14 % des baby-boomers les utilisent quotidiennement, contre un taux bien supérieur chez les moins de 35 ans<sup><a href="#note72">72</a></sup>. Enfin, une enquête révèle que 72 % des Français considèrent que les entreprises doivent jouer un rôle clé dans l’accompagnement du vieillissement actif, bien que près de 50 % d’entre elles n’aient pas encore déployé de stratégies spécifiques pour les salariés de plus de 55 ans<sup><a href="#note73">73</a></sup>.
+        </p>
+        <!-- Entre Chapitre 10 et Chapitre 11 -->
+        <p>
+          Si la culture start-up valorise avant tout la jeunesse, elle contribue également à renforcer des perceptions stéréotypées sur l’âge.
+          Face à cette dualité, il devient indispensable d’examiner comment les réformes et la médiatisation façonnent le débat public sur l’emploi et les retraites.
+          Dans le chapitre suivant, nous nous intéresserons aux réformes, à la médiatisation et aux débats publics qui entourent ces enjeux.
+        </p>
         <hr>
       </div>
       
       <!-- Page 12 : Chapitre 11 -->
       <div class="page" id="page12">
-          
-      <!-- CHAPITRE 11 -->
-      <h2>Chapitre 11&nbsp;: Réformes, Médiatisation et Débats Publics</h2>
-      <p>
-        Les réformes des retraites continuent de susciter des débats passionnés et de cristalliser les tensions entre générations. Bien que l’on ne dispose pas de données précises quant au pourcentage de débats radio consacrés au report de l’âge, il est clair que ce sujet est régulièrement abordé dans l’actualité. Par exemple, en novembre 2024, une proposition de loi visant à abroger le report de l’âge légal de départ à 64 ans a été débattue à l’Assemblée nationale, et en mars 2023, le Sénat a voté en faveur du report de l’âge de départ de 62 à 64 ans<sup><a href="#note76">76</a></sup>.
-      </p>
-      <p>
-        En parallèle, l’âge moyen d’obtention d’un CDI en France a augmenté pour atteindre aujourd’hui 29 ans, reflet d’un allongement des études et de parcours d’insertion professionnelle plus complexes<sup><a href="#note78">78</a></sup>. Dans le secteur agricole, en revanche, 55 % des exploitants en France métropolitaine sont âgés de 50 ans ou plus, et l’âge moyen des chefs d’exploitation est passé de 50,2 ans en 2010 à 51,4 ans en 2020, illustrant le défi du renouvellement générationnel dans ce secteur<sup><a href="#note79">79</a></sup>.
-      </p>
-      <p>
-        Face à ces évolutions, certaines entreprises explorent des dispositifs innovants pour faciliter la transmission des compétences, notamment par la mise en place de binômes seniors–juniors. Bien que les données soient encore rares, des initiatives comme le programme de reverse mentoring d’Engie, qui implique 60 binômes junior–senior, témoignent d’un intérêt croissant pour ces approches intergénérationnelles<sup><a href="#note80">80</a></sup>.
-      </p>
-      <p>
-        Le mentorat, en favorisant le transfert de savoirs tacites, joue également un rôle crucial dans la préservation de la mémoire organisationnelle. Des études, notamment dans le secteur public québécois, montrent que l’aide apportée par des seniors permet à 26 % des actifs de mieux conserver et transmettre leurs connaissances, contribuant ainsi à l’amélioration de la performance globale des organisations<sup><a href="#note81">81</a></sup>.
-      </p>
-      <p>
-        Par ailleurs, l’emploi des femmes seniors a progressé au cours de la dernière décennie, avec un taux d’emploi atteignant 57,2 % pour les femmes de 55 à 64 ans en 2023, bien qu’elles soient plus souvent en temps partiel et en sous-emploi que leurs homologues masculins<sup><a href="#note82">82</a></sup>. Enfin, la transmission des savoirs reste perçue comme le principal défi RH pour l’avenir, soulignant l’urgence pour les entreprises d’instaurer des dispositifs formels de mentorat ou de tutorat afin d’assurer la pérennité de leurs compétences internes<sup><a href="#note83">83</a></sup>.
-      </p>
-            <hr>
-      </div>
-
-            <!-- Page 13 : Chapitre 12 -->
-            <div class="page" id="page13">
-      
-  <!-- CHAPITRE 12 -->
-  <h2>Chapitre 12&nbsp;: Entre Âgisme, Inclusion et Politiques d’Âge</h2>
-  <p>
-    Les discriminations liées à l'âge (l'âgisme) restent un sujet majeur en France. Selon une étude, 
-    <strong>46 % des Français</strong> considèrent que la « guerre des générations » est un phénomène avant tout médiatique 
-    <sup><a href="#note86">86</a></sup>. Pourtant, l’inclusion fondée sur l’âge 
-    est rarement mentionnée dans les offres d’emploi : en moyenne, <strong>24 % des offres</strong> évoquent 
-    l’inclusion et seulement 7 % l’intergénérationnel 
-    <sup><a href="#note87">87</a></sup>.
-  </p>
-    <!-- Insertion Extrait 3 dans le Chapitre 12 -->
-    <div class="extrait-intergen">
-      <h3>L’évolution des mentalités vis-à-vis des différences d’âge</h3>
-      <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe Orange :</strong></p>
-      <p><strong>Interviewé :</strong> « J’ai constaté qu’auparavant, il y avait un véritable accompagnement des jeunes par les plus expérimentés. Aujourd’hui, il semble y avoir moins de patience vis-à-vis des plus âgés, ce qui traduit bien l’évolution du métier et des mentalités dans l’entreprise. »</p>
-      <p>Ce passage révèle une transformation dans la manière dont les différences d’âge sont perçues et gérées, avec une évolution vers des pratiques plus axées sur l’efficacité et la rationalisation des compétences.</p>
-    </div>
-
-
-  <!-- Juste après le paragraphe introductif de Chapitre 12, par exemple : -->
-<div class="extrait-intergen">
-  <h3>Zoom : “Et si on changeait notre regard sur les âges au travail&nbsp;?”</h3>
-  <p><strong>Vidéo (Frédérique Jeske) :</strong></p>
-  <p>
-    « Tu sais ce que c’est l’âgisme&nbsp;? On pourrait dire que c’est une construction d’esprit 
-    qui caractérise les personnes à partir de stéréotypes négatifs sur l’âge. 
-    C’est un phénomène sournois et insidieux qui s’infiltre partout dans nos pensées, 
-    nos idées, nos actes, nos comportements…
-  </p>
-  <p>
-    Ce sont les stéréotypes et les préjugés qui pèsent sur les plus de 45 ans : 
-    on réduit la personne à son âge, puis on crée une catégorie “les seniors” 
-    et on stigmatise : “Ils sont trop chers, fatigués, démotivés, has been…”
-  </p>
-  <p>
-    Et enfin on discrimine : on ne les embauche plus, on ne les forme plus. 
-    L’âgisme, c’est en fait la première discrimination dans le monde du travail 
-    parce qu’on considère encore trop souvent les collaborateurs comme 
-    de simples ressources.
-  </p>
-  <p>
-    Pourtant ça coûte cher, l’âgisme, humainement et économiquement 
-    (600 milliards d’euros par an selon l’OCDE) et une perte 
-    de compétences, d’innovations, de cohésion, d’engagement énorme. 
-    Bref, l’âgisme, c’est une discrimination silencieuse qui pourtant 
-    concerne tout le monde : une absurdité qu’il faut écraser ! »
-  </p>
-
-  <p>
-    <a href="https://www.linkedin.com/posts/uskoa-partners_et-si-on-changeait-notre-regard-sur-les-%C3%A2ges-ugcPost-7274460619066466305-7lud/" 
-       target="_blank" rel="noopener noreferrer">
-       https://www.linkedin.com/posts/uskoa-partners_et-si-on-changeait-notre-regard-sur-les-%C3%A2ges-ugcPost-7274460619066466305-7lud/
-    </a>
-  </p>
-</div>
-
-  <p>
-    Sur le plan organisationnel, coupler politiques d’âge et égalité de genre 
-    peut améliorer la satisfaction au travail de 15 points 
-    <sup><a href="#note88">88</a></sup>. Concrètement, dans les entreprises où l’égalité 
-    professionnelle est promue, les salariés se disent plus motivés et engagés, et la diversité des âges est 
-    mieux acceptée.
-  </p>
-  <p>
-    Les conflits intergénérationnels peuvent parfois aller jusqu’à la médiation en entreprise. D’après certaines estimations, 
-    <em>14 % des médiations</em> résultent d’un litige entre des salariés de tranches d’âge différentes 
-    <sup><a href="#note89">89</a></sup>. Quant aux responsables RH, <em>32 % d’entre eux</em> 
-    placent la collaboration entre âges parmi leurs priorités stratégiques 
-    <sup><a href="#note90">90</a></sup>.
-  </p>
-  <p>
-    Concernant la santé au travail, <em>14 % des personnes de 55 ans ou plus</em> connaissent des arrêts 
-    maladie de longue durée, contre 6 % pour les 25–34 ans 
-    <sup><a href="#note91">91</a></sup>. De plus, <em>39 % des plaintes pour discrimination</em> 
-    déposées portent sur l’âge 
-    <sup><a href="#note92">92</a></sup>.
-  </p>
-  <p>
-    Au-delà des politiques d’inclusion, il demeure crucial de sensibiliser les équipes 
-    aux préjugés liés à l’âge. Sans un climat bienveillant, les talents seniors comme juniors 
-    peuvent se sentir exclus, freinant la transmission des savoirs et la cohésion d’ensemble.
-  </p>
-  <div class="extrait-intergen">
-    <h3>Extrait vidéo B SMART : “L’âgisme touche les deux côtés”</h3>
-    <p><strong>Frédérique Jeske :</strong> 
-      « L’âgisme est une discrimination qui touche les deux côtés du curseur : 
-      les plus jeunes comme les plus âgés. »
-    </p>
-    <p>
-      <em>(Source : SMART JOB, B SMART, 31 octobre 2024) – 
-        <br>
-        Voir la vidéo
-      <a href="https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024" 
-         target="_blank" rel="noopener noreferrer">
-         https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
-      </a></em>
-    </p>
+        <!-- CHAPITRE 11 -->
+        <h2>Chapitre 11&nbsp;: Réformes, Médiatisation et Débats Publics</h2>
+        <p>
+          Les réformes des retraites continuent de susciter des débats passionnés et de cristalliser les tensions entre générations. Bien que l’on ne dispose pas de données précises quant au pourcentage de débats radio consacrés au report de l’âge, il est clair que ce sujet est régulièrement abordé dans l’actualité. Par exemple, en novembre 2024, une proposition de loi visant à abroger le report de l’âge légal de départ à 64 ans a été débattue à l’Assemblée nationale, et en mars 2023, le Sénat a voté en faveur du report de l’âge de départ de 62 à 64 ans<sup><a href="#note76">76</a></sup>.
+        </p>
+        <p>
+          En parallèle, l’âge moyen d’obtention d’un CDI en France a augmenté pour atteindre aujourd’hui 29 ans, reflet d’un allongement des études et de parcours d’insertion professionnelle plus complexes<sup><a href="#note78">78</a></sup>. Dans le secteur agricole, en revanche, 55 % des exploitants en France métropolitaine sont âgés de 50 ans ou plus, et l’âge moyen des chefs d’exploitation est passé de 50,2 ans en 2010 à 51,4 ans en 2020, illustrant le défi du renouvellement générationnel dans ce secteur<sup><a href="#note79">79</a></sup>.
+        </p>
+        <p>
+          Face à ces évolutions, certaines entreprises explorent des dispositifs innovants pour faciliter la transmission des compétences, notamment par la mise en place de binômes seniors–juniors. Bien que les données soient encore rares, des initiatives comme le programme de reverse mentoring d’Engie, qui implique 60 binômes junior–senior, témoignent d’un intérêt croissant pour ces approches intergénérationnelles<sup><a href="#note80">80</a></sup>.
+        </p>
+        <p>
+          Le mentorat, en favorisant le transfert de savoirs tacites, joue également un rôle crucial dans la préservation de la mémoire organisationnelle. Des études, notamment dans le secteur public québécois, montrent que l’aide apportée par des seniors permet à 26 % des actifs de mieux conserver et transmettre leurs connaissances, contribuant ainsi à l’amélioration de la performance globale des organisations<sup><a href="#note81">81</a></sup>.
+        </p>
+        <p>
+          Par ailleurs, l’emploi des femmes seniors a progressé au cours de la dernière décennie, avec un taux d’emploi atteignant 57,2 % pour les femmes de 55 à 64 ans en 2023, bien qu’elles soient plus souvent en temps partiel et en sous-emploi que leurs homologues masculins<sup><a href="#note82">82</a></sup>. Enfin, la transmission des savoirs reste perçue comme le principal défi RH pour l’avenir, soulignant l’urgence pour les entreprises d’instaurer des dispositifs formels de mentorat ou de tutorat afin d’assurer la pérennité de leurs compétences internes<sup><a href="#note83">83</a></sup>.
+        </p>
+        <!-- Entre Chapitre 11 et Chapitre 12 -->
+        <p>
+          Les débats sur les réformes des retraites et l’évolution des parcours professionnels illustrent la complexité du lien entre l’âge et l’emploi.
+          Ces questions ouvrent la voie à une réflexion plus large sur l’âgisme et l’inclusion.
+          Le chapitre suivant analysera ainsi les discriminations liées à l’âge et les politiques d’inclusion, afin de dégager les pistes d’une société plus équitable.
+        </p>
         <hr>
       </div>
+
+      <!-- Page 13 : Chapitre 12 -->
+      <div class="page" id="page13">
+      
+        <!-- CHAPITRE 12 -->
+        <h2>Chapitre 12&nbsp;: Entre Âgisme, Inclusion et Politiques d’Âge</h2>
+        <p>
+          Les discriminations liées à l'âge (l'âgisme) restent un sujet majeur en France. Selon une étude, 
+          <strong>46 % des Français</strong> considèrent que la « guerre des générations » est un phénomène avant tout médiatique 
+          <sup><a href="#note86">86</a></sup>. Pourtant, l’inclusion fondée sur l’âge 
+          est rarement mentionnée dans les offres d’emploi : en moyenne, <strong>24 % des offres</strong> évoquent 
+          l’inclusion et seulement 7 % l’intergénérationnel 
+          <sup><a href="#note87">87</a></sup>.
+        </p>
+        <!-- Insertion Extrait 3 dans le Chapitre 12 -->
+        <div class="extrait-intergen">
+          <h3>L’évolution des mentalités vis-à-vis des différences d’âge</h3>
+          <p><strong>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe Orange :</strong></p>
+          <p><strong>Interviewé :</strong> « J’ai constaté qu’auparavant, il y avait un véritable accompagnement des jeunes par les plus expérimentés. Aujourd’hui, il semble y avoir moins de patience vis-à-vis des plus âgés, ce qui traduit bien l’évolution du métier et des mentalités dans l’entreprise. »</p>
+          <p>Ce passage révèle une transformation dans la manière dont les différences d’âge sont perçues et gérées, avec une évolution vers des pratiques plus axées sur l’efficacité et la rationalisation des compétences.</p>
+        </div>
+        <!-- Juste après le paragraphe introductif de Chapitre 12, par exemple : -->
+        <div class="extrait-intergen">
+          <h3>Zoom : “Et si on changeait notre regard sur les âges au travail&nbsp;?”</h3>
+          <p><strong>Vidéo (Frédérique Jeske) :</strong></p>
+          <p>
+            « Tu sais ce que c’est l’âgisme&nbsp;? On pourrait dire que c’est une construction d’esprit 
+            qui caractérise les personnes à partir de stéréotypes négatifs sur l’âge. 
+            C’est un phénomène sournois et insidieux qui s’infiltre partout dans nos pensées, 
+            nos idées, nos actes, nos comportements…
+          </p>
+          <p>
+            Ce sont les stéréotypes et les préjugés qui pèsent sur les plus de 45 ans : 
+            on réduit la personne à son âge, puis on crée une catégorie “les seniors” 
+            et on stigmatise : “Ils sont trop chers, fatigués, démotivés, has been…”
+          </p>
+          <p>
+            Et enfin on discrimine : on ne les embauche plus, on ne les forme plus. 
+            L’âgisme, c’est en fait la première discrimination dans le monde du travail 
+            parce qu’on considère encore trop souvent les collaborateurs comme 
+            de simples ressources.
+          </p>
+          <p>
+            Pourtant ça coûte cher, l’âgisme, humainement et économiquement 
+            (600 milliards d’euros par an selon l’OCDE) et une perte 
+            de compétences, d’innovations, de cohésion, d’engagement énorme. 
+            Bref, l’âgisme, c’est une discrimination silencieuse qui pourtant 
+            concerne tout le monde : une absurdité qu’il faut écraser ! »
+          </p>
+          <p>
+            <a href="https://www.linkedin.com/posts/uskoa-partners_et-si-on-changeait-notre-regard-sur-les-%C3%A2ges-ugcPost-7274460619066466305-7lud/" 
+              target="_blank" rel="noopener noreferrer">
+              https://www.linkedin.com/posts/uskoa-partners_et-si-on-changeait-notre-regard-sur-les-%C3%A2ges-ugcPost-7274460619066466305-7lud/
+            </a>
+          </p>
+        </div>
+        <p>
+          Sur le plan organisationnel, coupler politiques d’âge et égalité de genre 
+          peut améliorer la satisfaction au travail de 15 points 
+          <sup><a href="#note88">88</a></sup>. Concrètement, dans les entreprises où l’égalité 
+          professionnelle est promue, les salariés se disent plus motivés et engagés, et la diversité des âges est 
+          mieux acceptée.
+        </p>
+        <p>
+          Les conflits intergénérationnels peuvent parfois aller jusqu’à la médiation en entreprise. D’après certaines estimations, 
+          <em>14 % des médiations</em> résultent d’un litige entre des salariés de tranches d’âge différentes 
+          <sup><a href="#note89">89</a></sup>. Quant aux responsables RH, <em>32 % d’entre eux</em> 
+          placent la collaboration entre âges parmi leurs priorités stratégiques 
+          <sup><a href="#note90">90</a></sup>.
+        </p>
+        <p>
+          Concernant la santé au travail, <em>14 % des personnes de 55 ans ou plus</em> connaissent des arrêts 
+          maladie de longue durée, contre 6 % pour les 25–34 ans 
+          <sup><a href="#note91">91</a></sup>. De plus, <em>39 % des plaintes pour discrimination</em> 
+          déposées portent sur l’âge 
+          <sup><a href="#note92">92</a></sup>.
+        </p>
+        <p>
+          Au-delà des politiques d’inclusion, il demeure crucial de sensibiliser les équipes 
+          aux préjugés liés à l’âge. Sans un climat bienveillant, les talents seniors comme juniors 
+          peuvent se sentir exclus, freinant la transmission des savoirs et la cohésion d’ensemble.
+        </p>
+        <div class="extrait-intergen">
+          <h3>Extrait vidéo B SMART : “L’âgisme touche les deux côtés”</h3>
+          <p><strong>Frédérique Jeske :</strong> 
+            « L’âgisme est une discrimination qui touche les deux côtés du curseur : 
+            les plus jeunes comme les plus âgés. »
+          </p>
+          <p>
+            <em>(Source : SMART JOB, B SMART, 31 octobre 2024) – 
+              <br>
+              Voir la vidéo
+            <a href="https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024" 
+              target="_blank" rel="noopener noreferrer">
+              https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
+            </a></em>
+          </p>
+          <!-- Transition entre Chapitre 12 et Chapitre 13 -->
+          <p>Après avoir abordé les enjeux de l’âgisme et les politiques d’inclusion, il est temps de se tourner vers l’avenir.
+            Comment les reconversions et les nouvelles perspectives d’emploi contribuent-elles à forger une solidarité intergénérationnelle ?
+            Le chapitre suivant explorera ces pistes, en mettant en lumière les initiatives qui favorisent la reconversion et la cohésion sociale.
+          </p>
+          <hr>
+        </div>
+
       </div>
 
-      
       <!-- Page 14 : Chapitre 13 -->
 
       <div class="page" id="page14">
-  <!-- CHAPITRE 13 -->
-  <h2>Chapitre 13&nbsp;: Reconversions, Perspectives et Solidarité Active</h2>
-  <p>
-    Le marché de l’emploi évolue rapidement, et de plus en plus de salariés s’orientent 
-    vers une reconversion. Dans le secteur des startups, l’âge moyen des porteurs de projet 
-    est d’environ 38 ans 
-    <sup><a href="#note94">94</a></sup>, alors que <em>70 % des étudiants</em> se disent 
-    favorables à un management intergénérationnel inclusif 
-    <sup><a href="#note95">95</a></sup>.
-  </p>
-  <p>
-    Certaines entreprises, conscientes de la plus-value de la diversité d’âge, ont mis 
-    en place des programmes d’action sur ce thème. <em>44 % des sociétés</em> ont déjà lancé des 
-    initiatives en faveur de la diversité générationnelle, souvent inspirées de pratiques 
-    nordiques 
-    <sup><a href="#note96">96</a></sup><sup><a href="#note97">97</a></sup>. 
-    Par ailleurs, Google Trends indique un intérêt accru pour la notion de « guerre des générations » 
-    après 2020 
-    <sup><a href="#note98">98</a></sup>, signe que le débat reste vif.
-  </p>
-  <p>
-    Aux États-Unis, <em>23 % de la force de travail</em> a plus de 55 ans contre 18 % dix ans plus tôt 
-    <sup><a href="#note99">99</a></sup>. En France, <em>31 % des programmes de relance</em> 
-    incluent désormais des volets pour les seniors 
-    <sup><a href="#note100">100</a></sup>. Dans le même temps, <em>44 % des projets FNE-Formation</em> 
-    concernent des salariés âgés de 45 ans et plus 
-    <sup><a href="#note101">101</a></sup>.
-  </p>
-  <p>
-    L’espérance de vie en bonne santé progresse, notamment pour les femmes qui bénéficient d’un 
-    avantage de 2,6 ans 
-    <sup><a href="#note102">102</a></sup>. Cependant, certains DRH continuent de filtrer par âge 
-    <sup><a href="#note104">104</a></sup>. Or, différentes études soulignent la nécessité d’éviter 
-    l’âgisme en entreprise, tant pour des raisons d’égalité que pour la pérennité des savoir-faire.
-  </p>
-  <p>
-    S’agissant des seniors en reconversion, une proportion notable demeure. Néanmoins, il n’existe 
-    pas de chiffre précis quant à ceux qui « restent 25 % plus longtemps » dans la même société 
-    après leur reconversion<sup><a href="#note131">131</a></sup>. Le contrat de génération, expérimenté 
-    en France, a montré des résultats mitigés, sans réel équivalent dans le reste de l’UE 
-    <sup><a href="#note132">132</a></sup>.
-  </p>
+        <!-- CHAPITRE 13 -->
+        <h2>Chapitre 13&nbsp;: Reconversions, Perspectives et Solidarité Active</h2>
+        <p>
+          Le marché de l’emploi évolue rapidement, et de plus en plus de salariés s’orientent 
+          vers une reconversion. Dans le secteur des startups, l’âge moyen des porteurs de projet 
+          est d’environ 38 ans 
+          <sup><a href="#note94">94</a></sup>, alors que <em>70 % des étudiants</em> se disent 
+          favorables à un management intergénérationnel inclusif 
+          <sup><a href="#note95">95</a></sup>.
+        </p>
+        <p>
+          Certaines entreprises, conscientes de la plus-value de la diversité d’âge, ont mis 
+          en place des programmes d’action sur ce thème. <em>44 % des sociétés</em> ont déjà lancé des 
+          initiatives en faveur de la diversité générationnelle, souvent inspirées de pratiques 
+          nordiques 
+          <sup><a href="#note96">96</a></sup><sup><a href="#note97">97</a></sup>. 
+          Par ailleurs, Google Trends indique un intérêt accru pour la notion de « guerre des générations » 
+          après 2020 
+          <sup><a href="#note98">98</a></sup>, signe que le débat reste vif.
+        </p>
+        <p>
+          Aux États-Unis, <em>23 % de la force de travail</em> a plus de 55 ans contre 18 % dix ans plus tôt 
+          <sup><a href="#note99">99</a></sup>. En France, <em>31 % des programmes de relance</em> 
+          incluent désormais des volets pour les seniors 
+          <sup><a href="#note100">100</a></sup>. Dans le même temps, <em>44 % des projets FNE-Formation</em> 
+          concernent des salariés âgés de 45 ans et plus 
+          <sup><a href="#note101">101</a></sup>.
+        </p>
+        <p>
+          L’espérance de vie en bonne santé progresse, notamment pour les femmes qui bénéficient d’un 
+          avantage de 2,6 ans 
+          <sup><a href="#note102">102</a></sup>. Cependant, certains DRH continuent de filtrer par âge 
+          <sup><a href="#note104">104</a></sup>. Or, différentes études soulignent la nécessité d’éviter 
+          l’âgisme en entreprise, tant pour des raisons d’égalité que pour la pérennité des savoir-faire.
+        </p>
+        <p>
+          S’agissant des seniors en reconversion, une proportion notable demeure. Néanmoins, il n’existe 
+          pas de chiffre précis quant à ceux qui « restent 25 % plus longtemps » dans la même société 
+          après leur reconversion<sup><a href="#note131">131</a></sup>. Le contrat de génération, expérimenté 
+          en France, a montré des résultats mitigés, sans réel équivalent dans le reste de l’UE 
+          <sup><a href="#note132">132</a></sup>.
+        </p>
+        <!-- Transition entre Chapitre 13 et Chapitre 14 -->
+        <p>
+          Les reconversions et les actions collectives témoignent d’un réel engagement pour adapter le marché du travail aux évolutions démographiques.
+          Toutefois, ces transformations s’accompagnent de défis persistants, notamment en termes d’âgisme et de formation.
+          Le prochain chapitre se penchera sur ces enjeux, en examinant comment la formation peut constituer une réponse à la fois aux discriminations et aux besoins d’innovation dans un contexte de vieillissement de la population.
+        </p>
         <hr>
       </div>
       
       <!-- Page 15 : Chapitre 14 -->
       <div class="page" id="page15">
-  
-  <!-- CHAPITRE 14 -->
-  <h2>Chapitre 14&nbsp;: L’Âgisme comme Problème Mondial et les Enjeux de Formation</h2>
-  <p>
-    L’OMS considère l’âgisme comme un enjeu mondial de santé et de société. 
-    Dans le domaine technologique, <em>21 % des ingénieurs de plus de 50 ans</em> 
-    poursuivent une formation sur les langages de programmation récents 
-    <sup><a href="#note105">105</a></sup>. De même, <em>49 % des cadres dirigeants</em> 
-    jugent nécessaire de mobiliser toutes les générations pour la lutte contre le réchauffement climatique 
-    <sup><a href="#note106">106</a></sup>.
-  </p>
-  <p>
-    Dans l’industrie, le départ des baby-boomers crée une tension sur le marché de l’emploi. 
-    <em>62 % des secteurs</em> souffrent d’une pénurie de compétences due à ces retraites massives 
-    <sup><a href="#note108">108</a></sup>. Certaines formations « mixtes » intergénérationnelles 
-    améliorent la rétention des savoirs de 18 %, car elles facilitent le transfert d’expériences 
-    entre juniors et seniors.
-  </p>
-  <p>
-    Les femmes seniors subissent parfois une double discrimination – sexisme et âgisme. 
-    Environ 35 % d’entre elles évoquent cette « double peine » 
-    <sup><a href="#note109">109</a></sup>, et seulement 1 recrutement sur 4 concerne des 
-    salariés de plus de 45 ans 
-    <sup><a href="#note110">110</a></sup>. D’après certaines études, <strong>47 %</strong> 
-    des femmes seniors en reconversion manquent de soutien institutionnel 
-    <sup><a href="#note111">111</a></sup>.
-  </p>
-  <p>
-    Ainsi, si l’âge et le genre peuvent se combiner pour freiner l’évolution de carrière, 
-    plusieurs initiatives émergent pour sensibiliser les entreprises et proposer des parcours 
-    de formation continue adaptés aux seniors, y compris dans les secteurs technologiques.
-  </p>
-  <div class="extrait-intergen">
-    <h3>Extrait vidéo B SMART : “Former pour éviter le has-been”</h3>
-    <p><strong>Frédérique Jeske :</strong>
-      « Si on ne forme pas nos salariés expérimentés, 
-      on ne peut pas se plaindre qu’ils soient has-been ; 
-      et c’est pareil pour les jeunes : on ne peut pas exiger l’expérience 
-      si on ne leur donne pas leur chance. »
-    </p>
-    <p>
-      <em>(Source : SMART JOB, B SMART, 31 octobre 2024) – <br>
-        Voir la vidéo
-      <a href="https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024"
-         target="_blank" rel="noopener noreferrer">
-         https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
-      </a></em>
-    </p>
-        <hr>
-      </div>
+        <!-- CHAPITRE 14 -->
+        <h2>Chapitre 14&nbsp;: L’Âgisme comme Problème Mondial et les Enjeux de Formation</h2>
+        <p>
+          L’OMS considère l’âgisme comme un enjeu mondial de santé et de société. 
+          Dans le domaine technologique, <em>21 % des ingénieurs de plus de 50 ans</em> 
+          poursuivent une formation sur les langages de programmation récents 
+          <sup><a href="#note105">105</a></sup>. De même, <em>49 % des cadres dirigeants</em> 
+          jugent nécessaire de mobiliser toutes les générations pour la lutte contre le réchauffement climatique 
+          <sup><a href="#note106">106</a></sup>.
+        </p>
+        <p>
+          Dans l’industrie, le départ des baby-boomers crée une tension sur le marché de l’emploi. 
+          <em>62 % des secteurs</em> souffrent d’une pénurie de compétences due à ces retraites massives 
+          <sup><a href="#note108">108</a></sup>. Certaines formations « mixtes » intergénérationnelles 
+          améliorent la rétention des savoirs de 18 %, car elles facilitent le transfert d’expériences 
+          entre juniors et seniors.
+        </p>
+        <p>
+          Les femmes seniors subissent parfois une double discrimination – sexisme et âgisme. 
+          Environ 35 % d’entre elles évoquent cette « double peine » 
+          <sup><a href="#note109">109</a></sup>, et seulement 1 recrutement sur 4 concerne des 
+          salariés de plus de 45 ans 
+          <sup><a href="#note110">110</a></sup>. D’après certaines études, <strong>47 %</strong> 
+          des femmes seniors en reconversion manquent de soutien institutionnel 
+          <sup><a href="#note111">111</a></sup>.
+        </p>
+        <p>
+          Ainsi, si l’âge et le genre peuvent se combiner pour freiner l’évolution de carrière, 
+          plusieurs initiatives émergent pour sensibiliser les entreprises et proposer des parcours 
+          de formation continue adaptés aux seniors, y compris dans les secteurs technologiques.
+        </p>
+        <div class="extrait-intergen">
+          <h3>Extrait vidéo B SMART : “Former pour éviter le has-been”</h3>
+          <p><strong>Frédérique Jeske :</strong>
+            « Si on ne forme pas nos salariés expérimentés, 
+            on ne peut pas se plaindre qu’ils soient has-been ; 
+            et c’est pareil pour les jeunes : on ne peut pas exiger l’expérience 
+            si on ne leur donne pas leur chance. »
+          </p>
+          <p>
+            <em>(Source : SMART JOB, B SMART, 31 octobre 2024) – <br>
+              Voir la vidéo
+            <a href="https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024"
+              target="_blank" rel="noopener noreferrer">
+              https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
+            </a></em>
+          </p>
+            <!-- Transition entre Chapitre 14 et Chapitre 15 -->
+          <p>
+            Les enjeux de formation et la lutte contre l’âgisme soulignent l’importance d’une adaptation continue des compétences.
+            Dans un monde où le travail évolue rapidement, le télétravail s’impose comme une solution, mais pas sans poser de nouveaux défis en termes de cohésion sociale.
+            Le chapitre suivant analysera l’impact du télétravail sur les interactions informelles et la cohésion des équipes
+          </p>
+          <hr>
+        </div>
       </div>
       
       <!-- Page 16 : Chapitre 15 -->
       <div class="page" id="page16">
-  <!-- CHAPITRE 15 -->
-  <h2>Chapitre 15&nbsp;: Télétravail, Interactions Informelles et Cohésion</h2>
-  <p>
-    L’essor du télétravail a profondément modifié l’organisation du travail, notamment en réduisant 
-    les échanges spontanés. Selon diverses analyses, les interactions informelles sont en baisse, 
-    ce qui peut affecter la cohésion d’équipe. Le CNRS suggère par exemple de limiter le télétravail 
-    à deux jours par semaine pour maintenir un lien social fort 
-    <sup><a href="#note112">112</a></sup>.
-  </p>
-  <p>
-    De même, <em>31 % des entreprises françaises</em> jugent que leur indice de cohésion intergénérationnelle 
-    est faible 
-    <sup><a href="#note113">113</a></sup>. Pourtant, le taux d’emploi des 60–64 ans 
-    a progressé, passant de 25 % à 35 % en deux décennies 
-    <sup><a href="#note114">114</a></sup>. En parallèle, <em>27 % des avis négatifs</em> 
-    portant sur la « guerre des âges » ont augmenté sur les plateformes d’avis salariés 
-    <sup><a href="#note115">115</a></sup>.
-  </p>
-  <p>
-    Dans les offres IT, <em>39 %</em> exigent 1 à 3 ans d’expérience, ce qui peut exclure à la fois 
-    les débutants et certains seniors en reconversion 
-    <sup><a href="#note116">116</a></sup>. De plus, <em>62 % des offres qualifiées</em> 
-    se concentrent en Île-de-France et en Auvergne-Rhône-Alpes 
-    <sup><a href="#note117">117</a></sup>.
-  </p>
-  <p>
-    Enfin, <em>46 % des plans de recrutement</em> n’aboutissent pas en raison d’un déséquilibre 
-    entre l’expérience exigée et les profils disponibles, et 57 % des DRH estiment 
-    que l’inclusion intergénérationnelle doit être prioritaire 
-    <sup><a href="#note118">118</a></sup><sup><a href="#note119">119</a></sup>.
-  </p>
-  <div class="extrait-intergen">
-    <h3>Impact du télétravail sur la disponibilité</h3>
-    <p>
-      <strong>Théophile :</strong> "Tu évoques le télétravail : quel impact as-tu constaté sur les interactions et la cohésion d’équipe ?"
-    </p>
-    <p>
-      <strong>Interviewé :</strong> "Le télétravail, imposé brutalement lors du COVID, a apporté de la flexibilité — par exemple, on peut lancer une lessive en parallèle du travail — mais il a aussi réduit les échanges spontanés. Au bureau, on se retrouve naturellement à discuter à la machine à café ou dans les couloirs, ce qui favorise le lien social et la transmission des savoirs. En télétravail complet, ces interactions se font de façon plus artificielle via visioconférences ou messageries, et même si certains outils virtuels (comme les avatars ou environnements type Metaverse) ont été tentés, ils ne reproduisent pas vraiment la chaleur du contact direct. Pour moi, habiter à proximité du site et ne pas avoir de contraintes familiales majeures, je préfère une présence partielle sur site pour conserver cet équilibre."
-    </p>
-    <h3>Débat sur le télétravail à 100%</h3>
-  <blockquote>
-    <p>
-      <strong>Théophile :</strong> "Est-ce que tu serais toi prêt à basculer à 100% en télétravail ?"
-    </p>
-    <p>
-      <strong>Interviewé :</strong> "Ah non non."
-    </p>
-    <p>
-      <strong>Théophile :</strong> "Non ?"
-    </p>
-    <p>
-      <strong>Interviewé :</strong> "Non, clairement pas pour moi. C’est après, moi je vois ça comme… je pense que le télétravail apporte du confort pour ceux qui ont un long trajet domicile-travail, une charge liée aux enfants ou à certaines tâches ménagères – par exemple, on peut lancer une lessive en parallèle de son travail, ce qui permet de gagner du temps. Mais au niveau du collectif et des échanges, par exemple lorsqu’on croise quelqu’un à la machine à café, on perd quelque chose. On entend dire que le télétravail permet de réduire la fatigue liée aux déplacements et donc les arrêts de travail, mais j’ai l’impression qu’il repousse certaines tâches de deux ou trois jours et qu’il entraîne un éclatement du travail : on doit mettre certaines tâches en attente jusqu’à ce que la personne revienne sur site. Pour moi, c’est gênant, d’autant que j’habite à 5 minutes du boulot et que je n’ai pas d’enfants – donc je n’ai pas vraiment d’incitation à télétravailler, car je privilégie la possibilité d’échanger directement."
-    </p>
-  </blockquote>
-      <p>
-        Ce court extrait illustre l’un des défis du télétravail : la difficulté de concilier flexibilité et disponibilité pour les interactions spontanées au sein de l’équipe.
-      </p>
-  </div>
-  
-  <hr>
-  </div>
+        <!-- CHAPITRE 15 -->
+        <h2>Chapitre 15&nbsp;: Télétravail, Interactions Informelles et Cohésion</h2>
+        <p>
+          L’essor du télétravail a profondément modifié l’organisation du travail, notamment en réduisant 
+          les échanges spontanés. Selon diverses analyses, les interactions informelles sont en baisse, 
+          ce qui peut affecter la cohésion d’équipe. Le CNRS suggère par exemple de limiter le télétravail 
+          à deux jours par semaine pour maintenir un lien social fort 
+          <sup><a href="#note112">112</a></sup>.
+        </p>
+        <p>
+          De même, <em>31 % des entreprises françaises</em> jugent que leur indice de cohésion intergénérationnelle 
+          est faible 
+          <sup><a href="#note113">113</a></sup>. Pourtant, le taux d’emploi des 60–64 ans 
+          a progressé, passant de 25 % à 35 % en deux décennies 
+          <sup><a href="#note114">114</a></sup>. En parallèle, <em>27 % des avis négatifs</em> 
+          portant sur la « guerre des âges » ont augmenté sur les plateformes d’avis salariés 
+          <sup><a href="#note115">115</a></sup>.
+        </p>
+        <p>
+          Dans les offres IT, <em>39 %</em> exigent 1 à 3 ans d’expérience, ce qui peut exclure à la fois 
+          les débutants et certains seniors en reconversion 
+          <sup><a href="#note116">116</a></sup>. De plus, <em>62 % des offres qualifiées</em> 
+          se concentrent en Île-de-France et en Auvergne-Rhône-Alpes 
+          <sup><a href="#note117">117</a></sup>.
+        </p>
+        <p>
+          Enfin, <em>46 % des plans de recrutement</em> n’aboutissent pas en raison d’un déséquilibre 
+          entre l’expérience exigée et les profils disponibles, et 57 % des DRH estiment 
+          que l’inclusion intergénérationnelle doit être prioritaire 
+          <sup><a href="#note118">118</a></sup><sup><a href="#note119">119</a></sup>.
+        </p>
+        <div class="extrait-intergen">
+          <h3>Impact du télétravail sur la disponibilité</h3>
+          <p>
+            <strong>Théophile :</strong> "Tu évoques le télétravail : quel impact as-tu constaté sur les interactions et la cohésion d’équipe ?"
+          </p>
+          <p>
+            <strong>Interviewé :</strong> "Le télétravail, imposé brutalement lors du COVID, a apporté de la flexibilité — par exemple, on peut lancer une lessive en parallèle du travail — mais il a aussi réduit les échanges spontanés. Au bureau, on se retrouve naturellement à discuter à la machine à café ou dans les couloirs, ce qui favorise le lien social et la transmission des savoirs. En télétravail complet, ces interactions se font de façon plus artificielle via visioconférences ou messageries, et même si certains outils virtuels (comme les avatars ou environnements type Metaverse) ont été tentés, ils ne reproduisent pas vraiment la chaleur du contact direct. Pour moi, habiter à proximité du site et ne pas avoir de contraintes familiales majeures, je préfère une présence partielle sur site pour conserver cet équilibre."
+          </p>
+          <h3>Débat sur le télétravail à 100%</h3>
+          <blockquote>
+            <p>
+              <strong>Théophile :</strong> "Est-ce que tu serais toi prêt à basculer à 100% en télétravail ?"
+            </p>
+            <p>
+              <strong>Interviewé :</strong> "Ah non non."
+            </p>
+            <p>
+              <strong>Théophile :</strong> "Non ?"
+            </p>
+            <p>
+              <strong>Interviewé :</strong> "Non, clairement pas pour moi. C’est après, moi je vois ça comme… je pense que le télétravail apporte du confort pour ceux qui ont un long trajet domicile-travail, une charge liée aux enfants ou à certaines tâches ménagères – par exemple, on peut lancer une lessive en parallèle de son travail, ce qui permet de gagner du temps. Mais au niveau du collectif et des échanges, par exemple lorsqu’on croise quelqu’un à la machine à café, on perd quelque chose. On entend dire que le télétravail permet de réduire la fatigue liée aux déplacements et donc les arrêts de travail, mais j’ai l’impression qu’il repousse certaines tâches de deux ou trois jours et qu’il entraîne un éclatement du travail : on doit mettre certaines tâches en attente jusqu’à ce que la personne revienne sur site. Pour moi, c’est gênant, d’autant que j’habite à 5 minutes du boulot et que je n’ai pas d’enfants – donc je n’ai pas vraiment d’incitation à télétravailler, car je privilégie la possibilité d’échanger directement."
+            </p>
+          </blockquote>
+          <p>
+            Ce court extrait illustre l’un des défis du télétravail : la difficulté de concilier flexibilité et disponibilité pour les interactions spontanées au sein de l’équipe.
+          </p>
+        </div>
+        <!-- Transition entre Chapitre 15 et Chapitre 16 -->
+        <p>
+          ansformation du cadre de travail rejoint également les questions de localisation et de formation, qui influencent les choix des jeunes et des seniors. 
+          Le prochain chapitre explorera ainsi comment la formation et les dynamiques territoriales modèlent les trajectoires professionnelles dans un contexte intergénérationnel. 
+        </p>
+        <hr>
+      </div>
 
-
-      
       <!-- Page 17 : Chapitre 16 -->
       <div class="page" id="page17">
-       
-  <!-- CHAPITRE 16 -->
-  <h2>Chapitre 16&nbsp;: Formation, Province et Nouvelles Générations</h2>
-  <p>
-    Les choix de localisation et de formation sont également marqués par des dynamiques générationnelles. 
-    Ainsi, <em>74 % des étudiants</em> jugent la « province moins dynamique » 
-    <sup><a href="#note120">120</a></sup>, préférant souvent rejoindre les grandes métropoles, 
-    notamment l’Île-de-France.
-    Les étudiants considèrent souvent la province comme moins dynamique 
-    (74 % selon certaines enquêtes<sup><a href="#note120">120</a></sup>), 
-    ce qui accentue la polarisation territoriale. Du côté des entreprises 
-    dans des villes plus petites, on constate peu de postes dédiés aux jeunes, 
-    à moins qu’ils ne soient stagiaires ou alternants. 
-  </p>
-  <div class="extrait-intergen">
-    <h3>Composition et ambiance de l’équipe</h3>
-    <blockquote>
-      <p>
-        <em>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe Orange :</em>
-      </p>
-      <p>
-        <strong>Interviewé :</strong> "Euh alors, sur l’équipe, c’est je pense qu’on est beaucoup à avoir la même tranche d’âge, c’est-à-dire entre 40 et 55 ans. Sur les jeunes qui passent, il y en a quand même beaucoup – des stagiaires, des thésards ou des apprentis – malheureusement, il y a peu de postes qui s’ouvrent. Parfois, quand il y a des postes, les jeunes ne sont pas forcément intéressés ou ils ont dans l’idée de poursuivre leurs études, de continuer ou d’aller sur Paris, sur Rennes, parce que Lannion, c’est un peu excentré. Mais dans l’ensemble, il y a quand même une bonne ambiance dans l’équipe, je trouve, et puis il n’y a pas de caractère particulièrement fort ou caractériel."
-      </p>
-      <p><em>Extrait d’entretien recueilli par Théophile auprès de salariés du groupe Orange :</em></p>
-      <p><strong>Interviewé :</strong> « Sur l’équipe, on est beaucoup à avoir la même tranche d’âge, entre 40 et 55 ans… Quand il y a des postes, les jeunes ne sont pas forcément intéressés ou préfèrent partir sur Paris, Rennes, etc. Mais dans l’ensemble, il y a quand même une bonne ambiance… »</p>
-    </blockquote>
-  </div>  
-  <p>
-    Par ailleurs, <em>29 % des 25–34 ans</em> considèrent que les seniors « prennent trop de place » 
-    <sup><a href="#note121">121</a></sup>, et 35 % des répondants admettent avoir déjà plaisanté 
-    sur l’âge d’un collègue 
-    <sup><a href="#note122">122</a></sup>. Plus grave, <em>11 % des seniors</em> 
-    se déclarent victimes de harcèlement lié à l’âge 
-    <sup><a href="#note123">123</a></sup>.
-  </p>
-  <p>
-    Dans une optique d’innovation, le <em>design thinking intergénérationnel</em> stimulerait la créativité 
-    de plus de 20 % 
-    <sup><a href="#note124">124</a></sup>. Pourtant, la pénurie de compétences intermédiaires 
-    (5–10 ans d’expérience) complique le recrutement : on estime qu’environ 53 % des recruteurs 
-    peinent à trouver ces profils en tension 
-    <sup><a href="#note125">125</a></sup>.
-  </p>
+
+        <!-- CHAPITRE 16 -->
+        <h2>Chapitre 16&nbsp;: Formation, Province et Nouvelles Générations</h2>
+        <p>
+          Les choix de localisation et de formation sont également marqués par des dynamiques générationnelles. 
+          Ainsi, <em>74 % des étudiants</em> jugent la « province moins dynamique » 
+          <sup><a href="#note120">120</a></sup>, préférant souvent rejoindre les grandes métropoles, 
+          notamment l’Île-de-France.
+          Les étudiants considèrent souvent la province comme moins dynamique 
+          (74 % selon certaines enquêtes<sup><a href="#note120">120</a></sup>), 
+          ce qui accentue la polarisation territoriale. Du côté des entreprises 
+          dans des villes plus petites, on constate peu de postes dédiés aux jeunes, 
+          à moins qu’ils ne soient stagiaires ou alternants. 
+        </p>
+        <div class="extrait-intergen">
+          <h3>Composition et ambiance de l’équipe</h3>
+          <blockquote>
+            <p>
+              <em>Extrait d'entretien recueilli par Théophile auprès de salariés du groupe Orange :</em>
+            </p>
+            <p>
+              <strong>Interviewé :</strong> "Euh alors, sur l’équipe, c’est je pense qu’on est beaucoup à avoir la même tranche d’âge, c’est-à-dire entre 40 et 55 ans. Sur les jeunes qui passent, il y en a quand même beaucoup – des stagiaires, des thésards ou des apprentis – malheureusement, il y a peu de postes qui s’ouvrent. Parfois, quand il y a des postes, les jeunes ne sont pas forcément intéressés ou ils ont dans l’idée de poursuivre leurs études, de continuer ou d’aller sur Paris, sur Rennes, parce que Lannion, c’est un peu excentré. Mais dans l’ensemble, il y a quand même une bonne ambiance dans l’équipe, je trouve, et puis il n’y a pas de caractère particulièrement fort ou caractériel."
+            </p>
+            <p><em>Extrait d’entretien recueilli par Théophile auprès de salariés du groupe Orange :</em></p>
+            <p><strong>Interviewé :</strong> « Sur l’équipe, on est beaucoup à avoir la même tranche d’âge, entre 40 et 55 ans… Quand il y a des postes, les jeunes ne sont pas forcément intéressés ou préfèrent partir sur Paris, Rennes, etc. Mais dans l’ensemble, il y a quand même une bonne ambiance… »</p>
+          </blockquote>
+        </div>  
+        <p>
+          Par ailleurs, <em>29 % des 25–34 ans</em> considèrent que les seniors « prennent trop de place » 
+          <sup><a href="#note121">121</a></sup>, et 35 % des répondants admettent avoir déjà plaisanté 
+          sur l’âge d’un collègue 
+          <sup><a href="#note122">122</a></sup>. Plus grave, <em>11 % des seniors</em> 
+          se déclarent victimes de harcèlement lié à l’âge 
+          <sup><a href="#note123">123</a></sup>.
+        </p>
+        <p>
+          Dans une optique d’innovation, le <em>design thinking intergénérationnel</em> stimulerait la créativité 
+          de plus de 20 % 
+          <sup><a href="#note124">124</a></sup>. Pourtant, la pénurie de compétences intermédiaires 
+          (5–10 ans d’expérience) complique le recrutement : on estime qu’environ 53 % des recruteurs 
+          peinent à trouver ces profils en tension 
+          <sup><a href="#note125">125</a></sup>.
+        </p>
   
-  <p>
-    Concernant la formation, <em>58 % des responsables</em> regrettent l’absence de programmes « bridge » 
-    entre juniors et seniors 
-    <sup><a href="#note126">126</a></sup>. La silver economy, quant à elle, pourrait créer 
-    <em>300 000 emplois</em> d’ici 2030 
-    <sup><a href="#note127">127</a></sup>. Sur le plan de la recherche, des collaborations 
-    multigénérationnelles affichent déjà de bons résultats 
-    <sup><a href="#note128">128</a></sup>.
-    Le manque d’attractivité des sites excentrés pour les plus jeunes 
-    rejoint la difficulté de garder des seniors dans ces mêmes zones, 
-    accentuant la « fuite des compétences ». De plus, 29 % des 25–34 ans 
-    estiment que les seniors « prennent trop de place »<sup><a href="#note121">121</a></sup>, 
-    alimentant un discours parfois teinté d’impatience pour accéder à des postes clés. 
-    Il s’agit là encore d’un stéréotype qui peut engendrer tensions et harcèlement 
-    (11 % des seniors se déclarent victimes<sup><a href="#note123">123</a></sup>).
-  </p>
-  <p>
-    Toutefois, seules <em>15 % des entreprises</em> proposent des dispositifs de transition emploi-retraite 
-    <sup><a href="#note129">129</a></sup> et <em>63 % des recruteurs</em> peinent à concilier 
-    expérience et compétences digitales 
-    <sup><a href="#note130">130</a></sup>. Les disparités géographiques (province vs métropole) 
-    restent fortes, alimentant l’essor des grandes régions et la concentration des emplois qualifiés.
-    Sur le plan des solutions, le design thinking intergénérationnel stimulerait 
-    la créativité de plus de 20 %<sup><a href="#note124">124</a></sup>, 
-    et la silver economy pourrait créer 300 000 emplois d’ici 2030<sup><a href="#note127">127</a></sup>. 
-    Cependant, seules 15 % des entreprises proposent un dispositif de transition 
-    emploi-retraite<sup><a href="#note129">129</a></sup>, alors même que 63 % 
-    des recruteurs peinent à concilier expérience et compétences digitales<sup><a href="#note130">130</a></sup>.
-  </p>
+        <p>
+          Concernant la formation, <em>58 % des responsables</em> regrettent l’absence de programmes « bridge » 
+          entre juniors et seniors 
+          <sup><a href="#note126">126</a></sup>. La silver economy, quant à elle, pourrait créer 
+          <em>300 000 emplois</em> d’ici 2030 
+          <sup><a href="#note127">127</a></sup>. Sur le plan de la recherche, des collaborations 
+          multigénérationnelles affichent déjà de bons résultats 
+          <sup><a href="#note128">128</a></sup>.
+          Le manque d’attractivité des sites excentrés pour les plus jeunes 
+          rejoint la difficulté de garder des seniors dans ces mêmes zones, 
+          accentuant la « fuite des compétences ». De plus, 29 % des 25–34 ans 
+          estiment que les seniors « prennent trop de place »<sup><a href="#note121">121</a></sup>, 
+          alimentant un discours parfois teinté d’impatience pour accéder à des postes clés. 
+          Il s’agit là encore d’un stéréotype qui peut engendrer tensions et harcèlement 
+          (11 % des seniors se déclarent victimes<sup><a href="#note123">123</a></sup>).
+        </p>
+        <p>
+          Toutefois, seules <em>15 % des entreprises</em> proposent des dispositifs de transition emploi-retraite 
+          <sup><a href="#note129">129</a></sup> et <em>63 % des recruteurs</em> peinent à concilier 
+          expérience et compétences digitales 
+          <sup><a href="#note130">130</a></sup>. Les disparités géographiques (province vs métropole) 
+          restent fortes, alimentant l’essor des grandes régions et la concentration des emplois qualifiés.
+          Sur le plan des solutions, le design thinking intergénérationnel stimulerait 
+          la créativité de plus de 20 %<sup><a href="#note124">124</a></sup>, 
+          et la silver economy pourrait créer 300 000 emplois d’ici 2030<sup><a href="#note127">127</a></sup>. 
+          Cependant, seules 15 % des entreprises proposent un dispositif de transition 
+          emploi-retraite<sup><a href="#note129">129</a></sup>, alors même que 63 % 
+          des recruteurs peinent à concilier expérience et compétences digitales<sup><a href="#note130">130</a></sup>.
+        </p>
+        <!-- Entre Chapitre 16 et Chapitre 17-->
+        <p>
+          Les enjeux de formation et la mobilité géographique révèlent des disparités marquées entre les zones urbaines et les provinces, et soulignent la nécessité de repenser l’attractivité des territoires.
+          Ces constats nous amènent à nous interroger sur l’efficacité des dispositifs de transition emploi-retraite et sur les nouvelles approches en matière de contrats de génération.
+          Le chapitre suivant se penchera sur ces stratégies innovantes, en analysant leur impact sur la reconversion et l’adaptation des entreprises aux évolutions démographiques
+        </p>
         <hr>
       </div>
       
@@ -1327,51 +1383,59 @@ p {
               <br>
               Voir la vidéo
             <a href="https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024"
-               target="_blank" rel="noopener noreferrer">
-               https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
+              target="_blank" rel="noopener noreferrer">
+              https://www.bsmart.fr/video/25912-smart-job-31-octobre-2024
             </a></em>
           </p>
         </div>
-  <hr>
+        <!-- Entre Chapitre 17 et Chapitre 18-->
+        <p>
+          Les approches innovantes, telles que les contrats de génération et le reverse mentoring, montrent que les entreprises expérimentent pour mieux intégrer les seniors.
+          Toutefois, ces dispositifs restent encore balbutiants et s’inscrivent dans un contexte où les défis économiques et sociaux demeurent.
+            Le prochain chapitre synthétise ces éléments en proposant une réflexion sur les actions collectives et les pistes d’avenir pour renforcer la solidarité intergénérationnelle.
+        </p>
+        <hr>
       </div>
       
       <!-- Page 19 : Chapitre 18 -->
       <div class="page" id="page19">
-       
-  <!-- CHAPITRE 18 -->
-  <h2>Chapitre 18&nbsp;: Actions Collectives et Conclusion Provisoire</h2>
-  <p>
-    <em>19 %</em> des 18–20 ans cumuleraient emploi et études, contre 15 % des 21–24 ans<sup><a href="#note140">140</a></sup>. 
-    Certains employeurs investissent davantage dans la formation continue des seniors<sup><a href="#note141">141</a></sup>. 
-    Par ailleurs, la mixité d’âges peut accroître la résilience des équipes en période de crise<sup><a href="#note142">142</a></sup>.
-  </p>
-  <p><em>
-    Selon la Dares et l’Edhec, l’accès à la formation continue se réduit après 45 ans. 
-    Les chercheurs recommandent un surcroît de 10 % dans les budgets formation pour les plus de 50 ans 
-    afin de favoriser leur maintien dans l’emploi. 
-  </em></p>
-  <p>
-    En parallèle, <em>70 % des dirigeants</em> ont du mal à comprendre les codes de la génération Z<sup><a href="#note143">143</a></sup>, 
-    et les plus de 50 ans prennent la parole moins souvent en visioconférence<sup><a href="#note144">144</a></sup>. 
-    Les jeux vidéo, en revanche, attirent une part non négligeable de plus de 40 ans<sup><a href="#note145">145</a></sup>.
-  </p>
-  <p><em>
-    Les journées DuoDay, qui permettent à un junior et un senior ou à une personne en situation de handicap d’être en binôme, 
-    atteignent 84 % de satisfaction mutuelle. Le programme Cisco Networking Academy attire également des publics en reconversion (moyenne d’âge inconnue, 
-    mais 70 % retrouvent un emploi en 6 mois).
-  </em></p>
-  <p>
-    Enfin, le taux d’épargne élevé des 50+ peut influer sur leur maintien ou non dans l’emploi<sup><a href="#note149">149</a></sup>, 
-    et l’effet « papy-boom » est parfois jugé exagéré par certains analystes<sup><a href="#note150">150</a></sup>. 
-    Des initiatives valorisant un « champion de l’inclusion » peuvent stimuler l’engagement des seniors et des retraités<sup><a href="#note151">151</a></sup>, 
-    tandis que 36 % des retraités actifs travaillent par passion ou pour transmettre leur savoir<sup><a href="#note152">152</a></sup>.
-  </p>
+        <!-- CHAPITRE 18 -->
+        <h2>Chapitre 18&nbsp;: Actions Collectives et Conclusion Provisoire</h2>
+        <p>
+          <em>19 %</em> des 18–20 ans cumuleraient emploi et études, contre 15 % des 21–24 ans<sup><a href="#note140">140</a></sup>. 
+          Certains employeurs investissent davantage dans la formation continue des seniors<sup><a href="#note141">141</a></sup>. 
+          Par ailleurs, la mixité d’âges peut accroître la résilience des équipes en période de crise<sup><a href="#note142">142</a></sup>.
+        </p>
+        <p><em>
+          Selon la Dares et l’Edhec, l’accès à la formation continue se réduit après 45 ans. 
+          Les chercheurs recommandent un surcroît de 10 % dans les budgets formation pour les plus de 50 ans 
+          afin de favoriser leur maintien dans l’emploi. 
+        </em></p>
+        <p>
+          En parallèle, <em>70 % des dirigeants</em> ont du mal à comprendre les codes de la génération Z<sup><a href="#note143">143</a></sup>, 
+          et les plus de 50 ans prennent la parole moins souvent en visioconférence<sup><a href="#note144">144</a></sup>. 
+          Les jeux vidéo, en revanche, attirent une part non négligeable de plus de 40 ans<sup><a href="#note145">145</a></sup>.
+        </p>
+        <p><em>
+          Les journées DuoDay, qui permettent à un junior et un senior ou à une personne en situation de handicap d’être en binôme, 
+          atteignent 84 % de satisfaction mutuelle. Le programme Cisco Networking Academy attire également des publics en reconversion (moyenne d’âge inconnue, 
+          mais 70 % retrouvent un emploi en 6 mois).
+        </em></p>
+        <p>
+          Enfin, le taux d’épargne élevé des 50+ peut influer sur leur maintien ou non dans l’emploi<sup><a href="#note149">149</a></sup>, 
+          et l’effet « papy-boom » est parfois jugé exagéré par certains analystes<sup><a href="#note150">150</a></sup>. 
+          Des initiatives valorisant un « champion de l’inclusion » peuvent stimuler l’engagement des seniors et des retraités<sup><a href="#note151">151</a></sup>, 
+          tandis que 36 % des retraités actifs travaillent par passion ou pour transmettre leur savoir<sup><a href="#note152">152</a></sup>.
+        </p>
+        <!-- Entre Chapitre 19 et Chapitre 0-->
+        <p>
+        Les actions collectives et les initiatives de reconversion démontrent que, malgré les obstacles, un véritable élan de solidarité se dégage. Ces dynamiques intergénérationnelles, bien que parfois fragmentées, préfigurent la possibilité d’une union plus forte face aux défis sociétaux. Le dernier chapitre viendra clore cette réflexion en esquissant les contours d’une nouvelle solidarité intergénérationnelle, capable de transformer le débat sur l’emploi et l’avenir social.
+        </p>
         <hr>
       </div>
       
       <!-- Page 20 : Chapitre 19 -->
       <div class="page" id="page20">
-
         <!-- CHAPITRE 19 -->
         <h2>Chapitre 19&nbsp;: Vers une Nouvelle Solidarité Intergénérationnelle</h2>
         <p>
@@ -1393,48 +1457,47 @@ p {
           Or, 50 % des experts-comptables en France ont plus de 50 ans<sup><a href="#note161">161</a></sup>, et 1 jeune sur 3 ne comprend pas les codes d’une organisation trop hiérarchique<sup><a href="#note162">162</a></sup>.
         </p>
         <!-- Dans Chapitre 19, juste avant ou juste après vos derniers paragraphes -->
-      <div class="extrait-intergen">
-        <h3>Extrait d’Edgar Morin (La Grande Librairie, France 5)</h3>
-        <p><strong>Vidéo :</strong></p>
-        <p>
-          « Nous sommes vous et moi des individus singuliers, nous sommes tous différents les uns 
-          des autres, mais en même temps, nous sommes tous semblables en tant qu’humains. 
-          D’abord, l’humain ne se réduit pas à l’individu. C’est une véritable trinité : il est à la fois 
-          un individu, une partie de l’espèce humaine, et une partie de la société. La nature est autant 
-          en nous que nous sommes dans la nature.
-        </p>
-        <p>
-          Ensuite, il nous faut comprendre à quel point un individu humain est potentiellement complexe. 
-          Il est à la fois <em>homo sapiens</em> et <em>homo demens</em> : c’est-à-dire qu’il est doué 
-          de raison autant que de passion, et aussi capable de folie. Il est à la fois pratique et 
-          transcendant : la société technique la plus évoluée, les États-Unis, est aussi profondément 
-          religieuse. Il agit dans son propre intérêt mais peut aussi se livrer à des activités gratuites 
-          ou ludiques.
-        </p>
-        <p>
-          Enfin, il a besoin de son milieu naturel, mais il tend de plus en plus à le dégrader. L’humain 
-          est complexe, multidimensionnel. Il y a en lui le meilleur et le pire, ce que nous révèle 
-          l’histoire de l’humanité. Chacun d’entre nous fait partie de l’aventure propre et inouïe 
-          de l’humanité. Chacun participe à cet infini, à cette réalité tissée de douleur, de joie et 
-          d’incertitude. Aujourd’hui que l’humanité est menacée comme jamais de périls mortels : 
-          les fanatismes, le nucléaire, la dégradation accélérée de la biosphère, il est capital 
-          que la jeunesse prenne conscience de notre communauté de destin. »
-        </p>
-        <p>
-          <em>Extrait diffusé dans « La Grande Librairie » 
-          (présentée par Augustin Trapenard, France 5, mercredi 26 octobre 2024)</em><br>
-          Voir la vidéo originale sur Instagram : 
-          <a href="https://www.instagram.com/lagrandelibrairie/reel/DBmQ-Lip8CC/" 
-             target="_blank" rel="noopener noreferrer">
-            https://www.instagram.com/lagrandelibrairie/reel/DBmQ-Lip8CC/
-          </a>
-        </p>
-      </div>
+        <div class="extrait-intergen">
+          <h3>Extrait d’Edgar Morin (La Grande Librairie, France 5)</h3>
+          <p><strong>Vidéo :</strong></p>
+          <p>
+            « Nous sommes vous et moi des individus singuliers, nous sommes tous différents les uns 
+            des autres, mais en même temps, nous sommes tous semblables en tant qu’humains. 
+            D’abord, l’humain ne se réduit pas à l’individu. C’est une véritable trinité : il est à la fois 
+            un individu, une partie de l’espèce humaine, et une partie de la société. La nature est autant 
+            en nous que nous sommes dans la nature.
+          </p>
+          <p>
+            Ensuite, il nous faut comprendre à quel point un individu humain est potentiellement complexe. 
+            Il est à la fois <em>homo sapiens</em> et <em>homo demens</em> : c’est-à-dire qu’il est doué 
+            de raison autant que de passion, et aussi capable de folie. Il est à la fois pratique et 
+            transcendant : la société technique la plus évoluée, les États-Unis, est aussi profondément 
+            religieuse. Il agit dans son propre intérêt mais peut aussi se livrer à des activités gratuites 
+            ou ludiques.
+          </p>
+          <p>
+            Enfin, il a besoin de son milieu naturel, mais il tend de plus en plus à le dégrader. L’humain 
+            est complexe, multidimensionnel. Il y a en lui le meilleur et le pire, ce que nous révèle 
+            l’histoire de l’humanité. Chacun d’entre nous fait partie de l’aventure propre et inouïe 
+            de l’humanité. Chacun participe à cet infini, à cette réalité tissée de douleur, de joie et 
+            d’incertitude. Aujourd’hui que l’humanité est menacée comme jamais de périls mortels : 
+            les fanatismes, le nucléaire, la dégradation accélérée de la biosphère, il est capital 
+            que la jeunesse prenne conscience de notre communauté de destin. »
+          </p>
+          <p>
+            <em>Extrait diffusé dans « La Grande Librairie » 
+            (présentée par Augustin Trapenard, France 5, mercredi 26 octobre 2024)</em><br>
+            Voir la vidéo originale sur Instagram : 
+            <a href="https://www.instagram.com/lagrandelibrairie/reel/DBmQ-Lip8CC/" 
+              target="_blank" rel="noopener noreferrer">
+              https://www.instagram.com/lagrandelibrairie/reel/DBmQ-Lip8CC/
+            </a>
+          </p>
+        </div>
       
-      <p>
-        Les propos d’Edgar Morin nous invitent à considérer l’humain dans sa complexité : à la fois individu, partie prenante de la société et membre d’une espèce dont le destin est commun. Dans cette perspective, la jeunesse n’est pas seulement un groupe d’âge qu’il faudrait former ou intégrer ; elle porte aussi l’espoir de renouveler notre lien au monde et notre capacité à relever des défis planétaires (dérèglement climatique, tensions géopolitiques, nouveaux rapports au travail). Ainsi, l’inclusion intergénérationnelle ne se limite pas à la « cohabitation » d’équipes de plus jeunes et de plus âgés ; elle vise à reconnaître en chacun la part de « homo sapiens » (raison, technique, savoirs) et de « homo demens » (passion, imagination, audace) qui convergent vers une même communauté de destin. Ce n’est qu’en embrassant ces dimensions plurielles, en valorisant l’expérience des plus anciens tout en libérant l’élan créatif des plus jeunes, que nous pourrons engager des projets porteurs de sens, de solidarité et d’innovation.
-      </p>
-      
+        <p>
+          Les propos d’Edgar Morin nous invitent à considérer l’humain dans sa complexité : à la fois individu, partie prenante de la société et membre d’une espèce dont le destin est commun. Dans cette perspective, la jeunesse n’est pas seulement un groupe d’âge qu’il faudrait former ou intégrer ; elle porte aussi l’espoir de renouveler notre lien au monde et notre capacité à relever des défis planétaires (dérèglement climatique, tensions géopolitiques, nouveaux rapports au travail). Ainsi, l’inclusion intergénérationnelle ne se limite pas à la « cohabitation » d’équipes de plus jeunes et de plus âgés ; elle vise à reconnaître en chacun la part de « homo sapiens » (raison, technique, savoirs) et de « homo demens » (passion, imagination, audace) qui convergent vers une même communauté de destin. Ce n’est qu’en embrassant ces dimensions plurielles, en valorisant l’expérience des plus anciens tout en libérant l’élan créatif des plus jeunes, que nous pourrons engager des projets porteurs de sens, de solidarité et d’innovation.
+        </p>
       
         <div class="extrait-intergen">
           <p>
@@ -1448,35 +1511,50 @@ p {
         </div>
         <hr>
       </div>
-      
-      <!-- Page 21 : Conclusion & Perspectives -->
+
+      <!-- ============== PAGE 21 : Conclusion & Perspectives ============== -->
       <div class="page" id="page21">
-        
-  <section>
-    <h2>Conclusion &amp; Perspectives</h2>
-    <p>
-      La prétendue « guerre des générations » masque la profonde continuité qui relie les âges : 
-      loin de former des blocs antagoniques, jeunes et vieux cohabitent dans un même tissu humain. 
-      Comme l’évoque Edgar Morin, l’humain est à la fois individu, membre d’une société et partie 
-      prenante d’un destin commun. D’un point de vue sociologique, les conflits apparents naissent 
-      davantage de l’organisation du travail, de l’inégalité d’accès à la formation ou de la 
-      méconnaissance mutuelle que d’une opposition intrinsèque entre cohortes d’âge. Or, la conscience 
-      partagée de notre vulnérabilité (crises écologiques, économiques, sociales) invite au dépassement 
-      de ces frontières arbitraires.
-    </p>
-    <p>
-      Philosophiquement, reconnaître la complexité de chacun — à la fois porteur d’une expérience 
-      historique et d’une capacité d’invention — implique de ne plus voir la jeunesse comme simple 
-      promesse de renouveau, ni la vieillesse comme simple vestige du passé. Chacune est une ressource 
-      pour l’autre : la passion et la créativité s’adossent à la mémoire et à la transmission, 
-      tissant une solidarité active. L’enjeu est donc d’explorer les voies d’une cohabitation 
-      fertile, où les valeurs, savoirs et énergies circulent entre les générations. Ainsi, 
-      la « guerre des âges » apparaît moins comme une fatalité que comme un mythe médiatique : 
-      c’est dans la reconnaissance mutuelle de notre interdépendance que peut s’enraciner 
-      une véritable avancée collective.
-    </p>
-  </section>
-  
+        <h2>Conclusion &amp; Perspectives</h2>
+        <p>
+          La prétendue « guerre des générations » masque la profonde continuité qui relie les âges : 
+          loin de former des blocs antagoniques, jeunes et vieux cohabitent dans un même tissu humain. 
+          Comme l’évoque Edgar Morin, l’humain est à la fois individu, membre d’une société et partie 
+          prenante d’un destin commun. D’un point de vue sociologique, les conflits apparents naissent 
+          davantage de l’organisation du travail, de l’inégalité d’accès à la formation ou de la 
+          méconnaissance mutuelle que d’une opposition intrinsèque entre cohortes d’âge. Or, la conscience 
+          partagée de notre vulnérabilité (crises écologiques, économiques, sociales) invite au dépassement 
+          de ces frontières arbitraires.
+        </p>
+        <p>
+          Philosophiquement, reconnaître la complexité de chacun — à la fois porteur d’une expérience 
+          historique et d’une capacité d’invention — implique de ne plus voir la jeunesse comme simple 
+          promesse de renouveau, ni la vieillesse comme simple vestige du passé. Chacune est une ressource 
+          pour l’autre : la passion et la créativité s’adossent à la mémoire et à la transmission, 
+          tissant une solidarité active. L’enjeu est donc d’explorer les voies d’une cohabitation 
+          fertile, où les valeurs, savoirs et énergies circulent entre les générations. Ainsi, 
+          la « guerre des âges » apparaît moins comme une fatalité que comme un mythe médiatique : 
+          c’est dans la reconnaissance mutuelle de notre interdépendance que peut s’enraciner 
+          une véritable avancée collective.
+        </p>
+
+        <!-- NOUVEAU PARAGRAPHE : Cécile Van de Velde, Michel Fize, etc. -->
+        <p>
+          En outre, <strong>Cécile Van de Velde</strong> souligne à quel point les trajectoires vers l’âge 
+          adulte varient selon le contexte national (logement, marché du travail, politiques publiques), 
+          rendant encore plus délicate l’idée d’une « génération Z » homogène<sup><a href="#noteS1">S1</a></sup>. 
+          Le sociologue <strong>Michel Fize</strong> rappelle que la jeunesse a toujours été décrite 
+          comme “en crise” ou “rebelle” à différentes époques, prouvant le caractère cyclique de la 
+          défiance vis-à-vis des “plus jeunes”. Nous pouvons donc conclure que la prétendue guerre des âges 
+          relèverait davantage d’une construction médiatique que d’un fait social avéré, et que la 
+          cohabitation intergénérationnelle est, déjà aujourd’hui, une réalité dans bien des milieux, 
+          tout comme la diversité des expériences.
+        </p>
+
+        <p>
+          Ainsi, la « guerre des âges » apparaît moins comme une fatalité que comme un mythe médiatique : 
+          c’est dans la reconnaissance mutuelle de notre interdépendance que peut s’enraciner 
+          une véritable avancée collective.
+        </p>
         <hr>
       </div>
       
@@ -2237,6 +2315,18 @@ p {
                 https://www.linkedin.com/posts/frederiquejeske_no%C3%ABl-en-famille-on-lattend-avec-impatience-activity-7275396960285593600-_MEL
               </a><br>
             </li>
+            <!-- EXEMPLE : noteS1 POUR LES SOURCES MANNHEIM, BOURDIEU, ETC. -->
+            <li id="noteS1">
+              <strong>S1 – Références Sociologiques Clés</strong> :  
+              <ul>
+                <li>Karl Mannheim, « Le problème des générations » (1928), in <em>Essais sur la sociologie de la culture</em>.</li>
+                <li>Pierre Bourdieu, « La jeunesse n’est qu’un mot », in <em>Questions de sociologie</em> (1980).</li>
+                <li>Michel Fize, <em>La Barbe ! Les jeunes, l’amour et la sexualité</em>, etc.</li>
+                <li>Cécile Van de Velde, <em>Devenir adulte</em>, PUF, 2008.</li>
+              </ul>
+              Voir également la notice <a href="#biblioSociologie">[biblioSociologie]</a> en fin d’article.
+            </li>
+
             <!-- ============ NOUVELLE NOTICE BIBLIO POUR GEN Z (GZ1) ============ -->
             <li id="biblioGZ1">
               <strong>[GZ1]</strong> 
@@ -2285,80 +2375,93 @@ p {
               </a>
             </li>
             
-  <li id="refGZ5">
-    <strong>Dans les pensées d'une RH qui tente de recruter un Gen Z [Vidéo YouTube]</strong>. 
-    Disponible sur : 
-    <a href="https://www.youtube.com/watch?v=Kt1WpTcUH_I" target="_blank" rel="noopener noreferrer">
-      https://www.youtube.com/watch?v=Kt1WpTcUH_I
-    </a>
-  </li>
-  <li id="refGZ6">
-    <strong>Un Gen X, un Millennial et un Gen Z sont en retard au travail [Vidéo YouTube]</strong>. 
-    Disponible sur : 
-    <a href="https://www.youtube.com/watch?v=l9ZS5xgmWi8" target="_blank" rel="noopener noreferrer">
-      https://www.youtube.com/watch?v=l9ZS5xgmWi8
-    </a>
-  </li>
-  <li id="refGZ7">
-    <strong>Un Gen X, un Millennial et un Gen Z recherchent un emploi [Vidéo YouTube]</strong>. 
-    Disponible sur : 
-    <a href="https://www.youtube.com/watch?v=y8us5VaTaH4" target="_blank" rel="noopener noreferrer">
-      https://www.youtube.com/watch?v=y8us5VaTaH4
-    </a>
-  </li>
-  <li id="refGZ8">
-    <strong>Le PROBLÈME avec les personnages de la Gen Z [Vidéo YouTube]</strong>. 
-    Disponible sur : 
-    <a href="https://www.youtube.com/watch?v=NQnFbVzWIec" target="_blank" rel="noopener noreferrer">
-      https://www.youtube.com/watch?v=NQnFbVzWIec
-    </a>
-  </li>
-  <li id="refGS9">
-    <strong>Un Gen X, un Millennial et un Gen Z négocient leur salaire [Vidéo YouTube]</strong>. Disponible sur : 
-    <a href="https://www.youtube.com/watch?v=9E607VR1eCs" target="_blank" rel="noopener noreferrer">
-      https://www.youtube.com/watch?v=9E607VR1eCs
-    </a>
-  </li>
+            <li id="refGZ5">
+              <strong>Dans les pensées d'une RH qui tente de recruter un Gen Z [Vidéo YouTube]</strong>. 
+              Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=Kt1WpTcUH_I" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=Kt1WpTcUH_I
+              </a>
+            </li>
+            <li id="refGZ6">
+              <strong>Un Gen X, un Millennial et un Gen Z sont en retard au travail [Vidéo YouTube]</strong>. 
+              Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=l9ZS5xgmWi8" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=l9ZS5xgmWi8
+              </a>
+            </li>
+            <li id="refGZ7">
+              <strong>Un Gen X, un Millennial et un Gen Z recherchent un emploi [Vidéo YouTube]</strong>. 
+              Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=y8us5VaTaH4" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=y8us5VaTaH4
+              </a>
+            </li>
+            <li id="refGZ8">
+              <strong>Le PROBLÈME avec les personnages de la Gen Z [Vidéo YouTube]</strong>. 
+              Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=NQnFbVzWIec" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=NQnFbVzWIec
+              </a>
+            </li>
+            <li id="refGS9">
+              <strong>Un Gen X, un Millennial et un Gen Z négocient leur salaire [Vidéo YouTube]</strong>. Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=9E607VR1eCs" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=9E607VR1eCs
+              </a>
+            </li>
   
-  <li id="refGZ10">
-    <strong>Faire partie de la génération Y / Z : C’EST QUOI LE PIRE ?! [Vidéo YouTube]</strong>. Disponible sur : 
-    <a href="https://www.youtube.com/watch?v=STxxloxmrkI" target="_blank" rel="noopener noreferrer">
-      https://www.youtube.com/watch?v=STxxloxmrkI
-    </a>
-  </li>
+            <li id="refGZ10">
+              <strong>Faire partie de la génération Y / Z : C’EST QUOI LE PIRE ?! [Vidéo YouTube]</strong>. Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=STxxloxmrkI" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=STxxloxmrkI
+              </a>
+            </li>
 
-  <li id="refGZ11">
-    <strong>Gen Z : La génération la plus FAIBLE de tous les temps ? [Vidéo YouTube]</strong>. 
-    Disponible sur : <a href="https://www.youtube.com/watch?v=epLycx9FSvI" target="_blank" rel="noopener noreferrer">
-    https://www.youtube.com/watch?v=epLycx9FSvI</a>
-  </li>
+            <li id="refGZ11">
+              <strong>Gen Z : La génération la plus FAIBLE de tous les temps ? [Vidéo YouTube]</strong>. 
+              Disponible sur : <a href="https://www.youtube.com/watch?v=epLycx9FSvI" target="_blank" rel="noopener noreferrer">
+              https://www.youtube.com/watch?v=epLycx9FSvI</a>
+            </li>
 
-  <li id="refGZ12">
-    <strong>Gen Z introduces new way of quitting jobs, and it’s loud [Vidéo YouTube]</strong>. 
-    Disponible sur : <a href="https://www.youtube.com/watch?v=MBYUfMUjoew" target="_blank" rel="noopener noreferrer">
-    https://www.youtube.com/watch?v=MBYUfMUjoew</a>
-  </li>
-  <li id="refGZ13">
-    <strong>La Gen Z déteste la nouvelle génération [Vidéo YouTube]</strong>. Disponible sur : 
-    <a href="https://www.youtube.com/watch?v=Fb5bXxPuul4" target="_blank" rel="noopener noreferrer">
-      https://www.youtube.com/watch?v=Fb5bXxPuul4
-    </a>
-  </li>
-  <li id="refGZ14">
-    <strong>Why Companies Are Firing Gen Z Workers [Vidéo YouTube]</strong>. Disponible sur : 
-    <a href="https://www.youtube.com/watch?v=hin_juGmdHs" target="_blank" rel="noopener noreferrer">
-      https://www.youtube.com/watch?v=hin_juGmdHs
-    </a>
-  </li>
-  
-  <li id="refGZ15">
-    <strong>Study explains why Gen Z struggles in the workforce. Young adults disagree [Vidéo YouTube]</strong>. Disponible sur : 
-    <a href="https://www.youtube.com/watch?v=yx03GVbovSU" target="_blank" rel="noopener noreferrer">
-      https://www.youtube.com/watch?v=yx03GVbovSU
-    </a>
-  </li>
-  
-  
+            <li id="refGZ12">
+              <strong>Gen Z introduces new way of quitting jobs, and it’s loud [Vidéo YouTube]</strong>. 
+              Disponible sur : <a href="https://www.youtube.com/watch?v=MBYUfMUjoew" target="_blank" rel="noopener noreferrer">
+              https://www.youtube.com/watch?v=MBYUfMUjoew</a>
+            </li>
+            <li id="refGZ13">
+              <strong>La Gen Z déteste la nouvelle génération [Vidéo YouTube]</strong>. Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=Fb5bXxPuul4" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=Fb5bXxPuul4
+              </a>
+            </li>
+            <li id="refGZ14">
+              <strong>Why Companies Are Firing Gen Z Workers [Vidéo YouTube]</strong>. Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=hin_juGmdHs" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=hin_juGmdHs
+              </a>
+            </li>
+            
+            <li id="refGZ15">
+              <strong>Study explains why Gen Z struggles in the workforce. Young adults disagree [Vidéo YouTube]</strong>. Disponible sur : 
+              <a href="https://www.youtube.com/watch?v=yx03GVbovSU" target="_blank" rel="noopener noreferrer">
+                https://www.youtube.com/watch?v=yx03GVbovSU
+              </a>
+            </li>
+            
+            <!-- NOUVELLE NOTICE BIBLIO POUR LA SOCIOLOGIE (biblioSociologie) -->
+            <li id="biblioSociologie">
+              <strong>[biblioSociologie]</strong>  
+              <p>
+                Quelques repères théoriques :  
+                <ul>
+                  <li><strong>Karl Mannheim</strong>, « Le problème des générations » (1928).</li>
+                  <li><strong>Pierre Bourdieu</strong>, « La jeunesse n’est qu’un mot » in <em>Questions de sociologie</em>, 1980.</li>
+                  <li><strong>Michel Fize</strong>, ouvrages sur la sociologie de l’adolescence et la “crise de la jeunesse”.</li>
+                  <li><strong>Cécile Van de Velde</strong>, <em>Devenir adulte, sociologie comparée de la jeunesse en Europe</em>, 2008.</li>
+                  <li><strong>Bernard Roudet</strong>, <em>Les Jeunes et les valeurs</em>, rapport INJEP (années 2000).</li>
+                </ul>
+              </p>
+            </li>
             
           </ul>
         </div>
