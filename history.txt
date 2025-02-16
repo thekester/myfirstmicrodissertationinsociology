@@ -375,3 +375,14 @@ Contenu :
 - you must put a number that refers to a description at the bottom of the page and a bibliographic notice at the end of the article for videos
 
 --------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Version : v001.030
+Date    : 2025-02-16
+Auteur  : thekester
+Lien    : /commit/20f9661288213b3a71901bbd97bd582d2baa8e4b
+Contenu :
+- Modify a video citation in chapter 12
+
+--------------------------------------------------------------------------------
