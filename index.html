@@ -290,7 +290,7 @@
   </div>
 
   <!-- Bouton de téléchargement du PDF -->
-  <button class="pdf-button" id="downloadPdfButton">Télécharger en PDF</button>
+  <button class="pdf-button" id="downloadPdfButton" style="display: none;">Télécharger en PDF</button>
   <!-- Bouton de bascule entre mode vertical et mode paginé -->
   <button id="toggleModeButton">Passer en mode paginé</button>
 
@@ -682,7 +682,6 @@
               (Voir notice bibliographique : <a href="#refBSOffboard">[BSOffboard]</a>)
             </li>
             
-            
           </ol>
         </div>
         <hr>
@@ -855,30 +854,29 @@
           créées par les marketeurs, mettent chacun dans une catégorie. 
           Résultat : on nourrit l’idée fausse que les jeunes ne veulent plus bosser 
           et que les vieux sont has-been. »
-          </p>
+        </p>
           
-          <!-- Entre Chapitre 8 et Chapitre 9 -->
-          <p>
-            Alors que la médiatisation semble parfois amplifier les clichés sur les différentes générations, il est essentiel de s’interroger sur le transfert effectif des savoirs et des compétences.
-            Le chapitre suivant se penchera sur la transmission intergénérationnelle et l’innovation, en mettant en lumière les obstacles et les potentiels pour améliorer la pérennité des connaissances au sein des organisations. 
-          </p>
-          <!-- Courte note de bas de page insérée juste après le paragraphe -->
-          <div class="footnotes">
-            <ol>
-              <li id="footBSCaseXYZ">
-                <strong>“Les cases X, Y, Z” [Vidéo B SMART]</strong> : 
-                Émission SMART JOB (31 octobre 2024). 
-                Frédérique Jeske y souligne le danger 
-                de catégoriser les générations, aboutissant à des stéréotypes 
-                comme “les jeunes ne veulent plus bosser” 
-                ou “les vieux sont has-been”.  
-                (Voir notice bibliographique : <a href="#refBSCaseXYZ">[BSCaseXYZ]</a>)
-              </li>
-              
-            </ol>
-          </div>
-          <hr>
+        <!-- Entre Chapitre 8 et Chapitre 9 -->
+        <p>
+          Alors que la médiatisation semble parfois amplifier les clichés sur les différentes générations, il est essentiel de s’interroger sur le transfert effectif des savoirs et des compétences.
+          Le chapitre suivant se penchera sur la transmission intergénérationnelle et l’innovation, en mettant en lumière les obstacles et les potentiels pour améliorer la pérennité des connaissances au sein des organisations. 
+        </p>
+        <!-- Courte note de bas de page insérée juste après le paragraphe -->
+        <div class="footnotes">
+          <ol>
+            <li id="footBSCaseXYZ">
+              <strong>“Les cases X, Y, Z” [Vidéo B SMART]</strong> : 
+              Émission SMART JOB (31 octobre 2024). 
+              Frédérique Jeske y souligne le danger 
+              de catégoriser les générations, aboutissant à des stéréotypes 
+              comme “les jeunes ne veulent plus bosser” 
+              ou “les vieux sont has-been”.  
+              (Voir notice bibliographique : <a href="#refBSCaseXYZ">[BSCaseXYZ]</a>)
+            </li>
+            
+          </ol>
         </div>
+        <hr>
       </div>
       
       <!-- Page 10 : Chapitre 9 -->
@@ -2525,9 +2523,6 @@
               </a>
             </li>
             
-            
-            
-            
             <!-- NOUVELLE NOTICE BIBLIO POUR LA SOCIOLOGIE (biblioSociologie) -->
             <li id="biblioSociologie">
               <strong>[biblioSociologie]</strong>  
@@ -2550,8 +2545,9 @@
   </div> <!-- Fin de contentToPrint -->
 
   <!-- Inclusions de html2canvas et jsPDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous"></script>
+  <!-- Conversion du HTML vers le format pdfMake -->
+  <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/pdfmake.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/vfs_fonts.js"></script>
 
   <script>
     // Variables globales
@@ -2581,21 +2577,23 @@
 
     // Génération du PDF
     document.getElementById('downloadPdfButton').addEventListener('click', function() {
-      const element = document.getElementById('contentToPrint');
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF('p', 'pt', 'a4');
-
-      doc.html(element, {
-        callback: function (pdf) {
-          pdf.save('jeunes-vs-vieux.pdf');
-        },
-        x: 10,
-        y: 10,
-        width: doc.internal.pageSize.getWidth() - 20,
-        windowWidth: element.scrollWidth,
-        html2canvas: { scale: 0.8 }
-      });
+      // Récupérer le HTML du contenu à convertir
+      var html = document.getElementById('contentToPrint').innerHTML;
+      // Convertir le HTML en objet pdfMake
+      var pdfContent = htmlToPdfmake(html);
+      
+      // Définir la structure du document
+      var docDefinition = {
+        content: pdfContent,
+        defaultStyle: {
+          font: 'Helvetica'
+        }
+      };
+      
+      // Générer et télécharger le PDF
+      pdfMake.createPdf(docDefinition).download('document.pdf');
     });
+
 
     // Fonction de séparation des notes & références en mode paginé
     function splitReferences() {
