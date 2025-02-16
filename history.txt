@@ -364,3 +364,14 @@ Contenu :
 - Ajout des transitions entre chapitres
 
 --------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Version : v001.029
+Date    : 2025-02-16
+Auteur  : thekester
+Lien    : /commit/69ceb10a1dc94f4ee2ee319297cb218d9c1fec97
+Contenu :
+- you must put a number that refers to a description at the bottom of the page and a bibliographic notice at the end of the article for videos
+
+--------------------------------------------------------------------------------
